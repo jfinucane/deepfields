@@ -1,0 +1,109 @@
+.enter_left {
+	width: 350px;
+	float: left;
+}
+.enter_right{
+	width: 550px;
+	float: left;
+	margin-top: 60px;
+}
+#north_plain {
+    background-image: image-url('final/enter-deep/btn-enter-hdf-n-default.jpg');
+	background-size: 388px 204px;
+	width: 388px;
+	height: 204px;
+	float: left;
+	border: 1px solid black;
+}
+#south_plain {
+    background-image: image-url('final/enter-deep/btn-enter-hdf-s-default.jpg');
+	background-size: 388px 204px;
+	width: 388px;
+	height: 204px;
+	float: left;
+	border: 1px solid black;
+}
+#hover_north {
+    background-image: image-url('final/enter-deep/btn-enter-hdf-n-over.jpg');
+	background-size: 487px 206px;
+	width: 487px;
+	height: 206px;
+	float: left;
+}
+#hover_south {
+    background-image: image-url('final/enter-deep/btn-enter-hdf-s-over.jpg');
+	background-size: 480px 206px;
+	width: 480px;
+	height: 206px;
+	float: left;
+}
+.hover_adjust_right {
+	position: relative;
+	left: 52px;
+}
+
+.hover_adjust_right_south {
+	position: relative;
+	left: 59px;
+}
+#earth_image {
+    background-image: image-url('final/enter-deep/graphic-earth-1-2.jpg');
+	background-size: 80px 80px;
+	width: 80px;
+	height: 80px;
+	margin-left: 40px;
+}
+#enter_the_deep {
+    background-image: image-url('final/enter-deep/graphic-enter-deep-1-2.jpg');
+	background-size: 283px 231px;
+	width: 283px;
+	height: 231px;
+	float: left;
+}
+.enter_the_deep_position {
+	margin: 115px 0px 40px 65px;
+}
+#enter_snippet {
+	margin: 50px 0px 0px 150px; 
+	width: 130px;
+    font-size: 1.2em;
+}
+.plain_middle {
+	float: left;
+	margin-top: 20px;
+	width: 150px;
+}
+.field_block {
+	float: left;
+	cursor: pointer;
+}
+.earth_block {
+	display: block;
+	position:relative;
+	top: 0px;
+	width: 500px;
+	float: left;
+}
+.enter_tag_position {
+	position: absolute;
+	top: 5px;
+	left: 300px;
+	&:hover {
+	  color: #ffffff;
+	}
+}
+.big_look{
+	font-family: troikaregular;
+	font-size: 2.0em;
+	color: #f3932e;
+	text-align: center;
+	text-decoration: underline;
+}
+.big_text {
+	color: #c8b29a;
+	font-size: 1.2em;
+	font-family: open-sans-condensed;
+	font-weight:bold;
+	text-align: center;
+	letter-spacing: .02em;
+}

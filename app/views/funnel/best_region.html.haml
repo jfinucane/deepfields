@@ -1,0 +1,24 @@
+.troika_h1.h_pos
+  Where is the best sample size?
+.troika_h2.h2_pos
+  Real data from HDF-#{field.upcase}  
+.short_break
+%br
+.left_smallest_region
+  = render partial:'funnel/best_region_left'
+.right_smallest_region
+  =render partial:'funnel/best_graph'
+= link_to funnel_smallest_path do
+  .back.back_position
+#your_sample_field.hide
+  = @sample_size  
+#page.hide
+  Best Region
+.hide
+  %canvas#green_sample{width:50, height: 20}
+.hide
+  %input{:type=>'button',:id=>'next_compare_astronomer'}
+  #you_got_it_path
+    = funnel_you_got_it_path
+  #your_persistent_freq
+    = @your_persistent_freq

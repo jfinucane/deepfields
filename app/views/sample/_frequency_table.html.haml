@@ -1,0 +1,45 @@
+.sample_legend
+  .osc_h2_gray
+    &nbsp;
+  .sample_row_1.sample_legend_style
+    Trial
+  .sample_row_2.sample_legend_style
+    Percentage 
+    %br
+    of Irregulars
+.sample_you_width
+  .osc_h2_gray.two_em_ltr
+    You
+  .sample.col
+  .sample_you.sample_row_1.sample_col
+    1
+  .sample_you.sample_row_2.sample_col.sample_computer
+    = "%5.1f%" % @percent
+.sample_table_width.osc_h2_gray.two_em_ltr.black_background
+  Computer
+.sample_computer_table.sample_table_width
+  .sample_table_inner
+    .sample_computer.sample_row_1.sample_col 1
+    .sample_computer.sample_row_1.sample_col 2
+    .sample_computer.sample_row_1.sample_col 3
+    .sample_computer.sample_row_1.sample_col 4
+    .sample_computer.sample_row_1.sample_col 5
+    .sample_computer.sample_row_2#f0.sample_col
+    .sample_computer.sample_row_2#f1.sample_col
+    .sample_computer.sample_row_2#f2.sample_col
+    .sample_computer.sample_row_2#f3.sample_col
+    .sample_computer.sample_row_2#f4.sample_col  
+.min_max_background.min_max_background_position.show_plot#replace_canvas.hide
+  %canvas{width: 524, height: 150, id: 'variability'}
+.min_max_placeholder#show_plot_elements
+  .button_outside.min_max_button_adjust#show_plot_button
+    .button_inside
+      .button_text
+        Show MIN/MAX plot
+.sample_controls.show_plot.hide
+  .float_left 
+    = render :partial=>'sample/checkbox' 
+  .button_outside.test_five_adjust#recalculate
+    .button_inside       
+      .button_text
+        Test 5 more samples

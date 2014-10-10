@@ -1,0 +1,86 @@
+
+#comment{
+	width: 600px;
+	color: white;
+	border: 1px solid white;
+	background-color: #333;
+    margin: 100px auto 100px auto;
+}
+#graph_with_sizes{
+	color: #caa;
+}
+.reasonable_size{
+	width: 30px;
+	height: 30px;
+	font-size: 120%;
+}
+#gray_title{
+	width:250px;
+	color: #ccc;
+	margin-left:20px
+}
+.graph_title {
+	height: 120px;
+}
+#green_sample{
+	position:relative;
+	top: 20px;
+	left: -40px;
+}
+#new_small_width{
+	width: 320px;
+	margin-left:20px;
+}
+#best_left {
+	margin: 0px 20px 0px 20px;
+	color: #ccc;
+	width: 300px;
+	border: 1px solid red;
+}
+#your_sample {
+  margin: 20px 10px 10px 50px;
+  float: left;
+  color: #ccc;
+}
+#your_sample_value {
+	background-color: #555;
+	border: 1px solid blue;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: 20px;
+	color: #fff;
+	font-size: 120%;
+	text-align: center;
+	line-height: 160%;
+}
+.align_with_graph {
+    float: left;
+	position: relative;
+	left: 300px;
+	width: 400px;
+	color: white;
+}
+#enter_box{
+	width:200px;
+	margin-left:50px;
+	border: 2px solid white;
+}
+#enter_text{
+	color: white;
+}
+#right_canvas{
+	width: 500px;
+	height: 300px;
+}
+#now_you_have {
+	width:400px;
+	color:  #fff;
+	margin: 10px;
+	font-size: 110%;
+}
+#adjust_yellow_overlay {
+	position: absolute;
+	left:140px;
+	top: 65px;
+}

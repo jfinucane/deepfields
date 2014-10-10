@@ -1,0 +1,174 @@
+
+.left_smallest_region {
+	width: 416px;
+	float: left;
+	margin-top: 100px;
+	margin-left: 60px;
+    position: relative;
+} 
+.right_smallest_region {
+	width: 404px;
+	float: left;
+	margin-top: 100px;
+	height: 100px;
+	position: relative;
+}
+.best_sample_position {
+	float: right;
+	width: 171px;
+	position: relative;
+	top: -15px;
+	margin-left: 15px;
+} 
+.brown_border {
+  border: 8px solid #422e24;
+  float: left;
+}
+.blue_header {
+	color: white;
+	background-color: #008ec7;
+	height: 56px;
+	width: 404px;
+}
+.sky_blue_border {
+  border: 4px solid #008ec7;
+  background-color: #008ec7;
+  height: 403px;
+  
+} 
+.sky_blue_border_variability {
+  border: 4px solid #008ec7;
+  background-color: #008ec7;
+  height: 357px;
+} 
+.sky_blue_title {
+  width: 100%;
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .05em;
+  height: 34px;
+  padding-top: 6px;
+}
+.adjust_best_show_me_position {
+	position: relative;
+	left: 100px;
+	top: 20px;
+}
+.adjust_best_show_me_text {
+	margin: 4px 30px 4px 30px !important;
+}
+.best_try {
+	margin-right: 5px;
+}
+.best_try25 {
+	margin-right: 45px;
+}
+.float_right {
+	float:right;
+}
+#best_your_sample {
+	margin-left: 60px;
+	width: 100%;
+	display: block;
+}
+#you_got_it_text {
+	margin: 20px 40px 0px 0px;
+}
+#best_text {
+	margin-right: 40px;
+}
+.color_bar {
+	margin: 15px 30px 5px 10px;
+    padding-top: 10px;
+}
+.color_bar_adjust {
+	position: relative;
+	top: -20px;
+	left: 40px;
+}
+.color_bar_legend {
+	width: 400px;
+	margin-top: 10px;
+}
+.color_bar_title {
+	width: 200px;
+	text-align: right;
+	display: block;
+	float: left;
+
+}
+@mixin counts {
+  background-color: #323232;
+  color: #e6e6e6;
+  text-align: center;
+  display: inline;
+  float: left;
+  margin: 0px 10px 0px 10px;
+  font-family: open_sansbold;
+  border: 1px solid gray;
+}
+.color_bar_counts {
+  @include counts;
+	width: 40px;
+	height: 30px;
+	font-size: 1.5em;
+	line-height: 130%;
+}
+.adjust_checkbox {
+	position: relative; 
+	top: 62px;
+	left: 250px;
+}
+.enter_yellow_frame {
+  width: 350px;
+  height: 60px;
+  border: 2px solid #ffca26;
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  padding-top: 25px
+}
+.best_size_spacing {
+	margin: 0px 20px 0px 20px;
+	float: left;
+}
+.compare_left {
+	width: 300px;
+	margin-right: 60px;
+}
+.galaxy_collage {
+	background-image: image-url('final/sample/bg-3-8-galaxy-types.jpg');
+	background-size: 477px 479px;
+	width: 477px;
+	height: 479px;
+	margin: 80px 0px 0px 450px;
+}
+.you_versus_left {
+  width: 200px;
+  margin: 140px 30px 0px 60px;
+  float: left;
+}
+.you_versus_right {
+	width: 580px;
+	float: left;
+	margin: 140px 0px 0px 0px;
+	color: white;
+	background-color: #1499c9;
+}
+.evaluate_right {
+	width: 560px;
+	float: left;
+	margin: 140px 0px 0px 0px;
+	color: white;
+	background-color: #1499c9;
+}
+.std_table_hdr {
+	font-family: open_sansregular;
+	color: black;
+	font-weight: normal;
+	font-size: .85em;
+}
+

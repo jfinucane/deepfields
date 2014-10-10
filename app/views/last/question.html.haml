@@ -1,0 +1,27 @@
+.congratulations_question
+  .troika_h1.final_headline
+    One last question
+  .button_outside.secrets_position#secrets_button
+    .button_inside
+      .button_text
+        Secrets of the Deep
+        %br
+        Revealed ...
+  .placeholder_text
+    .std_txt
+      If you looked toward the same two spots in the sky, but focused on the nearby universe, do you think your results would be similar to the HDF results?  Click the sign for a review and a clue...
+#facing_left
+
+  .jeep_wheels_left_facing.jeep_left
+  .jeep_body_left_facing.jeep_left.hst_bounce
+  .hst_left_facing.hst_bounce
+#facing_right.hide
+  .jeep_wheels_right_facing.facing_right
+  .jeep_body_right_facing.facing_right
+  .hst_right_facing.facing_right
+= link_to lesson_index_path do
+  .back.back_position
+#page.hide
+  Question
+#passenger_path
+  = last_different_path

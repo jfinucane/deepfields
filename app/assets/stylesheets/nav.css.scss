@@ -1,0 +1,156 @@
+#itinerary {
+	background-image: image-url('nav/itinerary.png');
+	background-size: 60px 60px;
+	width: 60px;
+	height: 60px;
+	float: left;
+	&:hover {
+	   border: 1px solid white;
+	}
+}
+#meet_hdfn_image{
+	height: 40px; 
+	width: 100px;
+	background-image: image-url('nav/about_hdfn.png');
+}
+#meet_hdfs_image {
+	height: 40px; 
+	width: 100px;
+	background-image: image-url('nav/about_hdfs.png');	
+}
+.back {
+  width: 55px;
+	height: 100px;
+	background-image: image-url('std/btn-back.png');
+	background-size: 55px 100px;
+	&:hover {
+	  background-image: image-url('std/btn-back-over.png');
+	}
+}
+.back_position {
+	z-index: 101;
+	position: absolute;
+  top: 580px;
+  left: 30px
+}
+.travelogue_image {
+	width: 60px;
+	height: 73px;
+	background-size: 60px 73px;
+	background-image: image-url('std/log-sample.png');
+	float: left;
+}
+.travelogue_digit {
+	width: 100%;
+	font-size: 100%;
+	margin-top: 20px;
+	text-align: center;
+	color: black;
+}
+#one{
+	width: 60px;
+	height: 60px;
+	background-image: image-url('nav/one.png');
+	background-size: 60px 60px;
+	float: left;
+}
+#explore_types_link {
+	height: 40px; 
+	width: 140px;
+	background-image: image-url('nav/explore_types.png');
+	background-size: 140px 40px;
+	border: 2px solid green;
+	float: left;
+}
+.next_signpost {
+  width: 75px;
+	height: 125px;
+	background-image: image-url('std/next/btn-next.png');
+	background-size: 75px 125px;
+	&:hover{
+	  background-image: image-url('std/next/btn-next-over.png');
+	}
+}
+.next_disable_signpost {
+  	width: 61px;
+	height: 121px;
+	background-image: image-url('std/next/btn-next-null.png');
+	background-size: 61px 121px;
+}
+.next_position {
+  position: absolute;
+  top: 560px;
+  left: 842px;
+  z-index: 110;
+}
+.comment{
+   color: #ccc;
+   font-size: 120%;
+   float: left;	
+}
+.go {
+	width: 30px;
+	height: 30px;
+	background-image: image-url('nav/best_go_f2.gif');
+	background-size: 30px 30px;
+	float: left;
+}
+.go_disable {
+	width: 30px;
+	height: 30px;
+	background-image: image-url('nav/best_go_disable.gif');
+	background-size: 30px 30px;
+	float: left;
+}
+.button_outside {
+    cursor: pointer;
+	border: 3px solid #fcca26;
+	display: inline-block;
+	background-color:  #fcca26;
+	border-radius: 5px;
+	&:hover {
+	  border-color: #ffe456;
+	  background-color: #ffe456;
+	}
+}
+.button_outside_gray {
+    cursor: pointer;
+	border: 3px solid #4d4d4d;
+	display: inline-block;
+	background-color:  #4d4d4d;
+	border-radius: 5px;
+}
+.button_outside {
+    cursor: pointer;
+	border: 3px solid #fcca26;
+	display: inline-block;
+	background-color:  #fcca26;
+	border-radius: 5px;
+	&:hover {
+	  border-color: #ffe456;
+	  background-color: #ffe456;
+	}
+}
+.button_inside {
+	border: 1px solid black;
+	color: black;
+	display: inline-block;
+	border-radius: 5px;
+}
+.button_text {
+	font-size: 1em;
+    margin: 4px 10px 4px 10px;
+	font-family: open-sans-condensed;
+    font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+    letter-spacing: .05em;
+    text-align: center;
+}
+a {    
+    text-decoration: none !important;
+}
+.position_caution_modal {
+    position: relative;
+	top: 300px;
+}

@@ -1,0 +1,48 @@
+.enter_left
+  #enter_the_deep.enter_the_deep_position
+  #enter_snippet
+    .std_text
+      Pick a Hubble Deep Field to sample
+.enter_right
+  .field_block#north
+    #plain_north
+      .plain_middle
+        .big_look
+          Look North 
+        .big_text
+          near the Big Dipper
+      #north_plain
+    = link_to finder_select_path('hdf_field'=> 'n') do
+      #hover_north.hide.hover_adjust_right
+ 
+  .earth_block
+    #earth_image
+    #meet_north.enter_tag_position.condensed_h2_underscore
+      More Info about HDF-N
+
+  .field_block#south
+    #plain_south
+      .plain_middle
+        %br
+        .big_look
+          Look South
+        .big_text
+          near the constellation Tucana
+      #south_plain
+    = link_to finder_select_path('hdf_field'=> 's') do
+      #hover_south.hide.hover_adjust_right_south
+
+  .earth_block
+    #meet_south.enter_tag_position.condensed_h2_underscore
+      More info about HDF-S
+- if @caution_modal
+  = render partial: 'nav/caution_modal'
+
+= render partial:'lesson/field_modals'
+
+= link_to lesson_stare_path do
+  .back.back_position
+
+#page.hide
+  Classic  
+

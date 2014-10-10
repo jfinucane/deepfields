@@ -1,0 +1,45 @@
+.troika_h1_tight.h_pos
+  Visualizing variability of Samples
+.left_of_sample_table
+  %p
+    .std_text
+      To the right, in each of the five trials, the computer picked the same number of galaxies that you picked.
+  %p
+  .std_text
+    Note the
+    .link.link_vocab range
+    of percentages of irregulars among the trials. Let's visualize the range in a 
+    .link.link_vocab min/max plot  
+    and add&nbsp;
+    .link.link_vocab> measures of central tendency
+    = '.'  
+  %br
+  %br
+  .show_plot.hide
+    .std_text
+      The range of this data is repre- sented by the length of the line:  the longer the line, the greater the variability.   Add measures of central tendency to the graph.   Note the relative positions of the
+      .link.link_vocab mean
+      and&nbsp;
+      .link.link_vocab> median
+      = '.'
+      Test other sets of five samples by pressing 
+      %br
+      '5 MORE SAMPLES'.  
+.sample_table_frame
+  .across.across_spacing
+    .condensed_h2_gray.sample_size_header
+      Your HDF-#{field_name}
+      Safari sample size: 
+    #sample_counts
+      =@count
+  =render :partial=>'sample/frequency_table'
+#travelogue_7.travelogue_position
+= link_to sample_index_path do
+  .back.back_position
+= link_to funnel_magnify_path do
+  .next_signpost.next_position.show_plot.hide
+.next_disable_signpost.next_position
+#page.hide
+  Visualize
+#count.hide
+  =@count

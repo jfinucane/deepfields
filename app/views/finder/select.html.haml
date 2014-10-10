@@ -1,0 +1,15 @@
+.troika_h1.h_pos
+  Capture a Random Sample
+= render :partial=>'finder/select_instructions'
+= render :partial=>'finder/canvas',:locals=>{:show_counts=>true} 
+= link_to lesson_classic_path do
+  .back.back_position
+#travelogue_1.travelogue_position  
+= render partial: 'lesson/field_modals'
+%p.hide#hdf_field
+  = @hdf_field
+%p.hide#page
+  Select
+#finder_get_counts.hide
+  = finder_got_counts_path 
+#result_form.hide  

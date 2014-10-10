@@ -1,0 +1,95 @@
+.center_block#oops.hide
+  #overlay_background
+    .oops_wrong_modal.adjusted_sample_position
+      %br
+      .troika_headline
+        OOPS, That's Biased!
+      %p
+        .std_text
+          Samples picked by humans are always susceptible to bias.  Unconsciously, we base our choices on a trait or quality of the sample member.
+      #oops_close.oops_close_adjustment
+        = render partial: 'nav/close_x'
+.center_block.hide#bias_computer_biased
+  #overlay_background
+    .wrong_modal.position_modal
+      %br
+        .troika_headline
+          Oops! Computer-generated sample: Unbiased
+      %p
+        .std_text
+          Selection of samples by computers is considered unbiased.
+      %p
+        .std_text
+          In the database sampling, each galaxy would be assigned a number.  The computer would collect a sample of galaxies by randomly picking numbers.
+      .adjust_right.close_modal
+        .close_no_right
+          .close_msg
+            CLOSE
+          %i.fa.fa-times
+      .short_break
+      .half_break
+.center_block.hide#bias_computer_unbiased
+  #overlay_background
+    .correct_modal.position_modal
+      %br
+        .troika_headline
+          That's Right! Computer-generated sample: Unbiased
+      %p
+        .std_text
+          Selection of samples by computer is considered unbiased.
+      %p
+        .std_text
+          In the database sampling, each galaxy would be assigned a number.  The computer would collect a sample of galaxies by randomly picking numbers.
+      .adjust_right.close_modal
+        .close_no_right
+          .close_msg
+            CLOSE
+          %i.fa.fa-times
+      .short_break
+      .half_break
+.center_block.hide#bias_eyes_closed_biased
+  #overlay_background
+    .correct_modal.position_modal.eyes_closed_wider
+      %br
+        .troika_headline
+          That's Right! Picking with eyes closed: biased
+      =render :partial=>'bias/modal_eyes_closed'
+
+.center_block.hide#bias_eyes_closed_unbiased
+  #overlay_background
+    .wrong_modal.position_modal.eyes_closed_wider
+      %br
+        .troika_headline
+          OOPS! Picking with eyes closed: biased
+      =render :partial=>'bias/modal_eyes_closed'
+
+.center_block.hide#implausible_sorry
+  #overlay_background
+    .wrong_modal.position_modal.symmetry_modal
+      %br
+        .troika_h2
+          Sorry!
+        .short_break
+        .std_text
+          Sorry,
+        = render :partial=>'nav/implausible'
+.center_block.hide#implausible_yes
+  #overlay_background
+    .correct_modal.position_modal.symmetry_modal
+      %br
+        .troika_h2
+          That's right
+        .short_break
+        .std_text
+          That's right,   
+        = render :partial=>'nav/implausible'
+- if @warn  
+  #overlay_background.field_selection_modal
+    .wrong_modal.position_modal.enter_modal 
+      %br
+        .troika_h2
+          HDF Field Selection
+        %p
+          .std_text
+            You need to pick galaxies first 
+        = render partial: 'nav/close_x'      

@@ -1,0 +1,263 @@
+.ui-corner-left {
+	background-color: #aaaaaa;
+	height: 20px;
+}
+.ui-progressbar {
+	border: 1px solid #cccccc;
+	width: 800px;
+}
+#next_steps a{
+	float:left;
+	width: 160px;
+	position:relative;
+	left: 70px;
+}
+.star_canvas {
+	width: 431px;
+	height: 448px;
+}
+.star_canvas_location {
+	position: relative;
+	top: 121px;
+	left: 425px;
+}
+.star_border {
+	border: 4px solid orange;
+}
+#done_sampling {
+	float: left;
+	position: relative;
+	top: 120px;
+}
+
+#counting_galaxies{
+	position: relative;
+	top: 50px;
+}
+@mixin counts {
+  background-color: #323232;
+  color: #e6e6e6;
+  text-align: center;
+  display: inline;
+  float: left;
+  margin: 0px 10px 0px 10px;
+  font-family: open_sansbold;
+  border: 1px solid gray;
+}
+#active_counts {
+  @include counts;
+	width: 50px;
+	height: 40px;
+	font-size: 1.75em;
+}
+#sample_counts {
+  @include counts;
+	font-size: 1.5em;
+	width: 40px;
+	height: 30px;
+	line-height: 125%;
+}
+#sample_toolbar{
+	position: relative;
+	top: 30px;
+	width: 100%;
+	height: 65px;
+}
+#select_about{
+   position: relative; 
+   float: left;
+   top: 10px;
+}
+#photo_safari_toolbar {
+   height: 60px;
+   background-color: #333;
+   color: white;
+}
+#back_to_enter {
+	position: relative;
+	top: 235px;
+}
+.full_height {
+	height: 700px;
+}
+.part_height {
+	color: white; 
+	height: 443px;
+}
+.canvas_adjust {
+	position: relative;
+	left: 20px;
+}
+.canvas_header {
+	margin: 70px 30px 10px 0px;
+}
+.captured_message_location {
+	position: relative;
+	left:92px; 
+	top: 5px;
+}
+.move_starfield_left {
+	margin-left: 50px;
+}
+.left_of_starfield_position {
+	position: relative;
+	top: 100px;
+	left: 60px;
+}
+.galaxy_windowshade_position {
+	position: relative;
+	left: -40px;
+	float: left;
+}
+.why_link_position {
+	margin: 10px 0px 10px 100px !important;
+	display: block !important;
+}
+.tiny_link_position{
+	margin: 0px 0px 15px 130px !important;
+	display: block !important;
+	float: left;
+}
+.galaxy_types_image{
+	background-image: image-url('final/start_safari/bg-1-4.jpg');
+	background-size: 357px 105px;
+	width: 357px;
+	height: 105px;
+}
+.got_counts_width{
+	width: 355px;
+}
+.sample_block {
+	width: 100%;
+	background-color: #1499c9;
+	height: 230px;
+}
+.location_block {
+	width: 100%;
+	background-color: #1499c9;
+	height: 250px;
+	border-radius: 5px;
+}
+.sample_table {
+	width: 331px;
+	height:156px;
+	margin-left: 10px;
+
+}
+.sample_table_wide {
+	width: 450px;
+}
+@mixin sample_border{
+	border-width: 2px 1px 2px 1px;
+	border-color:#e0d3b9;
+	border-style: solid;
+	text-align: center;
+	float: left;
+}
+.dummy { width: 330px; height: 1px; background-color: #e0d3b9; float: left;}
+.dummy_again {width: 440px; height: 1px; margin-left: 10px; background-color: #e0d3b9; float: left;}
+.col1 {
+    @include sample_border;
+    width: 140px;
+    border-width: 2px 1px 2px 3px;
+}
+.col1_location {
+    @include sample_border;
+    width: 195px;
+    border-width: 2px 1px 2px 3px;
+}
+.col2 {
+    @include sample_border;
+	width: 110px;
+}
+.col2_location {
+    @include sample_border;
+	width: 105px;
+}
+.col3 {
+    @include sample_border;
+	width: 70px;
+	border-width: 2px 3px 2px 1px;
+}
+.col3_location {
+    @include sample_border;
+	width: 130px;
+	border-width: 2px 3px 2px 1px;
+}
+.th_sample{
+    color: white;
+	background-color: #8b6b48;
+}
+.td_sample {
+    line-height: 200%;
+	background-color: #ca8;
+	font-family: open_sansbold;
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #4a3a2a;
+}
+.td_sample_tall {
+	background-color: #ca8;
+    height: 70px;
+    font-size: 1.1em;
+    color: #4a3a2a;
+    line-height: 120%;
+    padding: 6px 0px 0px 0px;
+}
+.td_brown {
+	color: #4a3a2a !important;
+}
+.td_vertical_adjust {
+	width: 100%;
+	height: 25px;
+}
+.irregular_side {
+	background-image: image-url('final/section1/bg-1-5-1.jpg');
+	background-size: 542px 509px;
+    width: 542px;
+    height: 509px;
+}
+.irregular_side_position {
+	position: absolute;
+	left: 360px;
+	top: 10px;
+}
+.left_irregular {
+	width: 280px;
+	height: 500px;
+	margin: 130px 20px 0px 60px;
+	float: left;
+}
+.left_irregular_text{
+	width: 200px;
+}
+.right_irregular_compare {
+	width: 459px;
+	position: absolute; 
+	left: 280px;
+	top: 130px;
+}
+.right_irregular_find_out {
+	width: 530px;
+	height: 170px;
+	float: left;
+	position: absolute;
+	left: 360px;
+	top: 390px;
+	border-radius: 5px;
+}
+.blue_box_color {
+	background-color: #20405e;
+}
+.split_box{
+	width: 233px;
+	padding: 15px;
+	float: left;
+}
+.find_out_background {
+	background-image: image-url('final/section1/bg-1-6-v1.jpg');
+	background-size: 940px 540px;
+	width: 940px;
+	height: 540px;
+	position: absolute;
+}

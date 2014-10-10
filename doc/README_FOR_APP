@@ -1,2 +1,7 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+ISSUE with the web page
+
+YOU VS THE ASTRONOMERS June 4
+
+Noting that Compare.java in the old app loops until the error is less than 3% for each sample.
+
+When sampling a proportion of .72 it appears that SE is 5.9% and for five samples SEM is around 2.6%.   

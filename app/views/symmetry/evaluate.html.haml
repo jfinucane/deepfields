@@ -1,0 +1,46 @@
+.troika_h1.h_pos
+  You vs. THE ASTRONOMERS
+.troika_h2.h2_pos
+  How well does your HDF-#{field.upcase} sample compare?
+.left_evaluate
+  .std_text#compare_question
+    Do you think your results are plausibly close to the astrono- mers? 
+    %br
+    %br
+  #plausible_buttons
+    .yes_spacing#plausible_yes
+      .button_outside
+        .button_inside
+          .button_text.wider_button
+            Yes  
+    .button_outside#plausible_no
+      .button_inside
+        .button_text.wider_button
+          No
+  .troika_h2#right_right.hide
+    You're Right!
+  .troika_h2#wrong_right.hide
+    Actually, your re- sults are good
+  #suggested_sample.hide
+    .std_text
+      These results are based on a correct sample size of 45.
+      %p
+      The computer sample's results are acceptably close to the astronomers'. (See travelogue question 9 to review.)   Next, let's look solely at the astronomers' results for both Deep Fields.        
+  #plausible_explanation.hide
+    .std_text 
+      Your results are plausible.   You had a sample size that reason- ably represented the population.  
+      %p
+      Your results are acceptably close to the astronomers'. (See travelogue question 9 to review.)   Next, let's look solely at the astronomers' results for both Deep Fields.        
+.evaluate_right
+  = render partial: 'symmetry/percentage'
+= link_to symmetry_sample_path do
+  .back.back_position
+= link_to symmetry_question_path do
+  .next_signpost.next_position.hide
+.next_disable_signpost.next_position
+
+#travelogue_13.travelogue_position
+#page.hide
+  Evaluate
+#count.hide
+  =@count  

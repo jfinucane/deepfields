@@ -1,0 +1,14 @@
+
+Fonts
+
+  All fonts are stored in repo.  
+  
+  All fonts are from Font Squirrel.
+  
+  Each font is stored in multidevice formats covering IE and mobile.
+
+  Fonts in assets/fonts are referenced in fonts.css
+
+  Open Sans Condensed pulls in a different font for font-weight: normal vs bold
+
+  Make sure fonts  and fonta are css.scss to the font-url helper is invoked.

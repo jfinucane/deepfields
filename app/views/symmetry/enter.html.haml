@@ -1,0 +1,55 @@
+.enter_left
+  #re_enter_the_deep.re_enter_the_deep_position
+  #re_enter_snippet
+    .troika_h2
+      Sample the
+      %br
+      other hdf
+
+    .std_text
+      Find out if things look the same or different in the other direction.
+.enter_right
+  - if field != 'n'
+    .field_block#north
+      #plain_north
+        .plain_middle
+          .big_look
+            Look North 
+          .big_text
+            near the Big Dipper
+        #north_plain
+      = link_to symmetry_sample_path('hdf_field'=> 'n') do
+        #hover_north.hide.hover_adjust_right
+  - else 
+    #north_used
+  .earth_block
+    #earth_image
+    #meet_north.enter_tag_position.enter_tag_style
+      More Info about HDF-N
+
+  - if field != 's'
+    .field_block#south
+      #plain_south
+        .plain_middle
+          .short_break
+          .short_break
+          .big_look
+            Look South
+          .big_text
+            near the constellation Tucana
+        #south_plain
+      = link_to symmetry_sample_path('hdf_field'=> 's') do
+        #hover_south.hide.hover_adjust_right_south
+  - else
+    #south_used
+  .earth_block
+    #meet_south.enter_tag_position.enter_tag_style
+      More info about HDF-S
+
+= render partial:'lesson/field_modals'
+
+= link_to lesson_index_path do
+  .back.back_position
+
+#page.hide
+  Reenter  

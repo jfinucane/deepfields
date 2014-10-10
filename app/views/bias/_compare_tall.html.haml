@@ -1,0 +1,15 @@
+.compare_row_taller
+  .compare_method_row
+    .bias_row_text
+      = text1
+      %br
+      = text2
+  .bias_check_row
+    .check_box.check_box_tall.unbiased
+      %canvas.check_canvas{width:22, height:22}
+  .bias_check_row
+    .check_box.check_box_tall.biased
+      %canvas.check_canvas{width:22, height:22}
+  .pct_tall_row
+    .compare_pct_row.more_padding
+      = pct

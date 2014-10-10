@@ -1,0 +1,52 @@
+.game {
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: cover;
+}
+.game_frame {
+  width: 940px;
+  height: 676px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  top: 24px;
+ }
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.default_color {
+  background-color: #000000;
+}
+.intro_color { 
+  background-color: #654d3e;
+}
+.lesson_color {
+  background-color: #e5d88e;
+}
+.bias_color {
+  background-color: #949470;
+}
+.sample_color {
+  background-color:  #24607e;
+}
+.funnel_color {
+  background-color:  #24607e;
+}
+.symmetry_color {
+  background-color:  #875a3b;
+}
+.newfields_color {
+  background-color: #305959;
+}
+.last_color {
+ background-color: #305959;
+}

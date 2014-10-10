@@ -1,0 +1,53 @@
+.homepage_background {
+	background-image: image-url('final/homepage/bg-homepage-940px.jpg');
+	width: 940px;
+	height: 676px;
+	background-size: 940px 676px;
+}
+.btn_enter {
+	background-image: image-url('final/homepage/btn-enter-default.png');
+	background-size: 222px 222px;
+	width: 222px;
+	height: 222px;
+}
+.btn_enter_hover {
+	  background-image: image-url('final/homepage/btn-enter-over.png') !important;
+	  cursor: pointer;
+	}
+.btn_enter_position {
+	position: absolute;
+	top: 184px;
+	left: 310px;
+}
+.home_toolbar {
+	width: 800px;
+	position: absolute;
+	top: 520px;
+	z-index: 1;
+	margin-left: 100px;
+}
+.home_text {
+	position:absolute;
+	top: 180px;
+	left: 550px;
+	width: 240px;
+	z-index: 1;
+	font-size: 110%;
+}
+.home_toolbar a {
+	margin-right: 30px;
+}
+.amazing_space_link {
+	background-image: image-url('final/homepage/btn-amazing-space.png');
+	background-size: 129px 70px;
+	width: 129px;
+	height: 70px;
+	&:hover {
+	  background-image: image-url('final/homepage/btn-amazing-space.png');
+	}
+	display: inline;
+	float: right;
+	position: relative;
+	top: -35px;
+	left: -60px;
+}

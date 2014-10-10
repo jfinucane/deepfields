@@ -1,0 +1,25 @@
+.troika_h1.h_pos
+  Where's the best sample size?
+.left_smallest_region
+  = render partial: 'funnel/best_header'
+  .best_sample_position
+    .brown_border
+      =render partial: 'sample/checkbox'
+    .variability_inset
+  = render partial: 'funnel/best_body'    
+.right_smallest_region
+  .sky_blue_border
+    .sky_blue_title
+      Variability of the smallest sample sizes
+    .variability_background
+    .variability_overlay_mean.hide
+    .variability_overlay_median.hide
+    .variability_overlay_region.hide
+= link_to funnel_magnify_path do
+  .back.back_position
+= link_to funnel_best_region_path do
+  .next_signpost.next_position.show_plot.hide
+.next_disable_signpost.next_position
+#page.hide
+  Smallest
+

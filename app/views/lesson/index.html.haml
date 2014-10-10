@@ -1,0 +1,26 @@
+#lesson_index_vertical_shim.default_color
+.safari_start_new
+  #hst_adjust
+    = image_tag 'std/hst-tow-banner.png' 
+    .notice
+      = render partial: 'lesson/flash'  
+  #travelogue_box
+    #travelogue_textleft
+      #travelogue_header
+        Don't forget your Travelogue!
+      #travelogue_body
+        Throughout the lesson, this icon is a reminder to answer questions in your travelogue.  There will be a number on the icon that matches the number of the question to answer before leaving that webpage.
+      - link_to 'Download the Travelogue', lesson_download_pdf_path, id: 'travelogue_pdf_link'
+      .link#travelogue_pdf_link
+        Download the Travelogue
+    .on_right
+      .travelogue_image#travelogue_image_adjust
+#canvas1
+  %canvas{width: '940', height: '669', id: 'border_canvas'}
+=render partial: 'layouts/progress'
+#page.hide
+  Main Itinerary
+#next_signpost
+  = @next_signpost
+#itinerary_header
+  Itinerary

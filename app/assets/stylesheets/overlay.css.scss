@@ -1,0 +1,44 @@
+#overlay {
+	margin-left: auto;
+	margin-right: auto;
+	position:relative;
+	top: -700px;
+	z-index: 1000;
+	height: 700px;
+	width: 960px;
+	border: 1px solid red;
+}
+.in {
+	border: 1px solid red;
+	height: 700px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.gutter_container {
+  width: 80px;
+  float: left;
+}
+.gutter {
+	width: 7px;
+	height: 680px;
+	border: 1px solid green;
+	float: left;
+}
+.grid_element {
+	float: left;
+	width: 60px;
+	height: 680px;
+}
+#overlay_btn {
+	width: 75px;
+	height: 20px;
+	color:white;
+	font-size: 10pt;
+	position: relative;
+	top: 40px;
+	border: 1px solid blue;
+	&:hover{
+	  color: blue;
+	}
+}

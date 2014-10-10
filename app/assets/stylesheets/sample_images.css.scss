@@ -1,0 +1,102 @@
+@mixin sample_image {
+	background-size: 95px 75px;
+	width: 95px;
+	height: 75px;
+}
+.sample_elliptical {
+	@include sample_image;
+	background-image: image-url('final/symmetry/galaxy-call-out-elliptical-99x75.jpg');
+}
+.sample_irregular {
+	@include sample_image;
+	background-image: image-url('final/symmetry/galaxy-irregular-99x75.jpg');
+}
+.sample_spiral {
+	@include sample_image;
+	background-image: image-url('final/symmetry/galaxy-call-out-spiral-99x75.jpg');
+}
+.min_max_background {
+	background-image: image-url('sample/page-3-2-min-max-bg.png');
+	background-size: 524px 150px;
+	width: 524px;
+	height: 150px;
+}
+@mixin dot_size {
+	background-size: 18px 18px;
+	width: 18px;
+	height: 18px;
+	margin-left: 8px;
+}
+.red_dot {
+	@include dot_size;
+	background-image: image-url("marker-green-circle.png");
+	display: inline;
+	float: right;
+}
+.green_dot {
+	@include dot_size;
+	background-image: image-url("marker-red-diamond.png");
+	display: inline;
+	float: right;
+}
+.unchecked_box {
+	border: 2px solid #999999;
+	background-color: #4d4d4d;
+	width: 15px;
+	height: 14px
+}
+.checked_box {
+	width: 11px;
+	height: 11px;
+	border: 2px solid black;
+    background-color: #ffca26;
+	position: relative;
+	top: -16px;
+	z-index: 1;
+}
+
+.variability_inset {
+	background-image: image-url('sample/page-3-5-var-graph-inset.png');
+	background-size: 155px 220px;
+	width: 155px;
+	height: 220px;
+    border: 8px solid #422e24;
+    float:left;
+}
+@mixin variability_graph_overlay{
+	background-size: 163px 297px;
+	width: 163px;
+	height: 297px;
+	position: absolute;
+	top: 95px;
+}
+.variability_background {
+	background-size: 396px 354px;
+	width: 396px;
+	height: 354px;
+ 
+	background-image: image-url('sample/page-3-5-var-graph-bg.png');
+}
+.variability_overlay_mean {
+    @include variability_graph_overlay;
+    left: 165px;
+	background-image: image-url('sample/page-3-5-overlay-mean.png');
+}
+.variability_overlay_median {
+    @include variability_graph_overlay;
+    left: 125px;
+	background-image: image-url('sample/page-3-5-overlay-median.png');
+}
+.variability_overlay_region {
+    background-size: 360px 86px;
+    width: 360px;
+    height: 86px;
+    position: absolute;
+	background-image: image-url('sample/page-3-5-overlay-region.png');
+	position: absolute;
+	left: 60px;
+	top: 175px;
+}
+
+
+

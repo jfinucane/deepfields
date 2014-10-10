@@ -1,0 +1,19 @@
+.center_block.hide#north_big_field
+  #overlay_background
+    .outer_border#big_north_image
+      .image_block
+        .troika_headline
+          Hubble Deep Field North
+        = render partial: 'nav/close_x'
+        #hdfn_big_image
+.center_block.hide#south_big_field
+  #overlay_background
+    .outer_border#big_south_image
+      .image_block
+        .troika_headline
+          Hubble Deep Field South
+        = render partial: 'nav/close_x'
+        #hdfs_big_image    
+= render :partial=>'nav/modal_bias'
+= render :partial=>'nav/oops_sample'
+          

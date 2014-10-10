@@ -1,0 +1,158 @@
+.enter_title_position {
+	margin: 40px 60px 0px 60px;
+	width: 820px;
+} 
+@mixin enter_font {
+    font-family: troikaregular;
+	color: #967450;
+	display: inline;
+}
+.enter_left {
+	float: left;
+}
+.enter_big {
+	@include enter_font;
+	font-size: 3.5em;
+}
+.enter_the {
+	@include enter_font;
+	font-size: 2.60em;
+}
+.pick_a_field {
+	width: 400px;
+	float: right;
+	font-family: open_sansbold;
+	font-size: 1.125em;
+}
+@mixin field_size {
+	background-size: 940px 551px;
+	width: 940px;
+	height: 551px;
+}
+.field_base {
+    @include field_size;
+	background-image: image-url('finder/selector-map-base.png');
+}
+.field_constellations {
+    @include field_size;
+	background-image: image-url('finder/selector-map-constellations.png');
+}
+.field_names {
+    @include field_size;
+	background-image: image-url('finder/selector-map-names.png');
+}
+.field_position {
+	position: absolute;
+	top: 100px;
+	left: 0px;
+}
+.footnote {
+	font-family: open_sansregular;
+	font-size: .9em;
+	color: #979797;
+	width: 380px;
+}
+.field_footnote_position {
+	position: absolute;
+	top: 600px;
+	left: 540px;
+	z-index: 1;
+}
+.field_select {
+	font-family: open-sans-condensed;
+	font-weight: bold;
+	font-size: 2.0em;
+
+	display: inline;
+}
+.diam_select {
+	font-size: 0.9em;
+	display: inline;
+	position: relative;
+	top: -10px;
+	left: 3px;
+}
+.diam_right_adjust {
+	left: -5px
+}
+#preview_north {
+	position: absolute;
+	top: 176px;
+	left: 154px;
+}
+#preview_south {
+	position: absolute;
+	left: 716px;
+	top: 528px;
+}
+.active_location {
+	color: #fcc126;
+	text-shadow: 0px 0px 10px #000000;
+	&:hover{
+	   color: #ffffff;
+	}
+	cursor: pointer;
+}
+.inactive_location {
+	color: #a07c30;
+	text-shadow: 0px 0px 10px #000000;
+	&:hover{
+	   color: #ffffff;
+	}
+	cursor: pointer;
+}
+#preview_ff1 {
+	position: absolute;
+	left: 645px;
+	top: 440px;
+}
+#preview_ff2 {
+	position: absolute;
+	left: 435px;
+	top: 425px;
+}
+#preview_ff3 {
+	position: absolute;
+	left: 374px;
+	top: 250px;
+}
+#preview_ff4 {
+	position: absolute;
+	left: 193px;
+	top: 290px;
+}
+#preview_ff5 {
+	position: absolute;
+	left: 705px;
+	top: 480px;
+}
+#preview_ff6 {
+	position: absolute;
+	left: 548px;
+	top: 355px;
+}
+#preview_hudf {
+	position: absolute;
+	left: 512px;
+	top: 435px;
+}
+.green_label {
+	font-family: open_sansbold_italic;
+	font-size: 1.1em;
+	color: #8ec640;
+}
+.green_below {
+	position: relative;
+	left: 18px;
+	top: -10px;
+}
+.green_above {
+	position: relative;
+	left: 18px;
+	top: -55px;
+}
+.green_left {
+	position: relative;
+	left: -103px;
+	top: -10px;
+}

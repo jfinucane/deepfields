@@ -1,0 +1,68 @@
+.oops_wrong_modal {
+    width: 310px;
+    background-color: black;
+    border: 2px solid #c9362c;
+    padding: 0px 20px 20px 20px;
+    margin: auto;
+    position: absolute;
+    top: 220px;
+    left: 80px;
+}
+.wrong_modal {
+    width: 560px;
+    background-color: black;
+    border: 2px solid #c9362c;
+    padding: 0px 10px 20px 20px;
+    margin: auto;
+    position: relative;
+}
+.correct_modal {
+    width: 560px;
+    background-color: black;
+    border: 2px solid green;
+    padding: 0px 10px 20px 20px;
+    margin: auto;
+    position: relative;
+}
+.adjust_right {
+  position: relative;
+  left: 0px;
+}
+.oops_adjust_right {
+	position: relative;
+	left: 240px;
+}
+.narrower_wrong_modal {
+    width: 475px;
+    background-color: black;
+    border: 2px solid #c9362c;
+    padding: 0px 20px 20px 20px;
+    margin: auto;
+    position: relative;
+}
+.opps_try_adjust {
+    margin-left: 20px;
+    margin-right: 267px;
+}
+.symmetry_modal {
+    width: 360px !important
+}
+#try_again {
+    margin: 0px 130px 0px 10px !important;
+    display: inline;
+}
+#skip_sampling {
+    display: inline;
+}
+.enter_modal {
+    text-align: center;
+    position: relative;
+    top: 340px;
+    height: 130px;
+    width: 300px;
+}
+.oops_close_adjustment {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}

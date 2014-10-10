@@ -1,0 +1,36 @@
+.grid_6.move_starfield_left   
+  .canvas_header
+    .condensed_h2.h2_field
+      Hubble Deep Field
+      = field_name
+      (HDF-#{field})
+    - if field == 'n' 
+      .humble_link.more_info_position#meet_north
+        (show info)
+    - else
+      .humble_link.more_info_position#meet_south
+        (show info)    
+  .star_canvas.star_border
+    #starfield
+      - if field == 'n'
+        .n-image
+          %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
+            %p Your browser doesn't support canvas
+      - else
+        .s-image
+          %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
+            %p Your browser doesn't support canvas
+  - if show_counts          
+    .captured_message_location
+      .osc_h1
+        You've captured 
+      #active_counts
+        0
+      .osc_h1
+        galaxies&nbsp;
+
+      .got_counts
+        #done_button.button_outside_gray
+          .button_inside
+            .button_text
+              Done

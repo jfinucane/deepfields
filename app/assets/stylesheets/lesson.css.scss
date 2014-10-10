@@ -1,3 +1,138 @@
-// Place all the styles related to the lessson controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.notice {
+	font-size: 180%;
+	width: 440px;
+	z-index: 2;
+	position: relative;
+	left: 300px;
+	top: -100px;
+	font-family: open_sansbold;
+	font-size: 1.125em;
+	color: #654d3e;
+}
+.safari_start {
+    width: 892px;
+    height: 621px;
+    border: 24px solid #422e24;
+	background-size: 892px 628px;
+	background-image: image-url('std/bg-map-fullpage.jpg');
+	position: relative;
+}
+
+.safari_start_new {
+    width: 892px;
+    height: 621px;
+    border: 24px solid #422e24;
+	background-size: 892px 635px;
+	background-image: image-url('final/progress/bg-itinerary-892x635.jpg');
+	position: relative;
+	overflow: hidden;
+}
+#hst_adjust {
+	position: relative;
+	top: 30px;
+	left: 35px;
+	color: black;
+}
+#canvas1 {
+	position: absolute;
+	top: 7px;
+	left: 0px;
+	height: 676px;
+	width: 100%;
+}
+#lesson_index_vertical_shim {
+	width: 100%;
+	height: 7px;
+	float: bottom;
+}
+#travelogue_box {
+	background-color: rgba(0,0,0,0.7);
+	width: 500px;
+	position: absolute;
+	top: 470px;
+	left: 340px;
+	z-index: 2;
+	padding: 1em;
+}
+#travelogue_textleft {
+	width: 420px;
+	float: left;
+}
+#travelogue_header {  
+	font-family: troikaregular;
+	font-size: 1.25em;
+	letter-spacing: 0.05em;
+	color: #edddbe;
+}
+#travelogue_body { 
+	font-family: open_sansregular;
+	color: #d4c5ab;
+	font-size: 0.75em;
+	float:left;
+}
+#travelogue_pdf_link {
+	color: #f8d989;
+	float: right;
+	font-family: open_sansbold;
+	font-size: 0.813em;
+	position: relative;
+	left: 10px;
+	margin: 0.5em 0em 0em 0em;
+}
+#display_pdf {
+	background-image: image-url('media/travelogue.pdf');
+	width: 100%;
+	height: 100%;
+	name: 'plugin';
+	type: 'application/pdf';
+	border: 10px solid green;
+    z-index: 100;
+}
+.explain_deep_text {
+	width: 700px;
+	margin: 20px 60px 0px 180px;
+}
+.explain_secret_text {
+	width: 600px;
+	margin: 20px 60px 10px 40px;
+}
+.outer_border_secret {
+    background-color: black !important;
+	position: absolute;
+	top: 60px;
+	left: 100px;
+	width: 780px;
+	border: 1px solid #ffca26;
+}
+.columns {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    width: 700px;
+    height: 150px;
+}
+.game_section {
+	width: 440px !important;
+	left: 30px !important;
+}
+.galaxy_types_modal {
+	margin: 60px 220px 60px 220px;
+}
+.close_galaxies {
+	position: relative;
+	top: 50px;
+}
+.types_adjust_left {
+	left: 30px !important;
+	font-size: 1.5em !important;
+	letter-spacing: 0.05em;
+}
+#galaxies_inner_border {
+    border: 1px solid #fcca26;
+    background-color: black;
+	width: 500px;
+	height: 540px;
+}

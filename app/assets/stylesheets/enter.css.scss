@@ -1,0 +1,88 @@
+#inner_border {
+    border: 1px solid #fcca26;
+    background-color: black;
+	width: 500px;
+	height: 580px;
+}
+.left_slide {
+	z-index: 200;
+	position: absolute;
+	top: 32px;
+	left: -540px;
+	width: 500px;
+	background-color: black;
+}
+.right_slide {
+	z-index: 200;
+	position: absolute;
+	top: 32px;
+	left: 960px;
+	width: 480px;
+}
+.border_slideout {
+	margin: 20px 30px 20px 30px;
+}
+#dummy_image1 {
+  min-width: 10px;
+  min-height: 163px;
+  margin: 30px 0px 50px 0px;
+  background-color: #333;
+}
+#hdfn_image {
+  background-image: image-url('hdfpic-n.jpg');
+  float: left;
+  background-size: 272px 281px;
+  width: 272px;
+  height: 281px;
+  margin: 20px 10px 20px 0px;
+}
+#hdfs_image {
+  background-image: image-url('hdfpic-s.jpg');
+  float: left;
+  background-size: 272px 281px;
+  width: 272px;
+  height: 300px;
+  margin: 20px 0px 20px 16px;
+}
+.slideout_text {
+	width: 420px;
+	color: #e6e6e6;
+	font-family: open_sansregular;
+	font-size: 0.875em;
+	float: left;
+	position: absolute;
+	top: 390px;
+}
+.location_and_button {
+	width: 150px;
+	float: left;
+	height: 281px;
+	
+}
+.close_style {
+	color: #fcca26;
+	&:hover {
+	  color: #ffffff;
+	}
+	float:left;
+	width: 80px;
+	margin-top: 25px;
+}
+
+@mixin magnifier {
+	color: #ccc;
+	position: absolute;
+	&:hover {
+	  color: #ffffff;
+	}
+}
+#left_field{
+    @include magnifier;
+	top: 300px;
+	left: 30px;
+}
+#right_field{
+    @include magnifier;
+	top: 300px;
+	left: 200px;
+}

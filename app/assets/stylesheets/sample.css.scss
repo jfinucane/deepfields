@@ -1,0 +1,184 @@
+.sample_size_header {
+	display: inline;
+    float: left;
+    margin-top: 5px
+}
+.sample_you {
+	background-color: #555;
+	color: #b2;
+    text-align: center
+}
+.sample_computer {
+	background-color: #b49354;
+	color: white;
+	text-align: center;
+	width: 65px;
+	border: 1px solid white;
+	float: left;
+	font-family: open_sansbold;
+	font-size: .8em;
+}
+.sample_row_2.sample_computer {
+	font-size: 1.1em;
+	padding-top: 10px;
+}
+.smaller {
+	font-size: 16px;
+}
+.left_of_sample_table {
+	width: 260px;
+	margin: 100px 20px 0px 60px;
+	float: left;
+}
+.sample_table_frame {
+	margin-top: 100px;
+	width: 545px;
+	height: 500px;
+	float: left;
+	position: relative;
+}
+.sample_row_1 {
+	height: 25px;
+    line-height: 200%;
+}
+.sample_row_2 {
+	height: 40px;
+}
+.sample_you_width {
+	width: 65px;
+	margin: 0px 10px 0px 10px;
+	float: left;
+}
+.sample_you {
+   background-color: #666666;
+   color: white;
+   border: 1px solid #b2b2b2;
+   font-family: open_sansbold;
+   font-size: .8em;
+}
+.sample_col {
+	width: 67px;
+	float: left;
+}
+.sample_legend {
+	width: 95px;
+	float: left;
+}
+.sample_table_width {
+	width: 345px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.sample_table_inner  {
+	width: 355px;
+}
+.sample_computer_table {
+	float: left;
+	border: 1px solid white;
+}	
+.sample_legend_style {
+	font-family: open_sansregular;
+	text-transform: uppercase;
+    font-size: .8em;
+    color: #bc9f6b;
+    text-align: right;
+    float:left;
+    width: 95px;
+    margin: 3px 10px 0px 0px;
+}
+.across_spacing {
+	margin-bottom: 20px;
+}
+.min_max_background_position {
+	position: absolute;
+	top: 166px;
+}
+.min_max_placeholder {
+	border: 2px solid #ffca26;
+	position: absolute;
+	top: 200px;
+	height: 116px;
+	text-align: center;
+	width: 524px;
+}
+.min_max_button_adjust {
+	position: relative;
+	top: 34px;
+}
+.checkbox_frame{
+	width: 151px;
+	height: 100px;
+	border: 2px solid #ffca26;
+	
+}
+.sample_controls {
+	position: absolute;
+	top: 340px;
+	width: 540px;
+}
+.test_five_adjust {
+	float:left;
+	margin-left: 20px;
+}
+.checkbox_hdr {
+	background-color: #333333;
+	color: #999999;
+	font-family: open-sans-condensed;
+	font-weight: bold;
+	font-size: .75em;
+	text-transform: uppercase;
+	height: 15px;
+	text-align: center;
+	letter-spacing: .05em;
+}
+.checkbox_row {
+	background-color: #1a1a1a;
+	color: #b2b2b2;
+	font-family: open_sansbold;
+	font-size: .85em;
+	text-transform: uppercase;
+	height:22px;
+	border-top: 1px solid #999999;
+	text-align: right;
+}
+.checkbox_col_1 {
+	width: 89px;
+	float:left;
+	border-right: 1px solid #999999;
+	padding: 6px;
+}
+.checkbox_col_2 {
+	width: 36px;
+	float: left;
+	padding: 6px;
+}
+.float_left {
+	float: left;
+}
+.sample_enough {
+	width: 320px;
+	height: 500px;
+	margin: 100px 20px 0px 60px;
+	float: left;
+}
+.sample_go {
+	margin-left: 230px;
+}
+.bg_3_1 {
+	background-image: image-url('final/sample/bg-3-1.jpg');
+	background-size: 469px 578px;
+    width: 469px;
+    height: 578px;
+	position: absolute;
+	left: 471px;
+}
+.enough_on_top {
+	z-index: 2;
+}
+.live_sample_background {
+   background-image: image-url('final/sample/page-3-6-var-data-graph-bg.gif');
+	background-size: 396px 356px;
+    width: 396px;
+    height: 356px;
+    position: absolute;
+}

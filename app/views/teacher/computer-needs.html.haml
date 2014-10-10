@@ -1,0 +1,78 @@
+%h1 Computer Needs: Software and Hardware
+- @top_links = true
+= jump_to(computer_needs_links)
+- @top_links = false
+%hr
+%h2{:id => 'browser'} Web browser
+%span{:class => 'list-title'} This activity was designed for use with standard compliant browsers. This includes:
+.markdown.indent
+  :markdown
+
+    * Chrome 
+    * Internet Explorer 8 and later on Windows
+    * Mozilla
+    * Firefox
+    * Safari on Macintosh
+
+    Though this activity may not format properly on non-compliant browsers
+    (including Internet Explorer 5.01 and earlier versions, Internet Explorer
+    for the Macintosh, and Netscape 4.0 and earlier), all of its content should
+    be available. This activity has not been tested with any other browsers.
+
+%h2{:id => 'computers'} Computers
+.markdown.indent
+  :markdown
+    You will need a computer capable of running one of the
+    following Web browsers: Chrome, Firefox, Safari, or Microsoft Internet
+    Explorer 8, or later.
+.indent
+  %table{:class=>'computer_needs_table'} 
+    %caption IBM Compatible PC Hardware Requirements
+    %tbody
+      - pc_requirements.each do |title, description|
+        %tr
+          %td.left= title
+          %td= description.gsub('\n', '<br />').html_safe
+  %br        
+  %table{:class=>'computer_needs_table'}
+    %caption Mac Hardware Requirements
+    %tbody
+      - mac_requirements.each do |title, description|
+        %tr
+          %td.left= title
+          %td= description.gsub('\n', '<br />').html_safe
+%br
+= jump_to(computer_needs_links)
+%h2{ :id=>'os', :class=>'computer_hdr'}  Operating systems
+.markdown
+  :markdown
+    * Any operating system that can support Firefox, Google Chrome, Safari, or Microsoft Internet Explorer 8 or later. This includes Windows 7 and 8 and Macintosh OS X, or later.<br/><br/> 
+    * Most Unix systems
+
+  %h2{:class=>'computer_hdr',:id=>'configure_browser'} How to configure the browser
+  
+  :markdown
+    * Set your display to 940x700 pixels or better.
+    * Maximize the browser window to fill the screen.
+    * Configure the browser to hide the Location Toolbar and Personal Toolbar. This can be done from the View menu item.
+    * Make sure JavaScript is enabled. Because browsers update frequently, a handy website to visit is enable-javascript.com (http://enable-javascript.com), which compiles up-to-date methods for ensuring JavaScript is enabled in the different browsers. Alternatively, a Google or Bing search for the following search phrases will lead you to directions on how to make sure JavaScript is enabled in the browser you are using:
+        * "firefox enable javascript" 
+        * "safari enable javascript" 
+        * "IE enable javascript"
+
+
+  %h2{:id=>'troubleshooting', :class=>'computer_hdr'} Troubleshooting
+
+  :markdown
+    * <b>For many problems, try clearing the browser's cache.</b>
+      
+      &nbsp;&nbsp;To clear the cache in Firefox:
+        1. Go to the <i> History </i> menu item.
+        2. Select <i>Clear Recent History</i>. Select the <i> Cache </i> checkbox.
+        3. In <i>Time Range To Clear</i>, select <i>Everything</i>.
+        4. Click on <i>Clear Now</i>.
+        5. Try the activity again. Some pages may need to be reloaded.
+
+<br/>
+<br/> 
+

@@ -1,0 +1,209 @@
+
+.congratulations_background {
+	background-image: image-url('final/last_stop/bg-6-3-congratulations.jpg');
+	background-size: 940px 676px;
+	width: 940px;
+	height: 676px;
+	position:relative;
+	left: -2px;
+}
+.congratulations_question {
+	background-image: image-url('final/last_stop/bg-6-1-last-question-v2.jpg');
+	background-size: 940px 676px;
+	width: 938px;
+	height: 676px;
+}
+.final_headline {
+	font-size: 3em !important;
+	position: absolute;
+	top: 160px;
+	left: 260px;
+}
+.secrets_position {
+	position: absolute;
+	top: 430px;
+	left: 530px;
+	line-height: 95%;
+}
+.placeholder_text {
+	color: black;
+	width: 480px;
+	position: absolute;
+	top: 330px;
+	left: 240px;
+	display: block ;
+	font-family: open_sansbold;
+	font-size: 1.1em;
+}
+.graphic_depths {
+	background-image: image-url('final/last_stop/graphic-universe-at-depths.jpg');
+	background-size: 800px 281px;
+	width: 800px;
+	height: 281px;
+}
+.graphic_depths_position {	
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.last_adjust {
+	margin-top: 40px;
+	margin-bottom: 10px !important;
+}
+.last_deep_position {
+	margin: 20px 0px 0px 160px;
+}
+.big_headline {
+  text-align:center;
+  position: relative;
+  top: 90px;
+}
+.headline_font {
+  font-size: 3.25em !important;
+}
+.congrats_block{
+  width: 200px;
+  position: relative;
+  left: 40px;
+  top: 60px;
+  letter-spacing: .05em;
+  text-align: left;
+}
+.congrats_block_adjusted{
+  margin: 80px 0px 0px 260px;
+  letter-spacing: .05em;
+  text-align: left;
+}
+.congrats_box {
+	width: 440px;
+	margin: 18px 0px 0px 50px;
+	float: left;
+}
+.congrats_text_style {	
+	font-size: 1.3em;
+	font-family: open-sans-condensed;
+    letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #e6e6e6;
+}
+.congrats_box1 {
+	background-color: #204060;
+	border-radius: 10px;
+	width: 410px;
+	height:105px;
+    margin-top: 15px;
+    float: left;
+}
+.congrats_box2 {
+	background-color: #204060;
+	border-radius: 10px;
+	width: 400px;
+	height:270px;
+	float: left;
+	margin-top: 18px;
+}
+.congratulations_learn {
+	background-image: image-url('final/last_stop/6-3-congrats-learn-more.png');
+	background-size: 164px 65px;
+	width: 164px;
+	height: 65px;
+	float: left;
+	margin: 20px 15px 0px 10px;
+}
+.congratulations_amazing {
+	background-image: image-url('final/last_stop/6-3-congrats-amazing-space.png');
+	background-size: 122px 65px;
+	width: 122px;
+	height: 65px;
+	margin:20px;
+	float: left;
+}
+.congratulations_frontier_fields {
+	background-image: image-url('final/last_stop/6-3-congrats-frontier-fields.jpg');
+	background-size: 94px 230px;
+	width: 94px;
+	height: 230px;
+	margin: 20px 0px 0px 15px;
+	float: left;
+}
+.congrats_text {
+	width: 200px;
+	display: block;
+	float: left;
+	margin: 20px 0px 0px 20px;
+}
+.congrats_text_wide {
+	width: 260px;
+	display: block;
+	float: left;
+	margin: 0px 0px 0px 20px;
+}
+
+.osc_block {
+	width: 300px;
+	display: block;
+}
+.troika_block {
+  display: block;
+  width: 300px;
+}
+.hst_left_facing {
+	background-image: image-url('final/last_stop/hst_left-facing.png');
+	background-size: 107px 107px;
+	width: 107px;
+	height: 107px;
+    position: absolute; 
+    left: 725px;
+    top: -100px;
+    z-index: 1;
+}
+.hst_right_facing {
+	background-image: image-url('final/last_stop/hst_right-facing.png');
+	background-size: 107px 107px;
+	width: 107px;
+	height: 107px;
+    position: absolute; 
+    left: 725px;
+    top: 420px;
+}
+.jeep_body_left_facing {
+	background-image: image-url('final/last_stop/jeepbody_left-facing.png');
+	background-size: 143px 79px;
+	width: 143px;
+	height: 79px;
+    position: absolute; 
+    left: 900px;
+    top: 500px;
+}
+.jeep_body_right_facing {
+	background-image: image-url('final/last_stop/jeepbody_right-facing.png');
+	background-size: 143px 79px;
+	width: 143px;
+	height: 79px;
+    position: absolute; 
+    left: 725px;
+    top: 500px;
+}
+.jeep_wheels_left_facing {
+	background-image: image-url('final/last_stop/jeepwheels_left-facing.png');
+	background-size: 143px 79px;
+	width: 143px;
+	height: 79px;
+    position: absolute; 
+    left: 900px;
+    top: 500px;
+}
+.jeep_wheels_right_facing {
+	background-image: image-url('final/last_stop/jeepwheels_right-facing.png');
+	background-size: 143px 79px;
+	width: 143px;
+	height: 79px;
+    position: absolute; 
+    left: 725px;
+    top: 500px;
+}
+
+
+
+
+

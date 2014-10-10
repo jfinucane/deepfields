@@ -1,0 +1,56 @@
+.troika_h1.h_pos
+  Your Photo Safari Results
+.grid_5
+  .left_of_starfield_position.got_counts_width
+    .galaxy_types_image
+    .sample_block
+      .short_break
+      .troika_h3  
+        Location: HDF-#{field_name}
+      .troika_h3.margin_bottom
+        Your Safari Sample Size: 
+        = @sample_size
+      .sample_table
+        .dummy
+        .col1.osc_h1_table.th_sample
+          Galaxy Type
+        .col2.osc_h1_table.th_sample
+          Frequency
+        .col3.osc_h1_table.th_sample
+          = '%'
+        - @types.each do |type|
+          .col1.td_sample
+            = type['name']
+          .col2.td_sample
+            = type['frequency']
+          .col3.td_sample
+            = "%2d\%" % type['percent'].to_f
+        .dummy    
+    .full_width.check
+    .std_text
+      Since &nbsp;
+      .link#galaxy_types_tag.galaxy_types_action> galaxies come in different types
+      , this chart shows how many of each type were in the sample that you just captured.
+    .full_width.check
+    %br
+    .std_text
+      - if @return_to_text == 'bias'
+        Has your selection method introduced bias by making certain members of the population more likely to be picked than others?
+      - elsif @return_to_text == 'sample'
+        Is your sample size large enough to adequately represent the populations of the HDF?
+      - else  
+        But how accurate are these percentages for the whole image?
+  
+= render :partial=>'finder/canvas',:locals=>{:show_counts=>false} 
+
+= link_to finder_select_path(:hdf_field=>@field) do
+  .back.back_position
+= link_to eval(@continue_path) do
+  .next_signpost.next_position
+#travelogue_2.travelogue_position
+= render partial: 'layouts/galaxies'
+= render partial: 'lesson/field_modals'
+#galaxies.hide
+  = @selected
+%p.hide#page
+  Got Counts

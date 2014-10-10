@@ -1,0 +1,22 @@
+#best_text
+  .std_text
+    These are actual HDF-#{field.upcase} re-samplings. Choose a sample size that seems both small and reasonable.  Use
+    .link.link_vocab mean 
+    and
+    .link.link_vocab median
+    to help you decide. Type the small and reasonable sample size in the box below. Then hit GO to proceed.   
+
+.color_bar_legend
+  .osc_h2_gray_normal.color_bar_title
+    Your
+    = @field =='n' ? 'HDF-NORTH' : 'HDF-SOUTH'
+    %br
+    Safari sample size:
+  .color_bar_counts
+    = @sample_size  
+  .color_bar  
+    %canvas#purple_sample{width:100, height: 20}
+
+= render :partial=>'layouts/enter_reasonable'
+.adjust_checkbox
+  =render partial: 'sample/checkbox'

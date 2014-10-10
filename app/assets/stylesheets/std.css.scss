@@ -1,0 +1,243 @@
+body {
+	font-family: 'open-sans-condensed';
+}
+#h1_style {
+	color: #cc9966;
+    font-size: 28px;
+    font-family: troikaregular;
+}
+.border_brown {
+	color: #422e24;
+}
+.border_dots {
+	color: #806045;
+}
+.checkbox {
+  width: 12px;
+  height: 12px;
+  display: inline;
+  background-color: black;
+  border: 1px solid white;
+  float: left;
+  cursor: pointer;
+}
+.enter_checkbox {
+  border: 1px solid #333;
+  background-color: #000;
+  height: 100px;
+  color: #979797;
+}
+.enter_checkbox_location {
+  width: 180px;
+  position: absolute;
+  top: 550px;
+  left: 100px;
+}
+.checkbox_header {
+  font-size: .75em;
+  font-family: open_sansregular;
+  color: #979797;
+  margin: 0px 0px 10px 0px;
+}
+.checkbox_label {
+  font-size: .75em;
+  font-family: open_sansregular;
+  color: #979797;
+  width: 150px;
+  margin: 5px 0px 7px 20px;
+}
+.box_checked {
+  background-color: #fcca26 !important;
+}
+.troika_h0{
+  font-size: 3.5em;
+  font-family: troikaregular;
+  color: #fff;
+  line-height: 80%;
+  margin-top: 8px;
+}
+
+.congrats_block{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: .05em;
+ }
+ .congrats_block .std_text { 
+  color: #e6e6e6 !important;
+  font-size: 1em !important;
+}
+@mixin troika_h1 {
+  font-size: 2.1em;
+  font-family: troikaregular;
+  color: #9c816b;
+}
+.troika_h1 {
+  @include troika_h1;
+  letter-spacing: .05em;
+}
+.troika_h1_tight {
+  @include troika_h1;
+  letter-spacing: .02em
+}
+@mixin troika_h2_std {
+  font-size: 1.5em;
+  font-family: troikaregular;
+  color: #ddd0be;
+  letter-spacing: .06em;
+}
+.troika_h2 {
+  @include troika_h2_std;
+}
+.troika_h2_white {
+  @include troika_h2_std;
+  color: #ffffff;
+  font-size: 1.25em;
+}
+.troika_h3 {
+  font-size: 1.25em;
+  font-family: troikaregular;
+  color: white;
+  letter-spacing: .06em;
+  text-align: center;
+}
+.h_pos {
+  position: absolute;
+  margin: 48px 60px 0px 60px;
+}
+.h2_pos {
+  position: absolute;
+  margin: 85px 60px 0px 60px;
+}
+.std_text {
+  width: 460px;
+  font-family: open_sansregular;
+  color: #e6e6e6;
+  font-size: 1em;
+  display: inline;
+}
+.std_plaintext {
+  line-height: 25% !important;
+  font-family: open_sansregular;
+  color: #000;
+  font-weight: normal;
+  font-size: .9em !important;
+  display: inline;
+}
+.std_bold {
+  font-family: open_sansbold !important;
+  display: inline;
+  color: #e6e6e6;
+}
+.std_hdr {
+  font-size: 1.25em;
+}
+.link {
+  font-size: 1em;
+  font-family: open_sansbold;
+  color: #f8dd9a;
+  text-decoration: underline;
+  display: inline;
+  cursor: pointer;
+}
+.tiny_link {
+  font-size: .8em;
+  font-family: open_sansbold;
+  color: #f8dd9a;
+  text-decoration: underline;
+  display: inline;
+}
+.spacing {
+  width: 100%;
+  height: 8px;
+  float: left;
+}
+
+.wider_spacing {
+  width: 100%;
+  height: 18px;
+  float: left;
+}
+.galaxy_types{
+  position: relative;
+  top: 20px;
+}
+.galaxy_text_width {
+  width: 230px;
+  float: left;
+}
+.gt {
+  width: 260px !important;
+  display: block;
+}
+.osc_h2 {
+  font-family: open-sans-condensed;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #cccccc;
+  letter-spacing: 0.02em;
+  position: relative; 
+  left: 140px;
+  display: inline;
+}
+.osc_h1_table {
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;
+  display: inline;
+  float:left;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.more_info_position {
+  float:right;
+  display: inline;
+  line-height: 200%
+}
+.osc_h1 {
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #e6e6e6;
+  display: inline;
+  float:left;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.osc_h2_gray {
+  font-family: open-sans-condensed;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #b2b2b2;
+  font-weight: bold;
+  display: inline;
+  float: left;
+  line-height: 200%;
+}
+.osc_h2_gray_normal{
+  font-family: open_sansbold;
+  text-transform: uppercase;
+  font-size: .85em;
+  color: #b2b2b2; 
+  display: inline;
+  line-height: 100%;
+}
+.osc_h2_big_gray_normal{
+  font-family: open_sansbold;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #b2b2b2; 
+  display: inline;
+  line-height: 100%;
+}
+.bold_label {
+  font-family: open_sansbold;
+  font-size: 1.125em;
+  color: #cbcbcb;
+  display: inline
+}
+.bold_label_blue {
+  color: #91c8ec !important;
+  display: inline;
+}

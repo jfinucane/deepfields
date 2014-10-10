@@ -1,0 +1,158 @@
+.outback_left{
+	width: 430px;
+	margin: 120px 0px 0px 60px;
+}
+.force_height {
+	height: 600px;
+	position: absolute; 
+	top: 0px;
+	left: 0px;
+	z-index: 300;
+	border: 10px solid red;
+}
+.deep_schematic {
+	background-image: image-url('final/enter-deep/graphic-what-is-deep.jpg');
+	background-size: 738px 168px;
+	width: 738px;
+	height: 168px;
+}
+.outer_border_outback {
+	border: 1px solid #ffca26;
+	position: absolute;
+	top: 100px;
+	left:80px;
+	width: 810px;
+    heightx: 400px;
+    background-color: black;
+}
+.outback_text {
+	margin: 120px 60px 20px 60px;
+}
+.outback_button {
+	margin-bottom: 20px;
+	margin-left: 60px;
+}
+.meet_side {
+	float: left;
+	margin-left: 20px;
+}
+.meet_side_south{
+	float: left;
+}
+.meet_center {
+	width: 400px;
+	float: left;
+	text-align: center;
+	margin-top:20px;
+}
+.meet_button {
+	margin: 50px 0px 10px 20px;
+}
+#intro_north_map {
+    background-image: image-url('final/enter-deep/graphic-modal-meet-hdf-n.jpg');
+	background-size: 177px 260px;
+	width: 177px;
+	height: 260px;
+}
+#intro_south_map {
+    background-image: image-url('final/enter-deep/graphic-modal-meet-hdf-s.jpg');
+	background-size: 177px 260px;
+	width: 177px;
+	height: 260px;
+}
+.outer_border_meet_hdfs {
+	border: 1px solid #ffca26;
+	position: absolute;
+	top: 100px;
+	left:80px;
+	width: 790px;
+    background-color: black;
+}
+.map_border {
+  margin: 30px 20px 30px 20px;
+  border: 1px solid #666666;
+}
+#big_north_map {
+    background-image: image-url('final/enter-deep/graphic-modal-image-hdf-n.jpg');
+	background-size: 511px 525px;
+	width: 511px;
+	height: 525px;
+	float: left;
+}
+#big_south_map {
+    background-image: image-url('final/enter-deep/graphic-modal-image-hdf-s.jpg');
+	background-size: 511px 525px;
+	width: 511px;
+	height: 525px;
+	float: left;
+}
+#side_north_map {
+    background-image: image-url('final/enter-deep/graphic-modal-map-hdf-n.jpg');
+	background-size: 248px 170px;
+	width: 248px;
+	height: 170px;
+}
+#side_south_map {
+    background-image: image-url('final/enter-deep/graphic-modal-map-hdf-s.jpg');
+	background-size: 248px 170px;
+	width: 248px;
+	height: 170px;
+}
+.right_side_of_map {
+	width: 320px;
+	margin: 25px 10px 0px 10px;
+	float: left;
+}
+.outer_border_meet {
+	border: 1px solid #ffca26;
+	position: absolute;
+	top: 40px;
+	left:20px;
+	width: 900px;
+    background-color: black;
+}
+.close_meet_position {
+	position: absolute;
+	bottom: 0px;
+	left: 800px;
+}
+.outback_background {
+	background-image: image-url('final/start_safari/bg-1-1.jpg');
+	background-size: 940px 530px;
+	width: 940px;
+	height: 530px;
+}
+.page_structure {
+	position: absolute;
+}
+.h_3 {
+	font-size: 3.0em !important;
+	width: 600px !important;
+}
+.compare_left_wider {
+    width: 360px;
+    height: 80px;
+    border: 2px solid #fcca26;   
+    position: relative;	
+    display: block;
+}
+.bigger_button {
+	font-size: 1.25em !important;
+	position: relative;
+	top: -5px;
+	left: 10px;
+}
+.outer_frame_video {
+	width: 370px;
+	height: 208px;
+    overflow:hidden;
+}
+.inner_frame_video {
+	position: relative; 
+	left: 27px;
+	top: -27px;
+}
+
+
+
+

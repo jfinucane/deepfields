@@ -1,0 +1,16 @@
+
+Teacher pages are from SSTC.
+
+
+   urls are
+      /teacher or /teacher/index for the Overview
+      /teacher/education-standards
+      /teacher/computer-needs
+      /teacher/lesson-plan
+      /teacher/science-background
+      /teacher/grab-bag
+
+ Conveniently the sidebar is defined in _sidebar.html.haml
+
+
+

@@ -1,0 +1,146 @@
+.outside_sign {
+	border: 3px solid #fe971e;
+	display: inline-block;
+	background-color:  #fe971e;
+	border-radius: 5px;
+}
+.adjust_pullup_signs {
+	top: -10px !important;
+	position: relative;
+}
+.inside_sign {
+	border: 1px solid black;
+	color: black;
+	display: inline-block;
+	border-radius: 5px;
+}
+.ib_text {
+  	margin: 0.5em .625em 0.5em .625em;
+  	font-family: troikaregular;
+	color: black;
+	font-size: 1.188em;
+	a{
+	color: black !important;
+	text-decoration: none !important;
+    }
+}
+.itin_visited {
+  	background-color: #a36b21;
+    border-color: #a36b21; 		
+}
+.level1 {
+	position: absolute;
+	top: -205px;
+}
+.small_itinerary .level1 {
+	top: -165px;
+}
+.level2 {
+	position: absolute;
+	top: -193px;
+}
+.small_itinerary .level2 {
+	top: -153px;
+}
+.level3 {
+	position: absolute;
+	top: -181px;
+}
+.small_itinerary .level3 {
+	top: -141px;
+}
+@mixin boxy{
+	width: 160px;
+	position: absolute;
+    text-align: center;
+    z-index: 10;
+}
+.boxy1 {
+	@include boxy;
+	left:35px;
+	width: 80px;
+}
+.boxy2 {
+	@include boxy;
+	left: 140px;
+	width: 140px;
+}
+.boxy3 {
+	@include boxy;
+	left: 300px;
+	width: 80px;
+}
+.boxy4 {
+	@include boxy;
+	left: 400px;
+	width: 130px;
+}
+.boxy5 {
+	@include boxy;
+	left: 555px;
+}
+.boxy6 {
+	@include boxy;
+	left: 725px;
+	width: 140px;
+}
+.boxy7 {
+	@include boxy;
+	width: 120px;
+	left: 750px;
+
+}
+@mixin gator {
+	width: 90px;
+	height: 100px;
+	background-size: 90px 100px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 20px;	
+}
+.bar.start_gator {
+    left: -20px;
+    @include gator;
+	background-image: image-url('std/gator/gator-start-default.png');
+}
+.start_hover:hover {
+      .outside_sign {
+	    background-color: #f8d729;
+	    border-color: #f8d729;
+	  }
+	  .start_gator {
+	    background-image: image-url('std/gator/gator-start-over.png');
+	}
+}
+.bar.next_gator {
+    left: 20px;
+    @include gator;
+	background-image: image-url('std/gator/gator-next-default.png');
+}
+.next_hover:hover {
+      .outside_sign {
+	    background-color: #f8d729;
+	    border-color: #f8d729;
+	  }
+	  .next_gator {
+	    background-image: image-url('std/gator/gator-next-over.png');
+	}
+}
+.bar.last_gator {
+    @include gator;
+	background-image: image-url('std/gator/gator-last-default.png');
+}
+.last_hover:hover {
+      .outside_sign {
+	    background-color: #f8d729;
+	    border-color: #f8d729;
+	  }
+	  .last_gator {
+	    background-image: image-url('std/gator/gator-last-over.png');
+	}
+}
+.boxy1 .outside_sign:hover {
+		background-color: #f8d729;
+	    border-color: #f8d729;
+}

@@ -1,0 +1,139 @@
+
+#re_enter_fields {
+    background-image: image-url("symmetry/re_enter.jpg");
+    width: 300px;
+	height: 300px;
+	background-size: 300px 300px;
+}
+.reenter_base {
+	position: relative;
+}
+.narrow_enter {
+	width: 100px;
+	font-size: 120%;
+	border: 1px solid green;
+}
+.symmetry_container {
+	height: 680px;
+	border: 1px solid blue;
+	color: white;
+}
+#enter_sample_size{
+	height: 30px;
+	width: 50px;
+	font-size: 120%;
+}
+.left_symmetry {
+	width: 350px;
+	margin: 130px 0px 0px 60px;
+	float: left;
+}
+.right_symmetry {
+	position:absolute;
+    left: 385px;
+}
+.move_checkbox_left {
+	position: relative;
+	left: -20px;
+}
+.wider_button {
+	margin: 4px 15px 4px 15px !important;
+}
+.yes_spacing{
+	margin: 0px 20px 0px 20px;
+	display: inline;
+}
+.left_evaluate {
+	width: 240px;
+	margin: 140px 30px 0px 60px;
+    float: left;
+}
+@mixin with_hubble {
+    background-size: 237px 312px;
+    width: 237px;
+    height: 312px;
+}
+#north_with_hubble {
+	@include with_hubble;
+    background-image: image-url('final/symmetry/graphic-hdf-n-compare-4-4.jpg');
+}
+#south_with_hubble {
+	@include with_hubble;
+	background-image: image-url('final/symmetry/graphic-hdf-s-compare-4-4.jpg');
+}
+#uniform {
+	background-image: image-url('final/symmetry/graphic-4-6-universe.jpg');
+	background-size: 395px 486px;
+	width: 395px;
+	height: 486px;
+}
+.question_left {
+	margin: 160px 0px 0px 60px;
+	float: left;
+}
+.question_right {
+	margin: 160px 60px 0px 00px;
+	float: right;
+}
+#compare_table {
+	width: 368px;
+	position: absolute;
+	left: 290px;
+	top: 144px;
+}
+.symmetry_comment {
+    width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: relative; 
+	top: 30px;
+}
+@mixin symmetry_cell {
+	float: left;
+	width: 118px;
+	border-right: 4px solid #000;
+	border-bottom: 4px solid #000;
+	text-align: center;
+}
+.symmetry_hdr {
+    @include symmetry_cell;
+	background-color: #008ec7;
+    color: #ffffff;
+    height: 70px;
+    font-family: open-sans-condensed;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.symmetry_text1 {
+	position: relative;
+	top: 25px;
+}
+.symmetry_text2 {
+	position: relative;
+	top: 15px;
+}
+.symmetry_cell {
+    @include symmetry_cell;
+	background-color: #ffffff;
+	color: #000;
+	height: 45px; 
+	font-size: 1.1em;
+	font-family: open_sansbold;
+	line-height: 270%;
+}
+.symmetry_col0{
+	font-family: open-sans-condensed !important;
+	font-weight: bold;
+	letter-spacing: .07em;
+}
+#left_uniform_text {
+	margin: 200px 0px 0px 60px;
+	width: 320px;
+}
+.uniform_position {
+	position: absolute;
+	top: 100px;
+	left: 430px;
+}

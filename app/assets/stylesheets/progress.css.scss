@@ -1,0 +1,99 @@
+#main_itinerary {
+	position: relative;
+	top:-215px;
+	left: 24px;
+	width: 892px;
+}
+.small_itinerary #main_itinerary{
+	top: 440px !important;
+	left: 15px;
+}
+#progress_tab {
+	position: absolute;
+	top: 570px;
+	left: 370px;
+	overflow: hidden;
+}
+.small_itinerary {
+    border: 24px solid #442e24;
+	background-image: image-url('final/progress/bg-itinerary-892x239.jpg');
+	background-size: 891px 231px;
+	width: 891px;
+	height: 231px;
+	position: relative;
+}
+#progress_bar {
+	position:relative;
+	top: -31px;
+}
+.small_itinerary #progress_bar{
+    position:relative;
+	top: -70px
+}
+.progress_slide_out {
+	position: relative;
+	top: -250px;
+	left: -15px;
+}
+#progress_canvas{
+    position: absolute;
+    top: 0px;
+}
+#progress_slide {
+	height: 278px;
+	overflow: hidden;
+	background-color: #333;
+	position: absolute;
+	top: 652px;
+	z-index: 2;
+}
+.tab_down {
+	background-image: image-url('final/progress/btn-map-down-default.png');
+}
+.tab_down_hover {
+    background-image: image-url('final/progress/btn-map-down-over.png') !important;
+}
+.tab_up {
+	background-image: image-url('final/progress/btn-map-up-default.png');
+}
+.tab_up_hover {
+    background-image: image-url('final/progress/btn-map-up-over.png') !important;
+}
+.tab_area {
+	position: absolute;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 102;
+}
+.tab_top_part {
+	height: 60px;
+	width: 114px;
+	background-position: -36px 0px;
+	top: 594px;
+    left: 413px;
+}
+.tab_bottom_part {
+    top: 654px;
+    width: 185px;
+	height: 18px;
+    background-position: 0px -60px;
+    left: 377px;
+}
+#itinerary_header {
+	font-family: troikaregular;
+	letter-spacing: 110%;
+	font-size: 1.875em;
+	letter-spacing: 0.06em;
+	color: #967450;
+	align:center;
+	background-image: image-url('final/progress/bg-title-itinerary.png');
+	position: relative;
+	top: -734px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 202px;
+	height: 38px;
+	z-index: 10;
+    text-align: center;
+    text-transform: uppercase;
+}

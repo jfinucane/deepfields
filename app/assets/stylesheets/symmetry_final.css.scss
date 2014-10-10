@@ -1,0 +1,41 @@
+#north_used {
+    background-image: image-url('final/enter-deep/btn-reenter-hdf-n-used.jpg');
+	background-size: 480px 205px;
+	width: 480px;
+	height: 205px;
+	float: left;
+	border: 1px solid black;
+	margin-left: 50px;
+}
+#south_used {
+    background-image: image-url('final/enter-deep/btn-reenter-hdf-s-used.jpg');
+	background-size: 470px 205px;
+	width: 470px;
+	height: 205px;
+	float: left;
+	border: 1px solid black;
+    margin-left: 50px;
+}
+#re_enter_the_deep {
+    background-image: image-url('final/enter-deep/graphic-reenter-deep-4-1.jpg');
+	background-size: 291px 262px;
+	width: 291px;
+	height: 262px;
+	float: left;
+}
+.re_enter_the_deep_position {
+	margin: 75px 0px 40px 60px;
+}
+#re_enter_snippet {
+	margin: 40px 0px 0px 140px; 
+	width: 180px;
+    font-size: 1.2em;
+}
+.sample_wrong {
+	width: 250px;
+	margin-top: 100px;
+}
+.adjusted_sample_position {
+	top: 160px !important;
+	left: 280px !important;
+}

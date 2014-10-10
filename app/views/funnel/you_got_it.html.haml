@@ -1,0 +1,27 @@
+.troika_h1.h_pos
+  Region of best Sample Sizes
+.troika_h2.h2_pos
+  You found a new small, reasonable size 
+.short_break
+%br
+.left_smallest_region
+  = render partial:'funnel/you_got_it_left'
+.right_smallest_region
+  =render partial:'funnel/best_graph'
+
+= link_to funnel_best_region_path do
+  .back.back_position
+#travelogue_9.travelogue_position
+= link_to funnel_compare_astronomer_path do
+  .next_signpost.next_position
+#page.hide
+  You Got It
+.hide
+  #your_persistent_freq
+    = @your_persistent_freq
+  #reasonable_field_size
+    = @reasonable
+  #your_reasonable_freq
+    = @your_reasonable_freq
+
+      

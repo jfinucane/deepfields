@@ -1,0 +1,57 @@
+.troika_h1.h_pos
+  Comparing Sampling Methods
+.compare_left
+  .std_text
+    On this page, see how your results for percentage of irregulars compares with other sampling methods and with the
+    .link.link_vocab astronomers' result
+    for the whole Deep Field.
+  %br
+  %br  
+  = render :partial=> 'bias/compare_table'
+  .std_text
+    Note that the computer-generated sample comes closest to the astrono- mers' actual result.   A computer is the best tool for avoiding&nbsp;
+    .link.link_vocab> inevitable human bias
+    = "."
+.bias_right
+  .troika_h2_white
+    Results using hdf-#{@field}
+  .compare_right_table
+    .compare_header
+      .compare_method_header
+        .bias_hdr_text
+          Method for
+          %br
+          choosing:
+      .bias_check_header.bias_hdr_text
+        %br
+        Unbiased
+      .bias_check_header.bias_hdr_text
+        %br
+        Biased
+      .compare_pct.bias_hdr_text
+        Percentage
+        %br
+        of irregulars
+    - @pct = "80"
+    .compare_row#bias_redness
+      = render :partial=>'bias/compare', :locals=>{:text=>'redness', :pct=>'79.8%'}
+    .compare_row#bias_location
+      = render :partial=>'bias/compare', :locals=>{:text=>'location in picture', :pct=>'50.6%'}
+    .compare_row#bias_size
+      = render :partial=>'bias/compare', :locals=>{:text=>'size', :pct=>'15.2%'}
+    .compare_row#bias_blueness
+      = render :partial=>'bias/compare', :locals=>{:text=>'blueness', :pct=>'80.1%'}
+    .compare_row#bias_shape
+      = render :partial=>'bias/compare', :locals=>{:text=>'shape', :pct=>'100.0%'}
+    .compare_row#bias_brightness
+      = render :partial=>'bias/compare', :locals=>{:text=>'brightness', :pct=>'61.4%'}
+    .compare_row#bias_eyes_closed
+      = render :partial=>'bias/compare_tall', :locals=>{:text1=>'picking with eyes',:text2=>'closed', :pct=>'10.3%'}
+    .compare_row#bias_computer
+      = render :partial=>'bias/compare_tall', :locals=>{:text1=>'letting computer', :text2=>'pick a sample', :pct=>'66.8%'}
+%p.hide#page
+  Bias Compare
+= link_to bias_index_path do
+  .back.back_position
+= link_to lesson_index_path do
+  .next_signpost.next_position

@@ -1,0 +1,67 @@
+.travelogue_position {
+	position: absolute;
+	top: 575px;
+	left: 350px;
+	cursor: pointer;
+}
+@mixin travelogue_size {
+	background-size: 63px 72px;
+	width: 63px;
+	height: 72px;
+}
+#travelogue_1 {
+	background-image: image-url('nav/log-1.png');
+	@include travelogue_size;
+}
+#travelogue_2 {
+	background-image: image-url('nav/log-2.png');
+	@include travelogue_size;
+}
+#travelogue_3 {
+	background-image: image-url('nav/log-3.png');
+	@include travelogue_size;
+}
+#travelogue_4_5 {
+	background-image: image-url('nav/log-4-5.png');
+	@include travelogue_size;
+}
+#travelogue_6 {
+	background-image: image-url('nav/log-6.png');
+	@include travelogue_size;
+}
+#travelogue_7 {
+	background-image: image-url('nav/log-7.png');
+	@include travelogue_size;
+}
+#travelogue_8 {
+	background-image: image-url('nav/log-8.png');
+	@include travelogue_size;
+}
+#travelogue_9 {
+	background-image: image-url('nav/log-9.png');
+	@include travelogue_size;
+}
+#travelogue_10_11 {
+	background-image: image-url('nav/log-10-11.png');
+	@include travelogue_size;
+}
+#travelogue_12 {
+	background-image: image-url('nav/log-12.png');
+	@include travelogue_size;
+}
+#travelogue_13 {
+	background-image: image-url('nav/log-13.png');
+	@include travelogue_size;
+}
+#travelogue_14 {
+	background-image: image-url('nav/log-14.png');
+	@include travelogue_size;
+}
+#travelogue_15 {
+	background-image: image-url('nav/log-15.png');
+	@include travelogue_size;
+}
+#travelogue_16 {
+	background-image: image-url('nav/log-16.png');
+	@include travelogue_size;
+}

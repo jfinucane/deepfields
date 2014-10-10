@@ -1,0 +1,40 @@
+
+.troika_h1.h_pos
+  Stare and Compare
+
+#galaxy_type_position.galaxy_types_action
+  = render :partial=>'nav/button',:locals=>{:text=>'More about galaxy types'}
+
+.background_stare.background_stare_position
+
+.stare_text.std_text
+  You're on a 
+  .std_bold
+    photo safari
+  to record and describe the types of galaxies revealed in Hubble's two samples of the sky.  
+  .std_bold
+    But 
+  there's no time to admire
+  .std_bold every
+  galaxy.  Your photos must be taken on the run?    
+  %br
+  %br
+  So, for each deep view, use
+  .std_bold random sampling.
+  That is randomly snap galaxy portraits until you've collected just enough to accurately reflect the types of galaxies in that whole Deep Field.   
+
+.callout.callout_position
+  .troika_h2
+    FIND OUT:
+  = render :partial=>'nav/callout', :locals=>{:num=>'1.',:text=>"What's out there?"}
+  = render :partial=>'nav/callout', :locals=>{:num=>'2.',:text=>"Does the universe look the same in all directions?"}
+  = render :partial=>'nav/callout', :locals=>{:num=>'3.',:text=>"Does the universe look the same at different depths (i.e. distances)?"}
+
+= render partial: 'layouts/galaxies'
+
+= link_to lesson_classic_path do
+  .next_signpost.next_position
+= link_to lesson_outback_path do
+  .back.back_position
+#page.hide
+  Stare

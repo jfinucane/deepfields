@@ -1,0 +1,80 @@
+.left_of_magnify {
+	width: 380px;
+	margin: 100px 0px 0px 60px;
+	float: left;
+}
+.text_border { 
+	width: 200px !important;
+	float: left;
+}
+#min_max_mini {
+	background-image: image-url('funnel/3-3-min-max-mini-graphic.jpg');
+	background-size: 132px 215px;
+	display: inline;
+	width: 132px;
+	height: 215px;
+	float: right;
+	margin-top: 15px;
+}
+.right_of_magnify {
+	width: 404px;
+	margin: 100px 20px 0px 0px;
+	float: left;
+	z-index: 10;
+}
+.middle_magnify {
+	width: 40px;
+	height: 385px;
+	float:left;
+	margin-top: 180px
+}
+#floating_lines {
+	position: relative;
+	left: -10px;
+}
+#min_max_frame {
+	background-image: image-url('funnel/3-3-min-max-frame.png');
+	background-size: 396px 395px;
+    width: 396px;
+    height: 395px;
+    position: absolute;
+    top: 0px;
+    z-index: 20;
+}
+.mag_blue_border {
+	border: 4px solid #008ec7;
+	height: 395px;
+	z-index: 20;
+}
+#graphic_window {
+	width: 396px;
+    height: 395px;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 1;
+}
+#min_max_graphic {
+	background-image: image-url('funnel/3-3-min-max-graphic.jpg');
+	background-size: 396px 858px;
+    width: 396px;
+    height: 858px;
+    position: relative;
+    top: 30px;
+    z-index: 1;
+}
+#magnifier_glass {
+	 background-image: image-url('funnel/magnifier-box.png');
+	 background-size: 94px 79px;
+	 width: 94px;
+	 height: 79px;
+	 position: absolute;
+	 cursor: pointer;
+}
+#magnifier_container{	 
+     width: 94px;
+	 height: 165px;
+	 z-index: 2;
+	 float: right;
+	 margin-top: 50px;
+	 position: relative;
+}

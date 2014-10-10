@@ -1,0 +1,52 @@
+.troika_h1.h_pos
+  Banishing Bias
+
+.bias_left
+  .std_text
+    Haphazard sampling &mdash; especially that done by human choice &mdash; can result in a biased sample that has very different characteristics from the population.  Random sampling requires careful planning to avoid bias.
+    %p
+    Here are some methods that you could have used to choose a sample of galaxies.  Decide whether each method introduces bias.   Click in the "Unbiased" or Biased" column to log your decision.
+
+.bias_right
+  .troika_h2_white
+    Categorize these methods:
+  .bias_right_table
+    .bias_header
+      .bias_wide_method_header
+        .bias_hdr_text
+          Method for choosing a
+          %br
+          sample of galaxies
+      .bias_check_header.bias_hdr_text
+        %br
+        Unbiased
+      .bias_check_header.bias_hdr_text
+        %br
+        Biased
+
+    .bias_row#bias_redness.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'redness'}
+    .bias_row#bias_location.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'location in picture'}
+    .bias_row#bias_size.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'size'}
+    .bias_row#bias_blueness.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'blueness'}
+    .bias_row#bias_shape.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'shape'}
+    .bias_row#bias_brightness.clickable
+      = render :partial=>'bias/method', :locals=>{:text=>'brightness'}
+    .bias_row#bias_eyes_closed.clickable
+      = render :partial=>'bias/method_tall', :locals=>{:text1=>'picking with eyes',:text2=>'closed'}
+    .bias_row#bias_computer.clickable
+      = render :partial=>'bias/method_tall', :locals=>{:text1=>'letting computer', :text2=>'pick a sample'}      
+
+= render partial: 'bias/green_message'
+%p.hide#page
+  Bias
+#travelogue_4_5.travelogue_position
+= link_to lesson_index_path do
+  .back.back_position
+= link_to bias_compare_path do
+  .next_signpost.next_position.hide
+.next_disable_signpost.next_position

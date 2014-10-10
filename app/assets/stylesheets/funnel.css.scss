@@ -1,0 +1,102 @@
+#magnify_increasing_size_label {
+	width:100px;
+	height: 300px;
+	z-index:10;
+	position:absolute; 
+    top: 130px;
+    left:280px;
+    color:black;
+}
+#percentage_increasing_size_label {
+	width:100px;
+	height: 400px;
+	z-index:10; 
+	position:absolute; 
+    top: 140px;
+    left:175px;
+}
+#replace_funnel {
+	background-color: #b97;
+}
+#left_slider_box {
+  float: left;
+  width: 250px;
+}
+#left_slider {
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#right_graph {
+  float:left;
+  width: 500px;	
+}
+
+.gold_for_text {
+	color: #aa8;
+}
+.big_frame {
+	width: 940px;
+}
+#adjust_variability_text{
+	width: 600px;
+	height: 20px;
+	position: relative;
+	top: -25px;
+}
+#graph_block {
+	width: 500px;
+	float:left;
+	margin: 20px 0px 20px 20px
+}
+#live_samples {
+	width: 396px;
+	height: 356px;
+	float: left;
+}
+#sample_suggestion {
+	width:500px;
+	height: 20px;
+	position:relative;
+	top:15px;
+	color: white;
+}
+.more_leftchart {
+  float:left;
+  width:200px;
+}
+.full_width {
+	width: 100%;
+	float:left;
+	color: white;
+}
+#page {
+	visibility:hidden;
+}
+#left_image {
+	margin: 20px;
+	float:left;
+}
+.left_narrow {
+   color: white;
+	width: 100px;
+	float: left;
+}
+.left_medium {
+	margin-top:70px;
+	width: 300px;
+	color:white;
+	float:left;
+}
+.left_title {
+	margin-top:20px;
+	width: 500px;
+	color:white;
+	float:left;
+}
+.center_wide {
+    margin-left: 20px;
+	width: 600px;
+	color: white;
+	float: left;
+}

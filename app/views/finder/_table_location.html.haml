@@ -1,0 +1,58 @@
+.location_block
+  .full_width.check
+  .troika_h3.margin_bottom
+    LOCATION: HDF-#{field_name}
+  .dummy_again  
+  .sample_table.sample_table_wide
+    .col1_location.osc_h1_table.th_sample
+      Source of Results
+    .col2_location.osc_h1_table.th_sample
+      Galaxy Type
+    .col3_location.osc_h1_table.th_sample
+      = '%'
+    .col1_location.td_sample_tall.td_padding_adjust
+      .std_bold.td_brown
+        YOU
+      %br
+      .std_plaintext
+        Using safari 
+        %br
+        sample size of 
+        = @sample_size    
+    .col2_location.td_sample_tall
+      .td_vertical_adjust
+      .std_bold.td_brown
+        Irregular
+    .col3_location.td_sample_tall
+      .td_vertical_adjust
+      .std_bold.td_brown
+        = "%3d\%" % @percent
+
+    .col1_location.td_sample_tall
+      .std_bold.td_brown
+        ASTRONOMERS
+      %br
+      .std_plaintext
+        Using whole population
+      %br
+      .std_plaintext
+        of HDF-
+        = @field_name  
+     
+    .col2_location.td_sample_tall
+      .td_vertical_adjust
+      .std_bold.td_brown
+        Irregular
+    .col3_location.td_sample_tall
+      #show_me
+        .full_width.check
+        = render :partial=>'nav/button',:locals=>{:text=>'Show Me'}
+      .std_bold.td_brown
+        .hide#astronomers_result
+          .td_vertical_adjust
+          = "%5.1f%" % ASTRONOMER[@field][2]
+      #actual_result.hide
+        .td_vertical_adjust
+          .std_bold
+            = '70%'
+  .dummy_again

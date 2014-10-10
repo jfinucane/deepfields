@@ -1,0 +1,20 @@
+.std_text
+  your sample size was too small to be reasonable.
+  %p
+  While it is statistically possible to get represen- tative results from such a sample, that sample size will not consistently yield good results.
+  %p
+  Want to try again?
+  .short_break
+  .short_break
+  .retry_spacing
+    #try_again
+      = link_to symmetry_sample_path do
+        .button_outside
+          .button_inside
+            .button_text.wider_button
+              Try Again
+    #skip_sampling.wtf            
+      .button_outside
+        .button_inside
+          .button_text.wider_button
+            Skip 

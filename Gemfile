@@ -1,38 +1,30 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.1.6'
+gem 'sprockets'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'redcarpet'
+gem 'rinku', :require => 'rails_rinku'
 
-gem 'pry'
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'haml-rails' 
+gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :deployment do
+  gem 'capistrano', '3.2.1'          # Required by capistrano-rails, but capistrano-rails version is not being updated when capistrano changes
+  gem 'capistrano-bundler', '1.1.3'  # Required by capistrano-rails, but version changes not being kept in sync
+  gem 'capistrano-rails', '1.1.2'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :development, :cucumber, :test do
+  gem 'cucumber-rails',  :require => false
+  gem 'webrat'
+  gem 'rspec'
+  gem "rspec-rails"
+  gem 'capybara'
+  gem 'selenium-client'
+  gem 'selenium-webdriver'
+end

@@ -1,0 +1,20 @@
+.troika_h1.h_pos
+  You vs. THE ASTRONOMERS
+.troika_h2.h2_pos
+  How well does your HDF-#{@field.upcase} sample compare?
+.you_versus_left
+  .std_text
+    VERY good! You've avoided bias and chosen an apt sample size.  Your sample results are so close to the 
+    .link.link_vocab astronomers' results
+    that they could serve as a plausible substitute for those results.  
+  %br
+.you_versus_right
+  = render :partial => 'layouts/percentage'
+            
+= link_to funnel_compare_astronomer_path do
+  .back.back_position
+= link_to lesson_index_path do
+  .next_signpost.next_position
+#travelogue_10_11.travelogue_position
+
+   

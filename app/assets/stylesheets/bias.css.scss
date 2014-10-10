@@ -1,0 +1,279 @@
+$bias_border:    #422e24;
+$bias_header:    #573d2f;
+$checkbox_col_fill:   #291f1a; 
+$checkbox_lines: #9c815b;
+$checkbox_fill:  #422e24;
+$bias_red_sample: #a03229;
+$bias_table_width: 410px;
+$compare_table_width: 450px;
+.bias_left {
+  width: 340px;
+  margin: 100px 60px 0px 60px;
+  float: left;
+}
+.bias_right {
+  float: left;
+  margin-top: 100px;
+}
+.bias_right_table{
+  width: $bias_table_width;
+  border: 3px solid $bias_border;
+  margin-top: 10px;
+  height: 408px;
+}
+.bias_header {
+  width: $bias_table_width;
+  height: 60px;
+  background-color: $bias_header;
+}
+.bias_row {
+  width: $bias_table_width;
+  background-color: #000000;
+  height: 36px;
+}
+.bias_tall_image {
+  height: 54px !important;
+}
+.bias_wide_method_header {
+  width: 270px;
+  background-color: $bias_header;
+  float: left;
+}
+.bias_check_header {
+  width: 70px;
+  background-color: $bias_header;
+  float: left;
+}
+.bias_wide_method_row {
+  width: 270px;
+  float: left;
+  border-top: 3px solid $bias_border;
+}
+.bias_check_row {
+  width: 67px;
+  border-left: 3px solid $bias_border;
+  border-top: 3px solid $bias_border;
+  float: left;
+  background-color: $checkbox_col_fill;
+  height: 100%;
+}  
+.check_box {
+  border: 2px solid $checkbox_lines;
+  background-color: $checkbox_fill;
+  width: 22px;
+  height: 22px;
+  margin:auto;
+  margin-top: 5px;
+}
+.check_box_tall {
+  margin-top: 14px;
+}
+.bias_check_canvas {
+  width:22px;
+  height: 22px;
+}
+@mixin bias_text{
+  font-family: open-sans-condensed;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.bias_hdr_text {
+  @include bias_text;
+  color: #e3d6bc;
+  text-align: center;
+  margin-top: 4px;
+  letter-spacing: .01em;
+}
+.bias_row_text {
+  @include bias_text;
+  color: #e5d8be;
+  text-align: right;
+  margin: 5px 5px 0px 0px;
+  letter-spacing: 0.02em;
+}
+@mixin bias_default {
+  background-size: 106px 36px;
+  width: 106px;
+  height: 36px;
+  float: left;
+}
+@mixin bias_larger {
+  background-size: 106px 54px;
+  width: 106px;
+  height: 54px;
+  float: left;
+}
+#bias_blueness .image{
+  @include bias_default;
+  background-image: image-url('bias/bias-blueness.jpg');
+}
+#bias_computer .image{
+  @include bias_larger;
+  background-image: image-url('bias/bias-computer.jpg');
+}
+#bias_eyes_closed .image{
+  @include bias_larger;
+  background-image: image-url('bias/bias-eyes-closed.jpg');
+}
+#bias_location .image {
+  @include bias_default;
+  background-image: image-url('bias/bias-location.jpg');
+}
+#bias_redness .image{
+  @include bias_default;
+  background-image: image-url('bias/bias-redness.jpg');
+}
+#bias_shape .image{
+  @include bias_default;
+  background-image: image-url('bias/bias-shape.jpg');
+}
+#bias_size .image{
+  @include bias_default;
+  background-image: image-url('bias/bias-size.jpg');
+}
+#bias_brightness .image{
+  @include bias_default;
+  background-image: image-url('bias/bias-brightness.jpg');
+}
+#bias_eyes_closed_bias_info {
+  background-size: 218px 299px;
+  width: 218px;
+  height: 299px;
+  background-image: image-url('bias/eyes-closed-bias-info.png');
+  float: left;
+}
+.green_button_inside {
+  border: 3px solid #00aa4e;
+  color: black;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #b4edb9;
+  position: absolute;
+  top: 200px;
+  left: 860px;
+  opacity: 1;
+}
+.green_button_text {
+  font-size: .9em;
+    margin: 4px 10px 4px 10px;
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+#oops_block {
+  width: 330px;
+  float: left;
+  margin-left: 20px;
+}
+.eyes_closed_wider {
+  width: 610px !important;
+}
+.bias_explicit_height {
+  height: 320px;
+}
+.compare_left {
+  width: 300px;
+  margin: 100px 60px 0px 60px;
+  float: left;
+}
+
+.compare_right_table{
+  width: $compare_table_width;
+  border: 3px solid $bias_border;
+  margin-top: 10px;
+  height: 410px;
+}
+.compare_header {
+  width: $compare_table_width;
+  height: 60px;
+  background-color: $bias_header;
+}
+.compare_row {
+  width: $compare_table_width;
+  background-color: #000000;
+  height: 36px;
+}
+.compare_method_header {
+ width: 180px;
+ float:left;
+}
+.compare_method_row {
+  width: 180px;
+  float: left;
+  border-top: 3px solid $bias_border;
+  padding-bottom: 1px;
+}
+.compare_pct {
+  width: 130px;
+  float: left;
+  color: white;
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center
+}
+.compare_pct_row {
+  width: 117px;
+  float: left;
+  color: #e5d8be;
+  font-family: open_sansbold;
+  font-size: 1.1em;
+  text-align: center;
+  letter-spacing: .06em;
+  padding: 5px;
+}
+.bias_pct_table {
+  border: 2px solid white;
+  width: 310px;
+}
+.bias_pct_header {
+  background-color: #8b6b48 !important;
+  width: 310px;
+  text-align: center;
+  font-family: open-sans-condensed;
+  font-weight: bold;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 0px 5px 0px;
+  letter-spacing: 0.02em;
+}
+.bias_pct_row {
+  background-color: #ca8;
+  border-top: 2px solid white;
+  font-family: open_sansbold;
+  font-size: 1.1em;
+  color: black;
+  padding: 5px 10px 5px 10px;
+}
+.bias_right_justify {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+.pct_tall_row {
+  height:52px !important;
+  width: 127px;
+  border-left: 3px solid $bias_border;
+  border-top: 3px solid $bias_border;
+  float: left;
+  text-align: center;
+}
+.pct_regular_row {
+  width: 127px;
+  height:33px !important;
+  border-left: 3px solid $bias_border;
+  border-top: 3px solid $bias_border;
+  float: left;
+  text-align:center;
+}
+.more_padding {
+  padding-top: 15px !important;
+  padding-bottom: 14px;
+}
+.compare_row_taller {
+  height: 56px;
+}

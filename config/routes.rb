@@ -1,61 +1,64 @@
 Galaxy::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-   
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-  get '/test', :controller=>'lesson', :action=>'test'
-  get '/hdfn', :controller=>'lesson', :action=>'hdfn'
-  get '/hdfs', :controller=>'lesson', :action=>'hdfs'
-  get '/closest', :controller=>'lesson', :action=>'closest'
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  root :to => 'lesson#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  namespace :lesson do
+    get 'index'
+    get 'home', :as => :home
+    get 'start', :as => :start
+    get 'outback'
+    get 'stare'
+    get 'travelogue'
+    get 'enter'
+    get 'display_pdf'
+    get 'download_pdf'
+    get 'classic'
+  end
+  namespace :finder do
+    get 'select', :as => :select
+    get 'hdf'
+    get 'hdf_back', :as => :hdf_back
+    post 'got_counts'
+    get 'got_counts_back'
+    get 'irregulars', :as => :irregulars
+    get 'find_out', :as => :find_out
+    get 'next'
+  end
+  namespace :bias do
+    get 'index'
+    get 'compare', :as => :compare
+  end
+  namespace :sample do
+    get 'index'
+    get 'go', :as => :go
+    get 'visualize', :as => :visualize
+    get 'size', :as => :size
+  end
+  namespace :funnel do
+    get 'magnify'
+    get 'smallest'
+    get 'more_closely'
+    get 'best_region'
+    post 'you_got_it'
+    get 'you_got_it_back'
+    get 'compare_astronomer'
+    get 'you_versus'
+  end
+  namespace :symmetry do
+    get 'index'
+    get 'enter'
+    get 'sample'
+    post 'evaluate'
+    get 'evaluate_back'
+    get 'question'
+    get 'answer'
+    get 'uniform'
+  end
+  namespace :last do
+    get 'secrets'
+    get 'question'
+    get 'different'
+    get 'congratulations'
+  end
+  get '/teacher/:page' => 'teacher#show', :as => 'teacher_page'
+  get '/teacher' => 'teacher#index', :as => 'teacher_root'
+  get "/lession/home", as: 'start_page' 
+  root :to => 'lesson#home'
 end

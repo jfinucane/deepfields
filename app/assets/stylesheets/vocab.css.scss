@@ -1,0 +1,55 @@
+.vocab {
+	border: 5px solid #ffca27;
+	width: 320px;
+    background-color: black;
+    color: #ccc;
+}
+.vocab_text {    
+    margin: 0px 15px 0px 15px;
+}
+#vocab_position {
+	position: absolute;
+	width: 354px;
+	z-index: 300;
+	top: 400px; 
+	left: 200px;
+}
+.vocab_inner {
+    width: 310px;
+    height: 100%;
+    background-color: black;
+    border: 2px solid #fcca26;
+    padding: 0px 20px 20px 20px;	
+}
+.alarm_inner {
+    width: 310px;
+    height: 100%;
+    background-color: black;
+    border: 2px solid #c9362c;
+    padding: 0px 20px 20px 20px;	
+}
+.vocab_hdr {
+  margin: 20px 20px 20px 0px;	
+}	
+.vocab_close {
+	position: absolute;
+	top: 8px;
+	left: 326px;
+	color: #fcca26;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+.push_button_right {
+	position: relative; 
+	left: 250px;
+}
+.alarm_margin {
+	margin: 20px 0px 20px 0px;
+}
+.min_max_image {
+	width: 315px;
+	height: 40px;
+	background-image: image-url('final/sample/vocab-min-max.gif');
+	background-size: 315px 40px;
+	margin-top: 20px;
+}

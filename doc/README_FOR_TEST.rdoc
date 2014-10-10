@@ -1,0 +1,4 @@
+
+Run gem install rspec to run locally.
+
+Selenium driver is set to 'ON'.   You may need to open a Firefox window to see the test proceed.

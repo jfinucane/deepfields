@@ -1,0 +1,150 @@
+.video_frame {
+    background-size: 200px  200px;
+	background-image: image-url('first_frame.png');
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 340px;
+	width: 200px;
+	height: 200px;
+	border: 4px solid gray;
+}
+@mixin btn {
+    color: #000;
+	font-size: 140%;
+	position: relative;
+	height: 40px;
+	width: 100px;
+	opacity: 0.5;
+	border: 4px solid white;	
+	cursor: pointer;
+	&:hover {
+	    opacity: 1.0;
+	    text_decoration: underline;
+	    color: #fff;
+	}
+	float: left;
+}
+#meet_toolbar{
+	position: absolute;
+	top: 540px;
+}
+#meet_btn1{
+    position: relative;
+    left: 40px;
+    float: left;
+    height: 60px;
+    width: 60px;
+	background-image: image-url('nav/back.png');
+	&:hover {border: 1px solid white}
+}
+
+#meet_btn2{
+	position:relative;
+	float: left;
+	left: 100px;
+}
+#meet_btn3{
+	position: relative; 
+	float: left;
+	left: 560px; 
+}
+#deep {
+	background-image: image_url('lesson/deep.png');
+	background-width: 599px;
+	background-height: 357px;
+	width: 610px;
+	height: 370px;
+}
+#deep_btn1{
+	@include btn;
+	position: absolute;
+	left: 0px;
+	top: 300px;
+	 }
+#galaxy_types {
+	background-image: image_url('lesson/galaxy_types.png');
+	background-width: 390px;
+	background-height: 269px;
+	width: 400px;
+	height: 280px;
+}
+#travelogue {
+	background-image: image_url('lesson/travelogue.png');
+	background-width: 326px;
+	background-height: 261px;
+	width: 330px;
+	height: 265px;
+}
+#travelogue_btn1{
+	@include btn;
+	position: absolute;
+	left: 50px;
+	top: 140px;
+	height: 30px;
+	font-size: 100%;
+	width: 150px;
+}
+#galaxy_type_position {
+  position: absolute;
+  top: 580px;
+  left: 560px;
+}
+.background_stare {
+	background-image: image_url('finder/background-1-1.png');
+	background-size: 377px 543px;
+	width: 377px;
+	height: 543px;
+}
+.background_stare_position {
+	position: absolute;
+	left: 540px;
+	top: 24px;
+}
+.stare_text {
+	position: absolute;
+	left: 60px;
+	top: 100px;
+}
+.background_get_counts {
+	background-image: image_url('finder/background-1-4.png');
+	background-size: 352px 95px;
+	width: 352px;
+	height: 95px;
+}
+.background_irregular {
+	background-image: image_url('finder/background-1-5.png');
+	background-size: 293px 391px;
+	width: 293px;
+	height: 391px;
+}
+.callout_position {
+	position: absolute;
+	top: 320px;
+	left: 160px;
+}
+.galaxy_types_close_position {
+	position: absolute;
+	top: 500px;
+	left: 30px;
+}
+@mixin type_images {
+	background-size: 165px 125px;
+	width: 165px;
+	height: 125px;
+	margin: 0px 20px 0px 0px;
+	float: left;
+	border: 1px solid #666666;
+}
+#ellipticals {
+    @include type_images;
+	background-image: image-url('finder/galaxy-call-out-elliptical-165x125.jpg');
+}
+#spirals {
+    @include type_images;
+	background-image: image-url('finder/galaxy-call-out-spiral-165x125.jpg');
+}
+#irregulars {
+    @include type_images;
+	background-image: image-url('finder/galaxy-call-out-irregular-165x125.jpg');
+}

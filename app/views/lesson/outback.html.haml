@@ -1,0 +1,58 @@
+.outback_background
+  .page_structure
+    .troika_h1.h_pos.h_3
+      The Ultimate Outback
+    .outback_left
+      .std_text
+        Billions and billions of 
+        .link.link_vocab galaxies
+        populate the universe. The Hubble Space Telescope has unmasked many of them in two of the clearest, most distant views ever obtained, called the Hubble &quot;Deep Fields&quot; (HDFs). One view peers northward, the other, southward.
+        %p
+          Scientists have used mathematics to unlock many galactic secrets hidden in these two views. Ahead, we'll use sample statistics based on actual HDF data to unravel some cosmic mysteries
+        %br
+      #meet_the_deep_fields.outback_button
+        = render partial: 'nav/button', locals: {text: 'Meet the Hubble Deep Fields'} 
+      .outback_button#secrets_modal
+        = render partial: 'nav/button', locals: {text: 'What do we mean by "Deep"?'}
+
+#overlay_background.about_deep.hide
+  .outer_border_secret
+    = render partial: 'lesson/secrets'
+    = render partial: 'nav/close_x'
+
+
+
+#overlay_background.hide.outback_meet_hdfs
+  .outer_border_meet_hdfs
+    .meet_side
+      #meet_north.meet_button
+        %br
+        = render partial: 'nav/button', locals: {text: 'Meet HDF-North'}
+      #intro_north_map
+    .meet_center
+      .troika_h1
+        Introducing the
+        %br
+        Hubble Deep Fields
+        %br
+        %br
+        .short_break
+        .outer_frame_video
+          .inner_frame_video
+            <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ></iframe> 
+    .meet_side_south
+      #meet_south.meet_button
+        %br  
+        = render partial: 'nav/button', locals: {text: 'Meet HDF-South'} 
+      #intro_south_map
+      %br
+    #close_meet_hdfs
+      = render partial: 'nav/close_x' 
+= render partial:'lesson/field_modals'
+    
+= link_to lesson_stare_path do
+  .next_signpost.next_position
+= link_to lesson_index_path do
+  .back.back_position 
+#page.hide
+  Outback     

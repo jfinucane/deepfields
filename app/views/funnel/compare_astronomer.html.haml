@@ -1,0 +1,37 @@
+.troika_h1.h_pos
+  Consider All types of Galaxies
+.compare_left
+
+  .std_text
+    We've been focusing only on the per- centage of irregular galaxies in our sample...
+    %br
+    %br
+    Hit GO and the computer will pick a sample of the
+    .link.link_vocab reasonable size
+    you've just discovered.  It will tally the percentages for all the
+    .link#galaxy_type_tag.galaxy_types_action galaxy types
+    in that sample.  Your results will be compared with the
+    .link.link_vocab astronomers' actual findings
+    for that Deep Field.
+  %br
+  %br
+ 
+  .compare_left_wider
+    %br
+    .osc_h2_gray_normal.color_bar_title
+      Your small
+      %br
+      reasonable sample size:
+    .color_bar_counts
+      = @reasonable
+    = link_to funnel_you_versus_path do
+      .button_outside.go_adjust.bigger_button
+        .button_inside
+          .button_text
+            GO
+.galaxy_collage            
+= link_to funnel_you_got_it_back_path do
+  .back.back_position
+
+= render partial: 'layouts/galaxies'
+

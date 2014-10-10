@@ -1,0 +1,91 @@
+.gray_border#vocab_position.hide
+  .alarm_inner#choose_at_least_one.hide
+    .std_text
+      .alarm_margin
+        You must choose at least one galaxy
+    .push_button_right
+      = render :partial=> 'nav/button',:locals=>{:text=>'OK'}
+  .vocab_inner#light-years__LY_.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      Light-Years (LY)
+    .std_text
+      The distance traveled by light in a full year &mdash; some 10 trillion kilometers (about 6 trillion miles).
+      %p
+      To calculate one light-year, multiply the speed of light (300,000 km/sec, or 186,000 miles/sec) by the length of a year expressed in seconds:
+      %p
+      (300,000 km/sec) (31,536,000 sec) or (186,000 miles/sec) (31,536,000 sec)
+  .vocab_inner#inevitable_human_bias.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      Inevitable Human Bias
+    .std_text
+      Samples picked by humans are always susceptible to bias.  Unconsciously, we base our choices on a trait or quality of the sample member.
+  .vocab_inner#range.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      Range
+    .std_text
+      Range is the simplest measure of dispersion. It is the interval between the highest-valued (largest) piece of data and the lowest-valued (smallest) one, expressed as the difference between them.      
+  .vocab_inner#min_max_plot.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      MIN/MAX PLOT
+    .std_text
+      A visual representation of the range. It shows the dispersion of the data by using a line to connect the lowest-valued (smallest) piece of data to the highest-valued (largest) one, as shown in the example below:
+    .min_max_image
+  .vocab_inner#measure_of_central_tendency.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      MEASURES OF CENTRAL TENDENCY 
+    .std_text      
+      Numerical values that are located, in some sense, in the middle of a sample or population. These include the mean, median, and mode.   
+  .vocab_inner#mean.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      MEAN 
+    .std_text      
+      The average value found by adding the values for all the members of the sample and dividing by the number of members.  
+  .vocab_inner#median.hide
+    .fa.fa-times.vocab_close
+    .short_break
+    .troika_h2.vocab_hdr
+      MEDIAN 
+    .std_text        
+      The middle value when the members of the sample are ranked in order according to size.
+      %p
+      When there is an odd number of members, the median is the exact middle piece of data. If there is an even number of members, the median is the number halfway between the middle two members’ values.
+
+  .vocab_inner#galaxies.hide
+    .fa.fa-times.vocab_close
+    .troika_h2.vocab_hdr
+      Galaxy
+    .std_text
+      An enormous collection of stars held together by gravitational attraction. Galaxies can be large or small and come in many shapes &mdash; elliptical, spiral or irregular. 
+
+  .vocab_inner#smallest_reasonable_sample.hide
+    = render partial: 'nav/reasonable'
+  .vocab_inner#smallest_reasonable_size.hide
+    = render partial: 'nav/reasonable'
+  .vocab_inner#reasonable_size.hide
+    = render partial: 'nav/reasonable'
+  .vocab_inner#smallest_reasonable_sample_size.hide  
+    = render partial: 'nav/reasonable'
+
+  .vocab_inner#astronomers_result.hide
+    = render partial: 'nav/astronomers'
+  .vocab_inner#astronomers_results.hide
+    = render partial: 'nav/astronomers'
+  .vocab_inner#astronomers_actual_findings.hide
+    = render partial: 'nav/astronomers'
+
+  .vocab_inner#all_the_galaxies.hide
+    = render partial: 'nav/all_of_them'
+  .vocab_inner#whole_population.hide
+    = render partial: 'nav/all_of_them'

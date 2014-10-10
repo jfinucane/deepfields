@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    - subpage = params.keys.include?('page')
+    - topic = subpage && (params[:page].gsub('_',' ').titleize )
+    %title Solar System Trading Cards -- #{subpage ? topic : 'Teacher Page'}
+    = stylesheet_link_tag 'teacher'
+    = javascript_include_tag 'application'
+    <link rel="icon" href="
+    = path_to_image('favicon.ico')
+    " type='image/x-icon'>
+  %body
+  .teacher
+    #header
+      = link_to lesson_home_path do
+        %div{:class=>'return-link'}
+          %div{:class=>'arrow-left'}
+          %div{:class=>'after-arrow'}
+            Back to Online Exploration
+      %br
+      %br    
+      .page_title{:class=>'adjust_header'} Solar System Trading Cards Teacher's Pages
+      
+    #wrapper
+      #sidebar=render :partial => 'sidebar'
+      #content
+        %a{:id => 'top'}
+        = auto_link(yield)
+      #footer
+        &nbsp;
+
+    

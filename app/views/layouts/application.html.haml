@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+%title Galaxy
+= stylesheet_link_tag    "application", :media => "all"
+= csrf_meta_tags  
+<body class="game #{@background_color}">
+
+.game_frame.container_12
+  = yield
+  = render partial: 'layouts/progress_pullup'
+  = render :partial=> 'nav/modal_block' 
+  = render :partial=> 'nav/vocab' 
+#travelogue_path.hide
+  = lesson_display_pdf_path 
+#progress.hide
+  = JSON.dump(@progress)
+#field.hide
+  = field
+#finder_hdf
+  = link_to '',finder_hdf_path(:format => :json)
+</body>
+= javascript_include_tag "application"
+%script{src:"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"}
+</html>

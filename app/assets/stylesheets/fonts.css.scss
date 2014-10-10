@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'open-sans-condensed';
+    src:font-url('opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.eot');
+    src:font-url('opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.woff') format('woff'),
+        font-url('opensanscondensed_bold_macroman/OpenSans-CondBold-webfont.ttf') format('truetype'),
+        font-url('opensanscondensed_bold_macromanOpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open-sans-condensed';
+    src:font-url('opensanscondensed_light_macroman/OpenSans-CondLight-webfont.eot');
+    src:font-url('opensanscondensed_light_macroman/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensanscondensed_light_macroman/OpenSans-CondLight-webfont.woff') format('woff'),
+        font-url('opensanscondensed_light_macroman/OpenSans-CondLight-webfont.ttf') format('truetype'),
+        font-url('opensanscondensed_light_macroman/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'troikaregular';
+    src: font-url('troika/troika-webfont.eot');
+    src: font-url('troika/troika-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('troika/troika-webfont.woff') format('woff'),
+         font-url('troika/troika-webfont.ttf') format('truetype'),
+         font-url('troika/troika-webfont.svg#troikaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src:font-url('opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+    src:font-url('opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+        font-url('opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+        font-url('opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansbold';
+    src:font-url('opensans_bold_macroman/OpenSans-Bold-webfont.eot');
+    src:font-url('opensans_bold_macroman/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensans_bold_macroman/OpenSans-Bold-webfont.woff') format('woff'),
+        font-url('opensans_bold_macroman/OpenSans-Bold-webfont.ttf') format('truetype'),
+        font-url('opensans_bold_macroman/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src:font-url('opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.eot');
+    src:font-url('opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.woff') format('woff'),
+        font-url('opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+        font-url('opensans_bolditalic_macroman/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    src:font-url('opensans_extrabolditalic_macroman/OpenSans-ExtraBoldItalic-webfont.eot');
+    src:font-url('opensans_extrabolditalic_macroman/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+        font-url('opensans_extrabolditalic_macroman/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+        font-url('opensans_extrabolditalic_macroman/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+        font-url('opensans_extrabolditalic_macroman/OpenSans-ExtraBoldItalic-webfont.svg#open_sansextrabold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

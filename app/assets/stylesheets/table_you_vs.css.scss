@@ -1,0 +1,141 @@
+$you_width: 186px;
+$you_width_narrow: 166px;
+$hdr_height: 100px;
+$row_height: 75px; 
+$hdr_dk_brown: #8b6b48;
+$table_black: #4a3a2a;
+$row_dk_brown: #ca8;
+$hdr_lt_brown: #b49354;
+$row_lt_brown: #ccb895;
+$blue_bkground: #1499c9;
+$border_color: #f5d8c5;
+@mixin compare_hdr {
+	height: $hdr_height;
+	ont-family: open-sans-condensed;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    letter-spacing: .02em;
+}
+@mixin cell{
+	border-color: $border_color;
+	border-style: solid;
+	text-align: center;
+	float: left;
+	width: $you_width;
+    height: $row_height;
+}
+.you_hdr1 {
+	@include cell;
+	@include compare_hdr;
+	background-color: #333333;
+	border-width: 0px 0px 0px 0px;
+}
+
+.you_hdr1_narrow {
+	@include cell;
+	width: $you_width_narrow;
+	@include compare_hdr;
+	background-color: #333333;
+	border-width: 0px 0px 0px 0px;
+}
+
+.you_hdr2 {
+	@include cell;
+	@include compare_hdr;
+	background-color: $hdr_dk_brown;
+	border-width: 0px 0px 0px 1px;
+	line-height: 1.2em;
+}
+.you_hdr3{
+	@include cell;
+	@include compare_hdr;
+	background-color: $hdr_lt_brown;
+	border-width: 0px 0px 0px 1px;
+	line-height: 1.2em;
+}
+.you_col1 {
+	@include cell;
+	background-color: black;
+	border-width: 2px 0px 0px 0px;
+}
+.you_col1_narrow {
+	@include cell;
+	background-color: black;
+	border-width: 2px 0px 0px 0px;
+	width: $you_width_narrow;
+	position: relative;
+}
+.you_col2 {
+	@include cell;
+	background-color: $row_dk_brown;
+	border-width: 2px 0px 0px 1px;
+}
+.you_col3 {
+	@include cell;
+	background-color: $row_lt_brown;
+	border-width: 2px 0px 0px 1px;
+}
+.you_table {
+	width: 561px;
+	border: 2px solid $border_color;
+	height: 331px;
+	margin: 2px 8px 8px 8px;
+	background-color: $border_color;
+}
+.you_table_narrow {
+	width: 541px;
+	border: 2px solid $border_color;
+	height: 331px;
+	margin: 2px 8px 8px 8px;
+	background-color: $border-color;
+}
+.table_hdr_text {
+	font-family: open_sansregular;
+	color: #ffffff;
+	font-weight: normal;
+	font-size: .85em;
+	text-transform: none;
+	margin: 0px 25px 0px 5px;
+	letter-spacing:0.0em;
+	line-height: 1.25em;
+}
+.table_bold {
+	font-family: open_sansbold;
+	font-size: 1.2em;
+	display: inline;
+	letter-spacing: .05em;
+}
+.small_link {
+	font-size: .85em !important;
+	letter-spacing: .05em;
+}
+.you_galaxy {
+	font-family: open_sansregular;
+	font-size: 1.1em;
+	color: white;
+	float: right;
+	position: relative;
+	top: 25px;
+	left: -20px;
+}
+.you_galaxy_safari {
+	font-family: open_sansregular;
+	font-size: 1.1em;
+	color: white;
+	float: right;
+	position: absolute;
+	top: 25px;
+	left: 70px;
+}
+.you_inline {
+	float:left;
+}
+.cell_pct {
+	font-family: open_sansbold;
+	font-size: 1.1em;
+	color: #4a3a2a;
+	position: relative;
+	top: 30px;
+}

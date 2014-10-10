@@ -1,0 +1,33 @@
+.homepage_background
+  %br
+  %br
+  .troika_headline.center_text
+    .troika_h0
+      Galaxy Hunter
+    .troika_h1
+      A cosmic photo safari
+.btn_enter.btn_enter_position
+.home_text
+  .std_text
+    Explore the Hubble Deep Fields from a statistical point of view. 
+    %p  
+    Watch out for the booby traps of bias, the vagueness of variability, and the shiftiness of sample size as we travel on a photo safari through the Hubble Deep Fields (HDFs).
+    %p
+    = link_to lesson_index_path do
+      .link
+        Start now!
+.home_toolbar
+  = link_to TEACHING_TIPS do
+    = render :partial=>'nav/button',:locals=>{:text=>'Teaching Tips'}
+  = link_to COMPUTER_NEEDS do
+    = render :partial=>'nav/button',:locals=>{:text=>'Computer Needs'}
+  = link_to ABOUT_STATISTICS do
+    = render :partial=>'nav/button',:locals=>{:text=>'About Statistics'}
+  = link_to EXPLORATIONS do
+    = render :partial=>'nav/button',:locals=>{:text=>'Statistics Links'}
+  = link_to AMAZING_SPACE do
+    .amazing_space_link
+#page.hide
+  Home
+#lesson_index_path.hide
+  = lesson_index_path
