@@ -1,0 +1,2 @@
+module GamePageHelper
+end

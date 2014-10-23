@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-%title Galaxy
+<html ng-app>
+%title Galaxy {{"hey, " + "today"}}
 = stylesheet_link_tag    "application", :media => "all"
 = csrf_meta_tags  
 <body class="game #{@background_color}">
@@ -20,5 +20,5 @@
   = link_to '',finder_hdf_path(:format => :json)
 </body>
 = javascript_include_tag "application"
-%script{src:"//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"}
+
 </html>

@@ -4,6 +4,7 @@ class LessonController < ApplicationController
   def home
     session['continue_after_selection'] = ' '
     @show_progress_pullup = false
+    @stuff=347
   end
 
   def select 
