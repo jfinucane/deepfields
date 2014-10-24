@@ -3,8 +3,8 @@ Galaxy::Application.routes.draw do
 
   namespace :lesson do
     get 'index'
-    get 'home', :as => :home
-    get 'start', :as => :start
+    get 'home'
+    get 'start'
     get 'outback'
     get 'stare'
     get 'travelogue'
@@ -14,24 +14,24 @@ Galaxy::Application.routes.draw do
     get 'classic'
   end
   namespace :finder do
-    get 'select', :as => :select
+    get 'select'
     get 'hdf'
-    get 'hdf_back', :as => :hdf_back
+    get 'hdf_back'
     post 'got_counts'
     get 'got_counts_back'
-    get 'irregulars', :as => :irregulars
-    get 'find_out', :as => :find_out
+    get 'irregulars'
+    get 'find_out'
     get 'next'
   end
   namespace :bias do
     get 'index'
-    get 'compare', :as => :compare
+    get 'compare'
   end
   namespace :sample do
     get 'index'
-    get 'go', :as => :go
-    get 'visualize', :as => :visualize
-    get 'size', :as => :size
+    get 'go'
+    get 'visualize'
+    get 'size'
   end
   namespace :funnel do
     get 'magnify'
