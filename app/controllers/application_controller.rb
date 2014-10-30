@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   before_filter :track_itinerary, :no_itinerary_pullup_needed, :set_back_path
   def set_back_path
     path = @_env['PATH_INFO']

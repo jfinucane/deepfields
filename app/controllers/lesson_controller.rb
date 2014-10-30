@@ -1,6 +1,6 @@
 class LessonController < ApplicationController
   require 'json'
-
+  layout false
   def home
     session['continue_after_selection'] = ' '
     @show_progress_pullup = false

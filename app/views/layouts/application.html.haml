@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='gamePage'>
 <head>
 <base href="/deepfields.us">
 %title Galaxy {{"hey, " + "today"}}
@@ -9,7 +9,7 @@
 <body class="game #{@background_color}">
 
 .game_frame.container_12
-  = yield
+  %ng-view
   = render partial: 'layouts/progress_pullup'
   = render :partial=> 'nav/modal_block' 
   = render :partial=> 'nav/vocab' 
