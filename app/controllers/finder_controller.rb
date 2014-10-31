@@ -1,7 +1,9 @@
 class FinderController < ApplicationController
   require 'json'
+  layout false
   def select 
-    @hdf_field = params['hdf_field'] || 'None'
+    #TODOJF this default is for angular testing
+    @hdf_field = params['hdf_field'] || 'n'
     @field=@hdf_field
     session['hdf_field'] = @hdf_field
     session['field'] = @hdf_field

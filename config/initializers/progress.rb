@@ -10,8 +10,10 @@ PROGRESS = {'/lesson/home' => 1,
             '/finder/got_counts' => 7,
             '/finder/irregulars' => 8,
             '/finder/next' => 9, 
+
             '/bias/index' => 11,
             '/bias/compare' => 12,
+
             '/sample/index' => 14,
             '/sample/go' => 15,
             '/funnel/magnify' => 16,
@@ -20,12 +22,14 @@ PROGRESS = {'/lesson/home' => 1,
             '/funnel/you_got_it' => 19,
             '/funnel/compare_astronomer' => 20,
             '/funnel/you_versus' => 21,
+
             '/symmetry/enter' => 23,
             '/symmetry/sample' => 24,
             '/symmetry/evaluate' => 25,
             '/symmetry/question' => 26,
             '/symmetry/answer' => 27,
             '/symmetry/uniform' => 28,
+            
             '/last/question' => 30,
             '/last/different' => 31,
             '/last/congratulations' => 32

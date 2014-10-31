@@ -2,41 +2,41 @@
   %canvas{width: '892', height: '60', id: 'progress_bar'}
   #boomerang_path.hide
     = image_path 'std/trail-boomerang.png'
-  = link_to lesson_home_path do
+  %a{href: '/home'}
     .boxy1.level2
       .outside_sign
         .inside_sign
           .ib_text
             Home
-  = link_to lesson_outback_path do
+  %a{href: '/start/outback'}
     .boxy2.level3.start_hover
       .outside_sign
         .inside_sign
           .ib_text
             Start Safari
       .bar.start_gator.hide
-  = link_to bias_index_path do
+  %a{href: '/bias/banishing'}
     .boxy3.level1.next_hover
       .outside_sign
         .inside_sign
           .ib_text
             Bias
       .bar.next_gator.hide
-  = link_to sample_index_path do
+  %a{href: '/sample/enough'}
     .boxy4.level2.next_hover
       .outside_sign
         .inside_sign
           .ib_text
             Sample Size
       .bar.next_gator.hide
-  = link_to symmetry_enter_path do
+  %a{href:'/fields/enter'}
     .boxy5.level1.next_hover
       .outside_sign
         .inside_sign
           .ib_text
             HDF-N vs HDF-S
       .bar.next_gator.hide
-  = link_to last_question_path do
+  %a{href: '/last_stop/question'}
     .boxy6.level3.last_hover
       .outside_sign
         .inside_sign

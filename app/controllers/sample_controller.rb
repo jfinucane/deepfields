@@ -1,6 +1,6 @@
 class SampleController < ApplicationController
   before_filter :check_for_field
-
+  layout false
   def points(hdf='n')
    hdf = 'n' if hdf == nil
    file_name='lib/HDF' + hdf +'.yaml'

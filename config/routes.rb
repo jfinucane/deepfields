@@ -1,6 +1,4 @@
 Galaxy::Application.routes.draw do
-  get 'game_page/index'
-
   namespace :lesson do
     get 'index'
     get 'home'
@@ -59,8 +57,10 @@ Galaxy::Application.routes.draw do
     get 'different'
     get 'congratulations'
   end
+
+
   get '/teacher/:page' => 'teacher#show', :as => 'teacher_page'
   get '/teacher' => 'teacher#index', :as => 'teacher_root'
-  get "/lession/home", as: 'start_page' 
-  root :to => 'game_page#index'
+  get '/*path'=> redirect("/?goto=%{path}")
+  root :to => 'game#index'
 end

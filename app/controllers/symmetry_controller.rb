@@ -1,4 +1,9 @@
 class SymmetryController < ApplicationController
+
+  
+
+
+  layout false
   def enter
     session['hdf_field'] = session['selected_field']
   end

@@ -1,5 +1,5 @@
 class LastController < ApplicationController
-
+layout false
 def question
 end
 

@@ -1,6 +1,6 @@
 class FunnelController < ApplicationController
   before_filter :check_for_field
-
+  layout false
   def magnify
   end
   def smallest
