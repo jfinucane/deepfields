@@ -1,8 +1,12 @@
-This repo became the primary repo for the GH rewrite in May 2014 when Stephanie Smith was assigned as design lead.
+mobile details
 
-Target browsers are modern browsers plus IE10.
+  - adding touch-punch.js for mobile drag
+  
+  - adding jquery-ui modules into application.js as a requirement
 
-This rules out the use of border-image for the dots around the itinerary.
+
+angular is used to give optimal URLS, remaning controller/method
+
 
 
 
