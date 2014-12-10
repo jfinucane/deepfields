@@ -6,12 +6,15 @@
       Galaxy Hunter
     .troika_h1
       A cosmic photo safari
-  <div ng-controller='homeCtrl'> 
 
-  .btn_enter.btn_enter_position
-    <div ng-mousemove='enter'>
-    {{x}}
-    </div>
+  <div ng-controller='homeCtrl' > 
+  <div class='btn_enter btn_enter_position'
+  ng-mousemove='enter($event)'
+  ng-class='home_class()'
+  ng-click='home_click()'>
+  </div>
+  </div>
+  
 .home_text
   .std_text
     Explore the Hubble Deep Fields from a statistical point of view. 
