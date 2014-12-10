@@ -1,4 +1,3 @@
-
 .homepage_background
   %br
   %br
@@ -7,7 +6,12 @@
       Galaxy Hunter
     .troika_h1
       A cosmic photo safari
-.btn_enter.btn_enter_position
+  <div ng-controller='homeCtrl'> 
+
+  .btn_enter.btn_enter_position
+    <div ng-mousemove='enter'>
+    {{x}}
+    </div>
 .home_text
   .std_text
     Explore the Hubble Deep Fields from a statistical point of view. 
@@ -16,7 +20,7 @@
     %p
     %a{href:'itinerary'}
       .link
-        Start now!
+        Start now!!
     
 .home_toolbar
   = link_to TEACHING_TIPS do
@@ -29,7 +33,8 @@
     = render :partial=>'nav/button',:locals=>{:text=>'Statistics Links'}
   = link_to AMAZING_SPACE do
     .amazing_space_link
-#page.hide
+#page
   Home
 #lesson_index_path.hide
   = lesson_index_path
+<div>  

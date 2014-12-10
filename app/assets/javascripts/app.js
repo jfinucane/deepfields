@@ -70,3 +70,6 @@ game.directive('secondPage', function() {
 	}
 })
 */
+
+game.controller( 'homeCtrl', function ($scope) { alert('hi'); $scope.x=333333; $scope.enter = window.mouseEnter()});
+
