@@ -7,15 +7,15 @@ gem 'sprockets'
 gem 'redcarpet'
 gem 'rinku', :require => 'rails_rinku'
 
+gem 'bower-rails'
+gem 'angular-rails-templates'
+
 group :assets, :development do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'haml-rails' 
   gem 'uglifier', '>= 1.0.3'
-  gem 'angularjs-rails'
 end
-
-gem 'jquery-rails'
 
 group :deployment do
   gem 'capistrano', '3.2.1'          # Required by capistrano-rails, but capistrano-rails version is not being updated when capistrano changes
