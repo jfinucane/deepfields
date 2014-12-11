@@ -1,3 +1,4 @@
+<div ng-controller='homeCtrl'  ng-mousemove='enter($event)'> 
 .homepage_background
   %br
   %br
@@ -7,13 +8,12 @@
     .troika_h1
       A cosmic photo safari
 
-  <div ng-controller='homeCtrl' > 
+
   <div class='btn_enter btn_enter_position'
-  ng-mousemove='enter($event)'
   ng-class='home_class()'
   ng-click='home_click()'>
   </div>
-  </div>
+
 
 .home_text
   .std_text
@@ -24,7 +24,7 @@
     %a{href:'itinerary'}
       .link
         Start now!!
-    
+</div>    
 .home_toolbar.hide
   = link_to TEACHING_TIPS do
     = render :partial=>'nav/button',:locals=>{:text=>'Teaching Tips'}
