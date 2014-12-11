@@ -14,7 +14,7 @@
   ng-click='home_click()'>
   </div>
   </div>
-  
+
 .home_text
   .std_text
     Explore the Hubble Deep Fields from a statistical point of view. 
@@ -25,7 +25,7 @@
       .link
         Start now!!
     
-.home_toolbar
+.home_toolbar.hide
   = link_to TEACHING_TIPS do
     = render :partial=>'nav/button',:locals=>{:text=>'Teaching Tips'}
   = link_to COMPUTER_NEEDS do
