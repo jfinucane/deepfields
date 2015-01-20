@@ -1,0 +1,136 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jasmine-core',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.1.12
+3 info using node@v0.10.32
+4 silly cache add args [ 'jasmine-core', null ]
+5 verbose cache add spec jasmine-core
+6 silly cache add parsed spec { raw: 'jasmine-core',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'jasmine-core',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed jasmine-core@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'jasmine-core', range: '*', hasData: false }
+11 silly mapToRegistry name jasmine-core
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/jasmine-core
+15 verbose addNameRange registry:https://registry.npmjs.org/jasmine-core not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/jasmine-core
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 17:19:29
+19 verbose request id 1d38ec271a6ee0df
+20 verbose etag "794GR5QM5OYRGIS5NAT9TJ581"
+21 http request GET https://registry.npmjs.org/jasmine-core
+22 http 304 https://registry.npmjs.org/jasmine-core
+23 silly get cb [ 304,
+23 silly get   { date: 'Wed, 07 Jan 2015 22:19:29 GMT',
+23 silly get     server: 'Apache',
+23 silly get     via: '1.1 varnish',
+23 silly get     'last-modified': 'Wed, 07 Jan 2015 22:19:30 GMT',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     etag: '"794GR5QM5OYRGIS5NAT9TJ581"',
+23 silly get     age: '0',
+23 silly get     'x-served-by': 'cache-atl6221-ATL',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1420669169.888875,VS0,VE111',
+23 silly get     vary: 'Accept',
+23 silly get     'content-length': '0',
+23 silly get     'keep-alive': 'timeout=10, max=50',
+23 silly get     connection: 'Keep-Alive' } ]
+24 verbose etag https://registry.npmjs.org/jasmine-core from cache
+25 silly addNameRange number 2 { name: 'jasmine-core', range: '*', hasData: true }
+26 silly addNameRange versions [ 'jasmine-core',
+26 silly addNameRange   [ '2.0.0', '2.0.1', '2.0.4', '2.1.0', '2.1.1', '2.1.2', '2.1.3' ] ]
+27 verbose addNamed jasmine-core@2.1.3
+28 silly addNamed semver.valid 2.1.3
+29 silly addNamed semver.validRange 2.1.3
+30 silly cache afterAdd jasmine-core@2.1.3
+31 verbose afterAdd /Users/jimfinucane/.npm/jasmine-core/2.1.3/package/package.json not in flight; writing
+32 verbose afterAdd /Users/jimfinucane/.npm/jasmine-core/2.1.3/package/package.json written
+33 silly install resolved [ { name: 'jasmine-core',
+33 silly install resolved     license: 'MIT',
+33 silly install resolved     version: '2.1.3',
+33 silly install resolved     repository: { type: 'git', url: 'https://github.com/pivotal/jasmine.git' },
+33 silly install resolved     description: 'Official packaging of Jasmine\'s core files for use by Node.js projects.',
+33 silly install resolved     homepage: 'http://jasmine.github.io',
+33 silly install resolved     main: './lib/jasmine-core.js',
+33 silly install resolved     devDependencies:
+33 silly install resolved      { grunt: '~0.4.1',
+33 silly install resolved        'grunt-contrib-jshint': '~0.7.0',
+33 silly install resolved        'grunt-contrib-concat': '~0.3.0',
+33 silly install resolved        'grunt-contrib-compass': '~0.6.0',
+33 silly install resolved        'grunt-contrib-compress': '~0.5.2',
+33 silly install resolved        shelljs: '~0.1.4',
+33 silly install resolved        glob: '~3.2.9',
+33 silly install resolved        jasmine: 'https://github.com/pivotal/jasmine-npm/archive/master.tar.gz',
+33 silly install resolved        'load-grunt-tasks': '^0.4.0' },
+33 silly install resolved     gitHead: 'b56c2a69ac8ca6dab78418e71bfbdd7ee79f5336',
+33 silly install resolved     bugs: { url: 'https://github.com/pivotal/jasmine/issues' },
+33 silly install resolved     _id: 'jasmine-core@2.1.3',
+33 silly install resolved     scripts: {},
+33 silly install resolved     _shasum: '83c4467a2250578e19e916cf8a2404a8c9841b39',
+33 silly install resolved     _from: 'jasmine-core@*',
+33 silly install resolved     _npmVersion: '1.4.16',
+33 silly install resolved     _npmUser: { name: 'slackersoft', email: 'gregg@slackersoft.net' },
+33 silly install resolved     maintainers: [ [Object], [Object] ],
+33 silly install resolved     dist:
+33 silly install resolved      { shasum: '83c4467a2250578e19e916cf8a2404a8c9841b39',
+33 silly install resolved        tarball: 'http://registry.npmjs.org/jasmine-core/-/jasmine-core-2.1.3.tgz' },
+33 silly install resolved     directories: {},
+33 silly install resolved     _resolved: 'https://registry.npmjs.org/jasmine-core/-/jasmine-core-2.1.3.tgz',
+33 silly install resolved     readme: 'ERROR: No README data found!' } ]
+34 info install jasmine-core@2.1.3 into /usr/local/lib
+35 info installOne jasmine-core@2.1.3
+36 verbose installOne of jasmine-core to /usr/local/lib not in flight; installing
+37 verbose lock using /Users/jimfinucane/.npm/_locks/jasmine-core-b3dc0635eeb66537.lock for /usr/local/lib/node_modules/jasmine-core
+38 silly install write writing jasmine-core 2.1.3 to /usr/local/lib/node_modules/jasmine-core
+39 silly cache addNamed cb jasmine-core@2.1.3
+40 verbose unbuild lib/node_modules/jasmine-core
+41 verbose gentlyRm vacuuming /usr/local/lib/node_modules/jasmine-core
+42 verbose tar unpack /Users/jimfinucane/.npm/jasmine-core/2.1.3/package.tgz
+43 verbose tar unpacking to /usr/local/lib/node_modules/jasmine-core
+44 verbose gentlyRm vacuuming /usr/local/lib/node_modules/jasmine-core
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 error tar.unpack untar error /Users/jimfinucane/.npm/jasmine-core/2.1.3/package.tgz
+47 verbose unlock done using /Users/jimfinucane/.npm/_locks/jasmine-core-b3dc0635eeb66537.lock for /usr/local/lib/node_modules/jasmine-core
+48 verbose fstream_path /usr/local/lib/node_modules/jasmine-core
+49 verbose fstream_type Directory
+50 verbose fstream_class DirWriter
+51 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/jasmine-core'
+52 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+52 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+52 verbose fstream_stack Object.oncomplete (fs.js:107:15)
+53 verbose cwd /Users/jimfinucane/Projects/deepfields
+54 error Darwin 14.0.0
+55 error argv "node" "/usr/local/bin/npm" "install" "-g" "jasmine-core" "--save-dev"
+56 error node v0.10.32
+57 error npm  v2.1.12
+58 error path /usr/local/lib/node_modules/jasmine-core
+59 error code EACCES
+60 error errno 3
+61 error Error: EACCES, mkdir '/usr/local/lib/node_modules/jasmine-core'
+61 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/jasmine-core']
+61 error   errno: 3,
+61 error   code: 'EACCES',
+61 error   path: '/usr/local/lib/node_modules/jasmine-core',
+61 error   fstream_type: 'Directory',
+61 error   fstream_path: '/usr/local/lib/node_modules/jasmine-core',
+61 error   fstream_class: 'DirWriter',
+61 error   fstream_stack:
+61 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+61 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+61 error      'Object.oncomplete (fs.js:107:15)' ] }
+62 error Please try running this command again as root/Administrator.
+63 verbose exit [ 3, true ]
+64 verbose unbuild lib/node_modules/jasmine-core
+65 verbose gentlyRm vacuuming /usr/local/lib/node_modules/jasmine-core

@@ -1,0 +1,17 @@
+{
+  "name": "angular-rails-deepfields",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jfinucane/deepfields.git"
+  },
+  "dependencies": {
+    "karma": ">= 0.10.9",
+    "karma-jasmine": "0.1.5",
+    "karma-ng-scenario": "0.1.0",
+    "phantomjs": "1.9.7-1"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.1.3"
+  }
+}
