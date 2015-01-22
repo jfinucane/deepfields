@@ -2,7 +2,7 @@ game = angular.module('gamePage', [
 	'ngRoute',
 	'gameControllers'
 	])
-
+console.log('app here')
 game.config(['$routeProvider', '$locationProvider', '$injector',
   function($routeProvider, $locationProvider, $injector) {
     $routeProvider.

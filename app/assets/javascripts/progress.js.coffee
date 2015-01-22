@@ -101,7 +101,7 @@ jQuery ->
 
   # Visiting the page corresponding to the last dot 
 # before the boomerang is what defines whether a signpost is 'done'
-
+console.log 'progress'
 # crocodile position is the first undone signpost, 
 window.visited_signpost_styling = (progress, boomerang_at) ->
   crocodile_positioned = false;

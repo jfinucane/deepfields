@@ -1,11 +1,21 @@
-.boxy2.game_section.hide
+.boxy2.game_section
+  <div ng-show="show_signpost('Start')">
   Journey to the wildest regions of space and wrestle with cosmic giants &mdash; galaxies.  To begin, click on the crocodile.
-.boxy3.game_section.hide
+  </div>
+.boxy3.game_section
+  <div ng-show="show_signpost('Bias')">
   .short_break
   You're off to a good start!   To go on, click on the crocodile.
-.boxy4.game_section.hide
+  </div>
+.boxy4.game_section
+  <div ng-show="show_signpost('Sample')">
   Congratulations, you've just learned how to bypass the booby trap of BIAS! To go on, click on the crocodile.
-.boxy5.game_section.hide
+  </div>
+.boxy5.game_section
+  <div ng-show="show_signpost('HDFN')">
   Great! You've grappled with the vagueness of variability and the shiftiness of sample size.  To proceed, click on the crocodile.
+  </div>
 .boxy6.game_section.hide
+  <div ng-show="show_signpost('Last')">
   Congratulations, you've uncovered some facts about the universe by comparing the two HDFs.  To finish the safari, click on the crocodile.
+  </div>
