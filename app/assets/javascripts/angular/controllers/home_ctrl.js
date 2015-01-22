@@ -10,8 +10,6 @@ gameControllers.controller('HomeCtrl', ['$scope', '$http', 'gameProgress', '$win
     console.log('HomeCtrl logged');
     p=gameProgress
     p.set_step(1)
-
-    
-
+   
     
   }]);
