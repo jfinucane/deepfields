@@ -9,10 +9,11 @@ set_background_color = function(step_number, boomerang_at) {
     return color;
 }
 game.service('gameProgress',function(){
-  boomerang_at =[2,10,13,22,29]	
+  boomerang_at =[2,10,13,22,29]
   progress_array = Array()
     signpost_stage = ['Start']
     this.background_color = ''
+    this.pullup_visible = false
     this.show_signpost = function(signpost_name){
         console.log('check for alligator')
     	return (signpost_stage[0] == signpost_name)
@@ -35,8 +36,8 @@ game.service('gameProgress',function(){
       else if(undone <= boomerang_at[4]) {signpost_stage[0]='HDFN'}  
       else {signpost_stage[0]='Last'}
 
-
-      this.background_color = set_background_color(step_number, boomerang_at) 
+      this.background_color = set_background_color(step_number, boomerang_at)
+      this.pullup_visible = step_number > 2;
     }
     this.signpost_visited = function(section) {
         visited = false
@@ -54,5 +55,6 @@ game.service('gameProgress',function(){
         removeClass('sample_color hdfn_color last_color ')
         $('.game').addClass(this.background_color.toLowerCase() + '_color');
         console.log('set background', this.background_color)
-    }      
+    }
+    this.pullup = function () { console.log('pullup called'); return this.pullup_visible}      
 });

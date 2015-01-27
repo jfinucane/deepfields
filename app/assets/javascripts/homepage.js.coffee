@@ -40,20 +40,5 @@ window.home_inside = (e) ->
   above3 = point_above_line(x, y, border_lines[3])
   above0 && above1 && !above2 && !above3 
 
-game.controller \
-  'homeCtrl',
-  ($scope, $location) ->
-    $('.progress_slider').addClass('hide') 
-    $scope.enter = (event) ->
-      $scope.home_inside = window.home_inside(event)
-      window.inside_enter_diamond= $scope.home_inside
-    window.disable_mousemove_for_test = () -> 
-      $scope.enter = false
-      window.inside_enter_diamond = false; 
-    $scope.home_class = () ->
-      'btn_enter_hover' if $scope.home_inside 
-    $scope.home_click = () ->  
-      if window.inside_enter_diamond == true
-        $location.path('/itinerary') 
       
  
