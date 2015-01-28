@@ -47,7 +47,7 @@ game.service('gameProgress',function(){
           before_boomerang = boomerang_at[section]-1
           visited = progress_array[before_boomerang]
         }
-        return visited 
+        return visited
     }
     this.set_background_color = function() {
         $('.game').removeClass('intro_color default_color start_color bias_color').

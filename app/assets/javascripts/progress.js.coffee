@@ -1,7 +1,3 @@
-
-  #TODO singpost styling  
-  #window.visited_signpost_styling(progress,boomerang_at)
-
 window.clickable = true
 tab_unhover = () ->
   t = $('.tab_area')
