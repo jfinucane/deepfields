@@ -1,6 +1,6 @@
 
-gameControllers.controller('ItineraryCtrl', ['$scope', '$routeParams', '$window', 'gameProgress',
-  function($scope, $routeParams, win, gameProgress) {
+gameControllers.controller('ItineraryCtrl', ['$scope', '$routeParams', '$window', 'gameProgress', 'drawProgressDots2',
+  function($scope, $routeParams, win, gameProgress, drawProgressDots2) {
     /*$scope.phoneId = $routeParams.phoneId;*/
     console.log('itin ctrl')
     
@@ -9,6 +9,10 @@ gameControllers.controller('ItineraryCtrl', ['$scope', '$routeParams', '$window'
     $scope.show_signpost = p.show_signpost
     p.set_step(2);
     p.set_background_color()
+
+    d=drawProgressDots2
+    d.draw_progress_trail(p.progress())
+
     c = document.getElementById("border_canvas")
     ctx = c.getContext("2d")
    
@@ -16,6 +20,7 @@ gameControllers.controller('ItineraryCtrl', ['$scope', '$routeParams', '$window'
     horizontal_dots(ctx, 657)
     vertical_dots(ctx, 12, 12, 657)
     vertical_dots(ctx, 927, 12, 657) 
+ 
 
 
 

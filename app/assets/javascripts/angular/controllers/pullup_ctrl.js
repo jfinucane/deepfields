@@ -8,7 +8,6 @@ gameControllers.controller('PullupCtrl', ['$scope', 'gameProgress',
     console.log("Loaded the PULLUP CTRL controller")
     $scope.show_pullup = function(){
     	p= gameProgress
-    	console.log(p.pullup(), 'progress pullup')
     	return (p.pullup());
     }
    
