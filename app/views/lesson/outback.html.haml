@@ -10,15 +10,15 @@
         %p
           Scientists have used mathematics to unlock many galactic secrets hidden in these two views. Ahead, we'll use sample statistics based on actual HDF data to unravel some cosmic mysteries
         %br
-      #meet_the_deep_fields.outback_button
-        = render partial: 'nav/button', locals: {text: 'Meet the Hubble Deep Fields'} 
-      .outback_button#secrets_modal
+      .outback_button
+        <div ng-click='open_modal(".outback_meet_hdfs")''>
+        = render partial: 'nav/button', locals: {text: 'Meet the Hubble Deep Fields'}
+        </div> 
+      .outback_button
+        <div ng-click='open_modal(".about_deep")'>
         = render partial: 'nav/button', locals: {text: 'What do we mean by "Deep"?'}
-
-#overlay_background.about_deep.hide
-  .outer_border_secret
-    = render partial: 'lesson/secrets'
-    = render partial: 'nav/close_x'
+        </div> 
+%what_is_deep
 
 #overlay_background.hide.outback_meet_hdfs
   .outer_border_meet_hdfs
@@ -44,8 +44,8 @@
         = render partial: 'nav/button', locals: {text: 'Meet HDF-South'} 
       #intro_south_map
       %br
-    #close_meet_hdfs
-      = render partial: 'nav/close_x' 
+    #close_meet_hdfs 
+      %close_overlay
 = render partial:'lesson/field_modals'
     
 = link_to lesson_stare_path do

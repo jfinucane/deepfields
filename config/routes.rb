@@ -10,6 +10,7 @@ Galaxy::Application.routes.draw do
     get 'display_pdf'
     get 'download_pdf'
     get 'classic'
+    get 'what_is_deep'
   end
   namespace :finder do
     get 'select'
