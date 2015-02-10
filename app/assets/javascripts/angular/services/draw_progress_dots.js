@@ -32,7 +32,7 @@ game.service ('drawProgressDots', function() {
       draw_x += draw_spacing 
       }
 
-    this.draw_progress_trail = function(progress) {
+    this.draw_progress_trail = function(progress,dots) {
       var progress_canvas = document.getElementById("progress_bar")
       var progress_ctx = progress_canvas.getContext("2d")
       var boomerang_positions = []
@@ -51,5 +51,24 @@ game.service ('drawProgressDots', function() {
       var path=$('#boomerang_path')
       img.src = path.html()
       console.log('positions', boomerang_positions)
+      // BORDER-IMAGE NOT SUPPORTED BY IE < 11 
+      dots!='itinerary' ? pullup_border_dots() :  itinerary_border_dots() 
+    }
+    var itinerary_border_dots = function(){
+      c = document.getElementById("border_canvas")
+      ctx = c.getContext("2d")
+      horizontal_dots(ctx, 12)
+      horizontal_dots(ctx, 657)
+      vertical_dots(ctx, 12, 12, 657)
+      vertical_dots(ctx, 927, 12, 657) 
     }  
+    var pullup_border_dots = function () {
+      var c = document.getElementById("progress_canvas")
+      var ctx = c.getContext("2d")
+      horizontal_dot_range(ctx, 12, 380, 12)
+      horizontal_dot_range(ctx, 570, 930, 12)
+      horizontal_dots(ctx,268)
+      vertical_dots(ctx, 12, 12, 272)
+      vertical_dots(ctx, 927, 12, 272)
+    }
 });
