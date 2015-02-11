@@ -14,11 +14,11 @@ game.directive('navButtonClick', function() {
 	return {
 		scope: {text: '=text'},
 		template: 
-        "<div ng-click='modal.open(&quot;{{text}}&quot;)' class='ng-isolate-scope'>"+
+        "<div ng-click='modal.open(&quot;{{text}}&quot;)'>"+
 		"<div class= 'button_outside'> "+
 		
 		"<div class='button_inside'>"+
-		" <div class='button_text'>{{text}}xxx</div>" + 
+		" <div class='button_text'>{{text}}</div>" + 
 		"</div></div></div>"
 
 	}
