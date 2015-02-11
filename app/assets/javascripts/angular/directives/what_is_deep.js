@@ -1,5 +1,5 @@
 game.directive('whatIsDeep', function() {
   return { 
-  	templateUrl: "/lesson/what_is_deep.html"
+  	templateUrl: "/partials/what_is_deep.html"
   };
 });

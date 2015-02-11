@@ -9,9 +9,9 @@ gameControllers.controller('OutbackCtrl', ['$scope', 'gameProgress', 'drawProgre
     
     var d=drawProgressDots
     d.draw_progress_trail(p.progress())
-    $scope.open_modal = modal.open
-    $scope.close_modal= modal.close
-  
+
+    $scope.modal = modal
+
 
   }]);
   

@@ -1,3 +1,4 @@
+<div ng-controller='OutbackCtrl'>
 .outback_background
   .page_structure
     .troika_h1.h_pos.h_3
@@ -11,46 +12,45 @@
           Scientists have used mathematics to unlock many galactic secrets hidden in these two views. Ahead, we'll use sample statistics based on actual HDF data to unravel some cosmic mysteries
         %br
       .outback_button
-        <div ng-click='open_modal(".outback_meet_hdfs")''>
-        = render partial: 'nav/button', locals: {text: 'Meet the Hubble Deep Fields'}
-        </div> 
+        <nav-button ng-click='modal.open("Meet the HDFs")' text= "'Meet the Hubble Deep Fields'"> </nav-button> 
       .outback_button
-        <div ng-click='open_modal(".about_deep")'>
-        = render partial: 'nav/button', locals: {text: 'What do we mean by "Deep"?'}
-        </div> 
+        <nav-button ng-click='modal.open("What is Deep?")' text="'What do we mean by &quot;Deep&quot;?'"></nav-button>
+        
 %what_is_deep
 
-#overlay_background.hide.outback_meet_hdfs
-  .outer_border_meet_hdfs
-    .meet_side
-      #meet_north.meet_button
-        %br
-        = render partial: 'nav/button', locals: {text: 'Meet HDF-North'}
-      #intro_north_map
-    .meet_center
-      .troika_h1
-        Introducing the
-        %br
-        Hubble Deep Fields
-        %br
-        %br
-        .short_break
-        .outer_frame_video
-          .inner_frame_video
-            <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ></iframe> 
-    .meet_side_south
-      #meet_south.meet_button
-        %br  
-        = render partial: 'nav/button', locals: {text: 'Meet HDF-South'} 
-      #intro_south_map
+
+<div class='overlay_background' ng-show='modal.show("Meet the HDFs")'>
+.outer_border_meet_hdfs
+  .meet_side
+    #meet_north.meet_button
       %br
-    #close_meet_hdfs 
-      %close_overlay
-= render partial:'lesson/field_modals'
+        <nav-button ng-click='modal.open("Meet HDF-North")' text= "'Meet HDF-North'"> </nav-button> 
+    #intro_north_map
+  .meet_center
+    .troika_h1
+      Introducing the
+      %br
+      Hubble Deep Fields
+      %br
+      %br
+      .short_break
+      .outer_frame_video
+        .inner_frame_video
+          <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ></iframe> 
+  .meet_side_south
+    #meet_south.meet_button
+      %br
+        <nav-button ng-click='modal.open("Meet HDF-South")' text= "'Meet HDF-South'"> </nav-button>
+        <nav-button-click text="'Meet HDF-South'">                                  </nav-button> 
+    #intro_south_map
+    %br
+  #close_meet_hdfs 
+    %close_overlay
+</div>      
+%field_modals
     
 = link_to lesson_stare_path do
   .next_signpost.next_position
 = link_to lesson_index_path do
   .back.back_position 
-#page.hide
-  Outback     
+</div>     
