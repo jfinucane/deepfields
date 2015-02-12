@@ -12,19 +12,19 @@
           Scientists have used mathematics to unlock many galactic secrets hidden in these two views. Ahead, we'll use sample statistics based on actual HDF data to unravel some cosmic mysteries
         %br
       .outback_button
-        <nav-button ng-click='modal.open("Meet the HDFs")' text= "'Meet the Hubble Deep Fields'"> </nav-button> 
+        <modal-button modal_is='"Meet the Hubble Deep Fields"' on-open='modal.open(modal_id)'></modal-button>
       .outback_button
         <nav-button ng-click='modal.open("What is Deep?")' text="'What do we mean by &quot;Deep&quot;?'"></nav-button>
         
 %what_is_deep
 
 
-<div class='overlay_background' ng-show='modal.show("Meet the HDFs")'>
+<div class='overlay_background' ng-show='modal.show("Meet the Hubble Deep Fields")'>
 .outer_border_meet_hdfs
   .meet_side
     #meet_north.meet_button
       %br
-        <nav-button ng-click='modal.open("Meet HDF-North")' text= "'Meet HDF-North'"> </nav-button> 
+        <modal-button modal_is='"Meet HDF-North"' on-open='modal.open(modal_id)'></modal-button>
     #intro_north_map
   .meet_center
     .troika_h1
@@ -36,7 +36,7 @@
       .short_break
       .outer_frame_video
         .inner_frame_video
-          <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ></iframe> 
+          <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ng-if=modal.video_on_top() ></iframe>
   .meet_side_south
     #meet_south.meet_button
       %br
