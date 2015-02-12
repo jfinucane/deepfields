@@ -1,25 +1,21 @@
 game.directive('navButton', function() {
 	return {
-		scope: {text: '=text'},
+		scope: {button_text: '=text'},
 		template: "<div class= 'button_outside'>"+ 
 		"<div class='button_inside'>"+
-		" <div class='button_text'>{{text}}</div>" + 
+		" <div class='button_text'>{{button_text}}</div>" +
 		"</div></div>"
 
 	}
 })
 
-//mysteriously doesn't work TODO upgrade to 1.4???
-game.directive('navButtonClick', function() {
+game.directive('modalButton', function() {
 	return {
-		scope: {text: '=text'},
-		template: 
-        "<div ng-click='modal.open(&quot;{{text}}&quot;)'>"+
-		"<div class= 'button_outside'> "+
-		
-		"<div class='button_inside'>"+
-		" <div class='button_text'>{{text}}</div>" + 
-		"</div></div></div>"
-
-	}
+    transclude: true,
+    scope: {
+        'open': '&onOpen',
+        'idText': '=modalIs'
+    },
+    template: "<nav-button text=idText ng-click=open({modal_id:idText})></nav-button>"
+    }
 })

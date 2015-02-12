@@ -40,7 +40,7 @@
   .meet_side_south
     #meet_south.meet_button
       %br
-        <nav-button ng-click='modal.open("Meet HDF-South")' text= "'Meet HDF-South'"> </nav-button>
+        <modal-button modal_is='"Meet HDF-South"' on-open='modal.open(modal_id)'></modal-button>
     #intro_south_map
     %br
   #close_meet_hdfs 
