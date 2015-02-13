@@ -4,5 +4,7 @@ class PartialsController < ApplicationController
 	end
 	def field_modals
 	end
+	def galaxy_types
+	end
 end
 

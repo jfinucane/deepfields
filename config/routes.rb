@@ -14,6 +14,7 @@ Galaxy::Application.routes.draw do
   namespace :partials do   
     get 'what_is_deep'
     get 'field_modals'
+    get 'galaxy_types'
   end
   namespace :finder do
     get 'select'

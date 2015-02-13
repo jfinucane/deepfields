@@ -25,8 +25,8 @@ game.config(['$routeProvider', '$locationProvider', '$injector',
       }).
       when('/home',  { templateUrl: '/lesson/home.html', controller: 'HomeCtrl'}).
       when('/itinerary', {templateUrl: '/lesson/index.html', controller: 'ItineraryCtrl'}).
-
       when('/start/outback', {templateUrl: '/lesson/outback.html', controller: 'OutbackCtrl'}).
+      when('/start/stare', {templateUrl: '/lesson/stare.html', controller: 'StareCtrl'}).
       when('/start/enter', {templateUrl: '/lesson/classic.html', controller: 'StartCtrl'}).
       when('/start/select', {templateUrl: '/finder/select.html', controller: 'StartCtrl'}).
       when('/start/got_counts', {templateUrl: '/finder/got_counts.html', controller: 'StartCtrl'}).

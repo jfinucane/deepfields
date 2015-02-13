@@ -1,14 +1,13 @@
 'use strict';
 
-/* Controllers */
+gameControllers.controller('StareCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus',
+  function($scope, $routeParams, $injector,page) {
+    page($scope,4)
+  }]);
 
-
-
-
-
-gameControllers.controller('StartCtrl', ['$scope', '$routeParams',
-  function($scope, $routeParams) {
-    /*$scope.phoneId = $routeParams.phoneId;*/
+gameControllers.controller('StartCtrl', ['$scope', 'pageStatus',
+  function($scope, page) {
+    page($scope, 1)
   }]);
 
 gameControllers.controller('BiasCtrl', ['$scope', '$routeParams',

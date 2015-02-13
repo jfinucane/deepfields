@@ -2,8 +2,8 @@
 .troika_h1.h_pos
   Stare and Compare
 
-#galaxy_type_position.galaxy_types_action
-  = render :partial=>'nav/button',:locals=>{:text=>'More about galaxy types'}
+#galaxy_type_position
+  <modal-button modal_is='"More About Galaxy Types"' on-open='modal.open(modal_id)'></modal-button>
 
 .background_stare.background_stare_position
 
@@ -30,11 +30,6 @@
   = render :partial=>'nav/callout', :locals=>{:num=>'2.',:text=>"Does the universe look the same in all directions?"}
   = render :partial=>'nav/callout', :locals=>{:num=>'3.',:text=>"Does the universe look the same at different depths (i.e. distances)?"}
 
-= render partial: 'layouts/galaxies'
+%galaxy_types
 
-= link_to lesson_classic_path do
-  .next_signpost.next_position
-= link_to lesson_outback_path do
-  .back.back_position
-#page.hide
-  Stare
+<page-nav back='"/start/outback"' forward='"/start/enter"'></page-nav>
