@@ -14,3 +14,4 @@ jQuery ->
     $('.outer_frame_video').removeClass('hide')
 
 
+#TODO  Used many places.  FIX them all and get rid of this.

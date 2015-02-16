@@ -1,5 +1,5 @@
-gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'modalService',
-  function(gameProgress, drawProgressDots, modal) { 
+gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'modalService', 'fieldChoice',
+  function(gameProgress, drawProgressDots, modal, fieldChoice) { 
       return function($scope, step){
             var p=gameProgress
       $scope.signpost_visited = p.signpost_visited
@@ -10,6 +10,7 @@ gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'moda
       var d=drawProgressDots
       d.draw_progress_trail(p.progress())
       $scope.modal = modal
+      $scope.fieldChoice = fieldChoice
     }
   }
 ])

@@ -12,13 +12,11 @@
         .big_text
           near the Big Dipper
       #north_plain
-    = link_to finder_select_path('hdf_field'=> 'n') do
-      #hover_north.hover_adjust_right.hover_control
- 
+
+    <a href='start/select' id='hover_north' class='hover_adjust_right hover_control' ng-click=fieldChoice.set_field('n')></a>
   .earth_block
     #earth_image
-    #meet_north.enter_tag_position.condensed_h2_underscore
-      More Info about HDF-N
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-South")'> More info about HDF-N </div> 
 
   .field_block#south
     #plain_south.plain_control
@@ -29,20 +27,14 @@
         .big_text
           near the constellation Tucana
       #south_plain
-    = link_to finder_select_path('hdf_field'=> 's') do
-      #hover_south.hover_adjust_right_south.hover_control
+    <a href='start/select' id='hover_north' class='hover_adjust_right hover_control' ng-click=fieldChoice.set_field('s')></a>
 
   .earth_block
-    #meet_south.enter_tag_position.condensed_h2_underscore
-      More info about HDF-S
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-South")'> More info about HDF-S </div>  
 - if @caution_modal
   = render partial: 'nav/caution_modal'
 
 %field_modals
 
-= link_to lesson_stare_path do
-  .back.back_position
-
-#page.hide
-  Classic  
+<page-nav back='"/start/stare"'></page-nav> 
 
