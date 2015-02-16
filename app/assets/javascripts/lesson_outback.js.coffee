@@ -13,13 +13,4 @@ jQuery ->
     $('.show_south').addClass('hide')
     $('.outer_frame_video').removeClass('hide')
 
-  $('.field_block').hover \
-    (()->
-      id = this.id
-      $('#plain_'+id).addClass('hide')
-      $('#hover_'+id).removeClass('hide')),
-    (()->
-      id = this.id
-      $('#hover_'+id).addClass('hide')
-      $('#plain_'+id).removeClass('hide'))
 

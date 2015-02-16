@@ -5,7 +5,7 @@
       Pick a Hubble Deep Field to sample
 .enter_right
   .field_block#north
-    #plain_north
+    #plain_north.plain_control
       .plain_middle
         .big_look
           Look North 
@@ -13,7 +13,7 @@
           near the Big Dipper
       #north_plain
     = link_to finder_select_path('hdf_field'=> 'n') do
-      #hover_north.hide.hover_adjust_right
+      #hover_north.hover_adjust_right.hover_control
  
   .earth_block
     #earth_image
@@ -21,7 +21,7 @@
       More Info about HDF-N
 
   .field_block#south
-    #plain_south
+    #plain_south.plain_control
       .plain_middle
         %br
         .big_look
@@ -30,7 +30,7 @@
           near the constellation Tucana
       #south_plain
     = link_to finder_select_path('hdf_field'=> 's') do
-      #hover_south.hide.hover_adjust_right_south
+      #hover_south.hover_adjust_right_south.hover_control
 
   .earth_block
     #meet_south.enter_tag_position.condensed_h2_underscore

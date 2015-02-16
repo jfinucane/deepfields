@@ -15,6 +15,22 @@
 	float: left;
 	border: 1px solid black;
 }
+.field_block {
+    .hover_control {
+        display: none;
+    }
+    .plain_control: {
+        display: block;
+    }
+	&:hover {
+        .hover_control {
+            display: block;
+      }
+        .plain_control {
+            display: none;
+     }
+	}
+}
 #south_plain {
     background-image: image-url('final/enter-deep/btn-enter-hdf-s-default.jpg');
 	background-size: 388px 204px;
