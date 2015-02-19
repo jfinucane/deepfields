@@ -1,7 +1,7 @@
 game.directive('pageForward', function() {
   return {
     scope: {
-        forward: '=url'
+        forward: '=forward'
     }, 	
     template: "<a href='{{forward}}'> <div class='next_signpost next_position'></div></a>"
     }
@@ -10,7 +10,7 @@ game.directive('pageForward', function() {
 game.directive('pageBack', function() {
   return {
     scope: {
-        back: '=url'
+        back: '=back'
     }, 	
     template: "<a href='{{back}}'> <div class='back back_position'></div></a>"
     }

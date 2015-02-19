@@ -39,7 +39,7 @@ game.service('gameProgress',function(){
       pullup_visible = step_number > 2;
     }
     this.signpost_visited = function(section) {
-        console.log('signpost_visited here')
+        //console.log('signpost_visited here')
         visited = false
         if (section==5 && progress_array[32]) {
             visited=true;

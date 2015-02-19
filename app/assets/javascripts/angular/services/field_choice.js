@@ -12,6 +12,7 @@ game.service('fieldChoice', function() {
   }
 
   this.field_name = function(field){
+    console.log('field in field_name',field)
   	var field_name = 'None'
   	if (active_field == 'n') {
   		field_name = 'North'
@@ -20,6 +21,10 @@ game.service('fieldChoice', function() {
   		field_name = 'South'
   	}
   	return field_name;
+  }
+
+  this.get_field_name = function() {
+    return this.field_name(this.get_field())
   }
 
   this.other_field= function(field) {
