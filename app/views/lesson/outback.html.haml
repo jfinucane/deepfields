@@ -22,7 +22,7 @@
 <div class='overlay_background' ng-show='modal.show("Meet the Hubble Deep Fields")'>
 .outer_border_meet_hdfs
   .meet_side
-    #meet_north.meet_button
+    .meet_button
       %br
         <modal-button modal_is='"Meet HDF-North"' on-open='modal.open(modal_id)'></modal-button>
     #intro_north_map
@@ -38,7 +38,7 @@
         .inner_frame_video
           <iframe width="370" height="208" src="//www.youtube.com/embed/ut8DNM3iH9A" frameborder="0" allowfullscreen ng-if=modal.video_on_top() ></iframe>
   .meet_side_south
-    #meet_south.meet_button
+    .meet_button
       %br
         <modal-button modal_is='"Meet HDF-South"' on-open='modal.open(modal_id)'></modal-button>
     #intro_south_map

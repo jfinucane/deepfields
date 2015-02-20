@@ -18,14 +18,12 @@
           .big_text
             near the Big Dipper
         #north_plain
-      = link_to symmetry_sample_path('hdf_field'=> 'n') do
-        #hover_north.hide.hover_adjust_right
+      <a href='start/select' id='hover_north' class='hover_adjust_right hover_control' ng-click=fieldChoice.set_field('n')></a>
   - else 
     #north_used
   .earth_block
     #earth_image
-    #meet_north.enter_tag_position.enter_tag_style
-      More Info about HDF-N
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-North")'> More info about HDF-N </div>
 
   - if field != 's'
     .field_block#south
@@ -38,18 +36,14 @@
           .big_text
             near the constellation Tucana
         #south_plain
-      = link_to symmetry_sample_path('hdf_field'=> 's') do
-        #hover_south.hide.hover_adjust_right_south
+      <a href='start/select' id='hover_south' class='hover_adjust_right_south hover_control' ng-click=fieldChoice.set_field('s')></a>
   - else
     #south_used
   .earth_block
-    #meet_south.enter_tag_position.enter_tag_style
-      More info about HDF-S
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-South")'> More info about HDF-S </div>
 
 %field_modals
 
-= link_to lesson_index_path do
-  .back.back_position
+<page-back back='"/itinerary"'></page-back> 
 
-#page.hide
-  Reenter  
+

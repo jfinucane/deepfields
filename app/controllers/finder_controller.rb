@@ -12,7 +12,10 @@ class FinderController < ApplicationController
   end
   def hdf
     respond_to do |format|
-      format.json { render json: galaxy_data_points.to_json, layout: false}
+      #format.json { render json: galaxy_data_points.to_json, layout: false}
+      n = File.read('lib/HDFn.yaml')
+      s = File.read('lib/HDFs.yaml')
+      format.json { render json: YAML.load(n + s).to_json, layout:false}
     end
   end
   def pct (freq, ss)

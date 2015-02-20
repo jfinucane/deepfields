@@ -1,102 +1,40 @@
+.enter_left
+  #enter_the_deep.enter_the_deep_position
+  #enter_snippet
+    .std_text
+      Pick a Hubble Deep Field to sample
+.enter_right
+  .field_block#north
+    #plain_north.plain_control
+      .plain_middle
+        .big_look
+          Look North 
+        .big_text
+          near the Big Dipper
+      #north_plain
 
-.enter_title_position
-  .enter_left
-    .enter_big
-      Enter
-    .enter_the
-      The
-    .enter_big
-      Deep    
-  .pick_a_field
-    Pick a field to sample.  There should be enough text here to give the idea.  
-.footnote.field_footnote_position
-  Note:  This is a map of the whole night sky.  You could never see this much of the sky from any point on Earth.
-.field_base.field_position
-.field_constellations.field_position
-.field_names.field_position
-#preview_north.active_location
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'HDF-N'}
-#preview_south.active_location
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'HDF-S'}
-#preview_ff1.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'FF-1'}
-  .green_above.green_label.hide
-    Abell 2744
-#preview_ff2.inactive_location.field_tags
-  = render :partial=>'finder/field_diam', :locals=>{:field_name=>'FF-2'}
-  .green_left.green_label.hide
-    MACSJ0416.1-2403
-#preview_ff3.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'FF-3'}
-  .green_below.green_label.hide
-    MACSJ0717.5+3745
-#preview_ff4.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'FF-4'}
-  .green_below.green_label.hide
-    MACSJ1149.5+2223
-#preview_ff5.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'FF-5'}
-  .green_below.green_label.hide
-    Abell S1063
-#preview_ff6.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'FF-6'}
-  .green_below.green_label.hide
-    Abell 370
-#preview_hudf.inactive_location.field_tags
-  = render :partial=>'finder/diam_field', :locals=>{:field_name=>'HUDF'}
-.enter_checkbox.enter_checkbox_location
-  .checkbox_header
-    Display option;
-  .checkbox#box_for_constellations.box_checked
-  .checkbox_label
-    Show constellations
-  .checkbox#box_for_names.box_checked
-  .checkbox_label
-    Show labels
-  .checkbox#box_for_tags.box_checked
-  .checkbox_label#show_frontier
-    Show frontier and HUDF
-= link_to lesson_stare_path do
-  .back.back_position
-.left_slide.gray_border
-  #inner_border
-    .border_slideout
-      .troika_headline.across_hdf
-        Hubble Deep Field South
-      #hdfs_image
-      .location_and_button 
-        #dummy_image1
-          <h3> GALAXY <br/>LOCATION </h3>
-        = link_to finder_select_path('hdf_field'=> 's') do 
-          = render partial: 'nav/button', locals: {text: 'USE THIS FIELD'}
-        .fa.fa-search-plus#right_field.fa-2x
-      .slideout_text
-        The Hubble Deep Field PlaceHolder (HDF-P) is one of the deepest, sharpest, multi-color images of the faintest universe in visible light.   The image was made by aiming the Hubble Space Telescope at one seeming empty point in the northern sky near the Big Dipper for 10 days in December 1995.  About a thousand never-before-seen galaxies are visible in this view of the universe.
+    <a href='start/select' id='hover_north' class='hover_adjust_right hover_control' ng-click=fieldChoice.set_field('n')></a>
+  .earth_block
+    #earth_image
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-North")'> More info about HDF-N </div> 
+
+  .field_block#south
+    #plain_south.plain_control
+      .plain_middle
         %br
-        #close_right.close_style
-          .close
-            %i.fa.fa-times
-              .close_msg.std_text
-        %br 
-.right_slide.gray_border
-  #inner_border
-    .border_slideout
-      .troika_headline.across_hdf
-        Hubble Deep Field North
-      #hdfn_image
-        .fa.fa-search-plus#left_field.fa-2x
-      .location_and_button  
-        #dummy_image1
-          <h3> GALAXY <br/>LOCATION </h3>
-        = link_to finder_select_path('hdf_field'=> 'n') do   
-          = render partial: 'nav/button', locals: {text: 'USE THIS FIELD'}
-      .slideout_text
-        The Hubble Deep Field North (HDF-N) is one of the deepest, sharpest, multi-color images of the faintest universe in visible light.   The image was made by aiming the Hubble Space Telescope at one seeming empty point in the northern sky near the Big Dipper for 10 days in December 1995.  About a thousand never-before-seen galaxies are visible in this view of the universe. <br/>
-        #close_left.close_style
-          .close
-            %i.fa.fa-times
-              .close_msg
-                CLOSE
-        %br
-#page.hide
-  Enter
+        .big_look
+          Look South
+        .big_text
+          near the constellation Tucana
+      #south_plain
+    <a href='start/select' id='hover_south' class='hover_adjust_right_south hover_control' ng-click=fieldChoice.set_field('s')></a>
+
+  .earth_block
+    <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-South")'> More info about HDF-S </div>  
+- if @caution_modal
+  = render partial: 'nav/caution_modal'
+
+%field_modals
+
+<page-back back='"/start/stare"'></page-back> 
+

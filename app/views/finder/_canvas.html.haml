@@ -1,25 +1,23 @@
 .grid_6.move_starfield_left   
   .canvas_header
     .condensed_h2.h2_field
-      Hubble Deep Field
-      = field_name
-      (HDF-#{field})
-    - if field == 'n' 
-      .humble_link.more_info_position#meet_north
-        (show info)
-    - else
-      .humble_link.more_info_position#meet_south
-        (show info)    
+      Hubble Deep Field {{fieldChoice.get_field_name()}}
+      (HDF-{{fieldChoice.get_field()}})&nbsp;
+ 
+    <div class='humble_link more_info_position' ng-show='fieldChoice.get_field()=="n"' ng-click='modal.open("Meet HDF-North")'>&nbsp;(show info) </div>
+
+    <div class='humble_link more_info_position' ng-show='fieldChoice.get_field()=="s"' ng-click='modal.open("Meet HDF-South")'>&nbsp;(show info) </div>
   .star_canvas.star_border
-    #starfield
-      - if field == 'n'
-        .n-image
-          %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
-            %p Your browser doesn't support canvas
-      - else
-        .s-image
-          %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
-            %p Your browser doesn't support canvas
+    <div ng-click=sample_this_galaxy($event) id='starfield'>
+    <div class='n-image' ng-show='fieldChoice.get_field()=="n"'>
+    %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
+      %p Your browser doesn't support canvas
+    </div>
+    <div class='s-image' ng-show='fieldChoice.get_field()=="s"'>
+    %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
+      %p Your browser doesn't support canvas
+    </div>
+    </div>       
   - if show_counts          
     .captured_message_location
       .osc_h1
@@ -33,4 +31,4 @@
         #done_button.button_outside_gray
           .button_inside
             .button_text
-              Done
+              Done              

@@ -17,11 +17,12 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def galaxy_data_points
+  def galaxy_data_pointsTODOremove
     hdf = session['hdf_field']
     file_name='lib/HDF' + hdf +'.yaml'
     field_name= 'hdf' + hdf
     YAML.load(File.read(file_name))[field_name]
   end
+
 
 end
