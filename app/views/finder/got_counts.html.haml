@@ -6,10 +6,10 @@
     .sample_block
       .short_break
       .troika_h3  
-        Location: HDF-#{field_name}
+        Location: HDF-{{fieldChoice.field_name()}}
       .troika_h3.margin_bottom
         Your Safari Sample Size: 
-        = @sample_size
+        {{galaxyData.count_of_samples}}
       .sample_table
         .dummy
         .col1.osc_h1_table.th_sample
@@ -18,13 +18,14 @@
           Frequency
         .col3.osc_h1_table.th_sample
           = '%'
-        - @types.each do |type|
-          .col1.td_sample
-            = type['name']
-          .col2.td_sample
-            = type['frequency']
-          .col3.td_sample
-            = "%2d\%" % type['percent'].to_f
+        <div ng-repeat='freq in galaxyData.frequencies()'>
+        .col1.td_sample
+          {{freq.name}}
+        .col2.td_sample
+          {{freq.count}}
+        .col3.td_sample
+          {{freq.freq}}
+        </div>
         .dummy    
     .full_width.check
     .std_text
@@ -43,8 +44,7 @@
   
 = render :partial=>'finder/canvas',:locals=>{:show_counts=>false} 
 
-= link_to finder_select_path(:hdf_field=>@field) do
-  .back.back_position
+<page-back back="'/start/select'"></page-back>
 = link_to eval(@continue_path) do
   .next_signpost.next_position
 #travelogue_2.travelogue_position

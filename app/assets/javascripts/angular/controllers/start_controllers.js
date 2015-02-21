@@ -16,15 +16,21 @@ gameControllers.controller('classicCtrl', ['$scope', '$routeParams', '$injector'
     page($scope,5)
   }]);
 
-gameControllers.controller('selectCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus', 'galaxyData',
-  function($scope, $routeParams, $injector,page, galaxyData) {
+gameControllers.controller('selectCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus', 'galaxyData', '$location', 
+  function($scope, $routeParams, $injector,page, galaxyData, location) {
     page($scope,6)
-    $scope.sample_this_galaxy = galaxyData.sample_this_galaxy
+    galaxyData.reset_the_counts()
+    $scope.galaxyData = galaxyData
+    $scope.got_counts = function(){
+      galaxyData.compute_frequencies()
+      location.path('/start/got_counts')
+    }
   }]);
 
-gameControllers.controller('gotCountsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus',
-  function($scope, $routeParams, $injector,page) {
+gameControllers.controller('gotCountsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus','galaxyData',
+  function($scope, $routeParams, $injector,page, galaxyData) {
     page($scope,7)
+    $scope.galaxyData = galaxyData
   }]);
 
 gameControllers.controller('IrregularsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus',

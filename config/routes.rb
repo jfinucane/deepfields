@@ -20,7 +20,7 @@ Galaxy::Application.routes.draw do
     get 'select'
     get 'hdf'
     get 'hdf_back'
-    post 'got_counts'
+    get 'got_counts'
     get 'got_counts_back'
     get 'irregulars'
     get 'find_out'

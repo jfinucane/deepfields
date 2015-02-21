@@ -12,7 +12,7 @@ class FinderController < ApplicationController
   end
   def hdf
     respond_to do |format|
-      #format.json { render json: galaxy_data_points.to_json, layout: false}
+      #Add new fields here
       n = File.read('lib/HDFn.yaml')
       s = File.read('lib/HDFs.yaml')
       format.json { render json: YAML.load(n + s).to_json, layout:false}
@@ -36,28 +36,7 @@ class FinderController < ApplicationController
     ['Elliptical', 'Spiral', 'Irregular']
   end
   def got_counts
-    @selected = JSON.parse(params['galaxies'])
-    @sample_size = @selected.count
-    @field = params['hdf_field']
-    @field = @field.strip
-    points = galaxy_data_points
-    frequencies = [0,0,0]
-    @selected.each{|c|
-      g_type = points[c][2]
-      type = type_map[g_type]
-      frequencies[type] += 1
-    }
-    session['field'] = @field
-    session['hdf_field'] = @field
-    session['sample_size'] = @selected.count
-    session['percent'] = pct(frequencies[2],@sample_size)
-    session['galaxies'] = @selected 
-    session['your_persistent_freq_sample'] = params['your_persistent_freq_sample']
-    @types = []
-    type_names.each_with_index{|t,i|	
-      @types << {'name' => t, 'frequency' => frequencies[i], 
-        'percent'=> pct(frequencies[i],@sample_size)  }
-    }
+
     if session['continue_after_selection'].nil? || session['continue_after_selection'] == '' || session['continue_after_selection'] ==' '  
       @continue_path = 'finder_irregulars_path'
     else
@@ -65,6 +44,8 @@ class FinderController < ApplicationController
       @continue_path = controller_method[1] +  '_' + controller_method[2] + '_path'
       @return_to_text = controller_method[1]
     end
+        @continue_path =''
+    @return_to_text =''
   end
   def got_counts_back
     @field = session['field']

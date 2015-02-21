@@ -12,7 +12,6 @@ game.service('fieldChoice', function() {
   }
 
   this.field_name = function(field){
-    console.log('field in field_name',field)
   	var field_name = 'None'
   	if (active_field == 'n') {
   		field_name = 'North'
