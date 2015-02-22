@@ -24,13 +24,13 @@
         .col2.td_sample
           {{freq.count}}
         .col3.td_sample
-          {{freq.freq}}
+          {{freq.freq}}%
         </div>
         .dummy    
     .full_width.check
     .std_text
       Since &nbsp;
-      .link#galaxy_types_tag.galaxy_types_action> galaxies come in different types
+      <span class='link' ng-click='modal.open("More About Galaxy Types")'> galaxies come in different types</span>
       , this chart shows how many of each type were in the sample that you just captured.
     .full_width.check
     %br
@@ -45,12 +45,8 @@
 = render :partial=>'finder/canvas',:locals=>{:show_counts=>false} 
 
 <page-back back="'/start/select'"></page-back>
-= link_to eval(@continue_path) do
-  .next_signpost.next_position
+<page-forward forward='"/start/irregulars"'></page-back>
 #travelogue_2.travelogue_position
-= render partial: 'layouts/galaxies'
+
+%galaxy_types
 %field_modals
-#galaxies.hide
-  = @selected
-%p.hide#page
-  Got Counts

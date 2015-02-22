@@ -1,3 +1,18 @@
+function drawX  (position) {
+    x=position[0]
+    y=position[1]
+    c=document.getElementById("StarDraw");
+    ctx=c.getContext("2d")
+    ctx.strokeStyle = '#ff0000'
+    ctx.lineWidth = 2
+    size = 6;
+    ctx.moveTo(x - size, y - size);
+    ctx.lineTo(x + size, y + size);
+    ctx.stroke();
+    ctx.moveTo(x + size, y - size);
+    ctx.lineTo(x - size, y + size);
+    ctx.stroke();
+}
 function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list) {
   var type_map = [0,0,1,1,2] //these types summarize the four categories in YAML
   var dist =[]
@@ -52,7 +67,7 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   	frequency_list =[]
   	for (i in [0,1,2]) {
   		count= galaxy_counts[i]
-  		freq = (count*1000/galaxy_counts.length)/10.0
+  		freq = Math.round(count*100/galaxy_list.length)
   		frequency_list.push({freq: freq, count: count, name: type_names[i]})
   	}
   	console.log("FREQ", frequency_list)
@@ -63,6 +78,14 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   this.count_by_type = function () {
   	console.log(galaxy_counts, 'COUNT BY TYPE')
   	return (galaxy_counts)
+  }
+  this.redraw_galaxies = function() {
+  	console.log('LIST', galaxy_list)
+  	for (i in galaxy_list) {
+  		var galaxy_id = galaxy_list[i]
+   		console.log(galaxy_id)
+  		drawX(galaxy_locations[galaxy_id])
+  	}
   }
 
 }])

@@ -30,7 +30,9 @@ gameControllers.controller('selectCtrl', ['$scope', '$routeParams', '$injector',
 gameControllers.controller('gotCountsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus','galaxyData',
   function($scope, $routeParams, $injector,page, galaxyData) {
     page($scope,7)
+    galaxyData.redraw_galaxies
     $scope.galaxyData = galaxyData
+
   }]);
 
 gameControllers.controller('IrregularsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus',
