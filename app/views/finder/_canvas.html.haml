@@ -8,7 +8,7 @@
 
     <div class='humble_link more_info_position' ng-show='fieldChoice.get_field()=="s"' ng-click='modal.open("Meet HDF-South")'>&nbsp;(show info) </div>
   .star_canvas.star_border
-    <div ng-click='galaxyData.sample_this_galaxy($event)' id='starfield'>
+    <div ng-click='clicksAreActive && galaxyData.sample_this_galaxy($event)' id='starfield'>
     <div class='n-image' ng-show='fieldChoice.get_field()=="n"'>
     %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
       %p Your browser doesn't support canvas

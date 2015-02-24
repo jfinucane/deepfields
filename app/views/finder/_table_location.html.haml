@@ -1,7 +1,7 @@
 .location_block
   .full_width.check
   .troika_h3.margin_bottom
-    LOCATION: HDF-#{field_name}
+    LOCATION: HDF-{{fieldChoice.get_field_name()}}
   .dummy_again  
   .sample_table.sample_table_wide
     .col1_location.osc_h1_table.th_sample
@@ -26,7 +26,7 @@
     .col3_location.td_sample_tall
       .td_vertical_adjust
       .std_bold.td_brown
-        = "%3d\%" % @percent
+        {{galaxyData.frequencies()[2].freq}}%
 
     .col1_location.td_sample_tall
       .std_bold.td_brown
@@ -36,9 +36,7 @@
         Using whole population
       %br
       .std_plaintext
-        of HDF-
-        = @field_name  
-     
+        of HDF-{{fieldChoice.get_field()}}  
     .col2_location.td_sample_tall
       .td_vertical_adjust
       .std_bold.td_brown
@@ -46,11 +44,12 @@
     .col3_location.td_sample_tall
       #show_me
         .full_width.check
-        = render :partial=>'nav/button',:locals=>{:text=>'Show Me'}
+        <nav-button ng-click="show_me_result=true" text='"Show me"' ng-hide='show_me_result'>
+        </nav-button>
       .std_bold.td_brown
-        .hide#astronomers_result
-          .td_vertical_adjust
-          = "%5.1f%" % ASTRONOMER[@field][2]
+        <div class='td_vertical_adjust' ng-show='show_me_result'>
+        = "%5.1f%" % ASTRONOMER[@field][2]
+        </div>   
       #actual_result.hide
         .td_vertical_adjust
           .std_bold

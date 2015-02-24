@@ -10,42 +10,30 @@
     .std_text
       To simplify, we're going to look at only the irregular galaxies.
       %p
-      .click_to_show
-        Click the SHOW ME button to see the actual result for irregulars found by categorizing
-        .link.link_vocab all the galaxies
-        that could be categorized in your HDF. 
-    
-  .guess_yes_no.hide.left_irregular_text 
-    .std_text
-      Here you can see the actual result for irregulars found by categorizing 
+      <div ng-hide='show_me_result'>
+      Click the SHOW ME button to see the actual result for irregulars found by categorizing
       .link.link_vocab all the galaxies
-      that could be categorized in your HDF.
-      %br
-      %br 
-    .std_bold
-      Does the percentage of irregulars in your safari sample seem close to the astronomers' actual result for the whole HDF?
-    .std_text
-      If you're not sure, go ahead and guess...
-    %p
-    = link_to finder_next_path do
-      #yes_no_buttons
-        = render :partial=>'nav/button',:locals=>{:text=>'YES'}
-        &nbsp;&nbsp;&nbsp;
-        = render :partial=>'nav/button',:locals=>{:text=>'NO'} 
-
+      that could be categorized in your HDF. 
+      </div>
+  <div class='left_irregular_text' ng-show='show_me_result'> 
+  .std_text
+    Here you can see the actual result for irregulars found by categorizing 
+    .link.link_vocab all the galaxies
+    that could be categorized in your HDF.
+    %br
+    %br 
+  .std_bold
+    Does the percentage of irregulars in your safari sample seem close to the astronomers' actual result for the whole HDF?
+  .std_text
+    If you're not sure, go ahead and guess...
+  %p
+  %a{href: 'start/next'}
+    <nav-button text='"yes"'></nav-button> &nbsp;&nbsp;&nbsp;
+    <nav-button text='"no"'></nav-button>
+  </div>
 .right_irregular_compare
   = render :partial=>'table_location'
-
-    
-.right_irregular_find_out.blue_box_color.before_you_answer.hide
-  = render :partial=>'table_find_out'
 #travelogue_3.travelogue_position
-= link_to finder_got_counts_back_path do
-  .back.back_position
-= link_to finder_next_path do
-  .next_signpost.next_position.hide
-.next_disable_signpost.next_position
-%p.hide#hdf_field
-  = @hdf_field
-%p.hide#page
-  Irregulars
+<page-back back="'/start/got_counts'"></page-back>
+<page-forward forward="'/start/next'" ng-show='show_me_result'>
+<div class='next_disable_signpost next_position' ng-hide=show_me_result'></div>
