@@ -19,4 +19,12 @@ game.service('modalService', function() {
         var video_last =  (video_pos == modal_stack.length-1) &&  (video_pos > -1)
         return video_last
   }
+  
+  this.bias = function(bias, id) {
+
+    console.log('here', bias, id)
+  }
+
+
+
 });

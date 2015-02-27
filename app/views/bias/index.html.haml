@@ -1,6 +1,5 @@
 .troika_h1.h_pos
   Banishing Bias
-
 .bias_left
   .std_text
     Haphazard sampling &mdash; especially that done by human choice &mdash; can result in a biased sample that has very different characteristics from the population.  Random sampling requires careful planning to avoid bias.
@@ -22,25 +21,23 @@
         Unbiased
       .bias_check_header.bias_hdr_text
         %br
-        Biased
-
-    .bias_row#bias_redness.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'redness'}
-    .bias_row#bias_location.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'location in picture'}
-    .bias_row#bias_size.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'size'}
-    .bias_row#bias_blueness.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'blueness'}
-    .bias_row#bias_shape.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'shape'}
-    .bias_row#bias_brightness.clickable
-      = render :partial=>'bias/method', :locals=>{:text=>'brightness'}
-    .bias_row#bias_eyes_closed.clickable
-      = render :partial=>'bias/method_tall', :locals=>{:text1=>'picking with eyes',:text2=>'closed'}
-    .bias_row#bias_computer.clickable
-      = render :partial=>'bias/method_tall', :locals=>{:text1=>'letting computer', :text2=>'pick a sample'}      
-
+        Biased   
+    <bias-check text="'redness'" image="'bias_redness'"
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'location in picture'" image="'bias_location'"
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'size'" image="'bias_size'""
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'blueness'" image="'bias_blueness'""
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'shape'" image="'bias_shape'" 
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'brightness'" image="'bias_brightness'" 
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'Picking with eyes closed'" image="'bias_eyes_closed'" tall=true
+    on-check='modal.bias(biased, image_ref)'></bias-check>
+    <bias-check text="'Letting computer pick a sample'" image="'bias_computer'" tall=true  
+    on-check='modal.bias(biased, image_ref)'></bias-check>
 = render partial: 'bias/green_message'
 %p.hide#page
   Bias

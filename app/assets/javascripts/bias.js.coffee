@@ -57,33 +57,33 @@ $('#oops_close').click ()->
   window.modal_close_fade('oops')
   check_fill(window.bias_method, 30)
 jQuery ->
-  if !window.page('Bias') then return
-  $('.check_box').click (e) ->
-    window.bias_check = 'unbiased'
-    if $(this).hasClass('biased') then window.bias_check = 'biased' 
-    row_id = $(this).parents('.bias_row').attr('id')
-    if row_id == 'bias_computer' || row_id == 'bias_eyes_closed'
-      window.modal_close_fade('oops')
-      msg_id = '#' + row_id + '_' + window.bias_check
-      $(msg_id).removeClass('hide')
-      modal_frame = msg_id + " .position_modal" 
-      top_dist = (676 -$(modal_frame).height())/2 -24
-      console.log $(modal_frame).height(), modal_frame
-      $(modal_frame).css('top': top_dist)
-      $(msg_id).animate
-        opacity: 1, \
-        200
-    else
-      if $('#'+row_id).hasClass('clickable')
-        if window.bias_check == 'biased'
-          thats_right(row_id, e.pageY)
-        else
-          oops(row_id)
-        $('#'+row_id).removeClass('clickable') 
-    $('#' + row_id).addClass('row_checked')
-    if $('.row_checked').length > 7
-      $('.next_disable_signpost').addClass('hide')
-      $('.next_signpost').removeClass('hide')    
+  return
+ 
+  window.bias_check = 'unbiased'
+  if $(this).hasClass('biased') then window.bias_check = 'biased' 
+  row_id = $(this).parents('.bias_row').attr('id')
+  if row_id == 'bias_computer' || row_id == 'bias_eyes_closed'
+    window.modal_close_fade('oops')
+    msg_id = '#' + row_id + '_' + window.bias_check
+    $(msg_id).removeClass('hide')
+    modal_frame = msg_id + " .position_modal" 
+    top_dist = (676 -$(modal_frame).height())/2 -24
+    console.log $(modal_frame).height(), modal_frame
+    $(modal_frame).css('top': top_dist)
+    $(msg_id).animate
+      opacity: 1, \
+      200
+  else
+    if $('#'+row_id).hasClass('clickable')
+      if window.bias_check == 'biased'
+        thats_right(row_id, e.pageY)
+      else
+        oops(row_id)
+      $('#'+row_id).removeClass('clickable') 
+  $('#' + row_id).addClass('row_checked')
+  if $('.row_checked').length > 7
+    $('.next_disable_signpost').addClass('hide')
+    $('.next_signpost').removeClass('hide')    
 
   $('.close_modal').click (e) ->
     id = $(this).parents('.center_block').attr('id')

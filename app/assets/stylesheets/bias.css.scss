@@ -65,7 +65,7 @@ $compare_table_width: 450px;
   margin:auto;
   margin-top: 5px;
 }
-.check_box_tall {
+.bias_tall_image .check_box {
   margin-top: 14px;
 }
 .bias_check_canvas {
@@ -108,10 +108,6 @@ $compare_table_width: 450px;
   @include bias_default;
   background-image: image-url('bias/bias-blueness.jpg');
 }
-#bias_computer .image{
-  @include bias_larger;
-  background-image: image-url('bias/bias-computer.jpg');
-}
 #bias_eyes_closed .image{
   @include bias_larger;
   background-image: image-url('bias/bias-eyes-closed.jpg');
@@ -142,6 +138,10 @@ $compare_table_width: 450px;
   height: 299px;
   background-image: image-url('bias/eyes-closed-bias-info.png');
   float: left;
+}
+#bias_computer .image{
+  @include bias_larger;
+  background-image: image-url('bias/bias-computer.jpg');
 }
 .green_button_inside {
   border: 3px solid #00aa4e;

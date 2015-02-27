@@ -33,7 +33,7 @@ game.config(['$routeProvider', '$locationProvider', '$injector',
       when('/start/irregulars', {templateUrl: '/finder/irregulars.html', controller: 'irregularCtrl'}).
       when('/start/next', {templateUrl: '/finder/next.html', controller: 'nextCtrl'}).
 
-      when('/bias/banishing', {templateUrl: '/bias/index.html', controller: 'indexBiasCtrl'}).
+      when('/bias/banishing', {templateUrl: '/bias/index.html', controller: 'banishingCtrl'}).
       when('/bias/compare', {templateUrl: '/bias/compare.html', controller: 'comparetrl'}).
 
       when('/sample/enough', {templateUrl: '/sample/index.html', controller: 'indexSampleCtrl'}).

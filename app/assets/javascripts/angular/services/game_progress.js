@@ -3,7 +3,7 @@ game.service('gameProgress',function(){
         if      (step_number == 1)               {color = 'Intro' }
         else if (step_number == 2)               {color = 'Default'}
         else if (step_number < boomerang_at[1]) {color= 'Start'}
-        else if (step_number < boomerang_at[2]) {color= 'Sias'}
+        else if (step_number < boomerang_at[2]) {color= 'Bias'}
         else if (step_number < boomerang_at[3]) {color= 'Sample'}
         else if (step_number < boomerang_at[4]) {color= 'HDFN'}
         else                                    {color= 'Last'}

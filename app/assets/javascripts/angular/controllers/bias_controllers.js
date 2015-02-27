@@ -1,8 +1,8 @@
 'use strict';
 
 
-gameControllers.controller('biasCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus',
-  function($scope, $routeParams, $injector,page) {
+gameControllers.controller('banishingCtrl', ['$scope', 'pageStatus',
+  function($scope, page) {
     page($scope,11)
   }]);
 
