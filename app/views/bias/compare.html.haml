@@ -14,7 +14,7 @@
     = "."
 .bias_right
   .troika_h2_white
-    Results using hdf-#{@field}
+    Results using hdf-{{fieldChoice.get_field_name()}}
   .compare_right_table
     .compare_header
       .compare_method_header
@@ -49,9 +49,4 @@
       = render :partial=>'bias/compare_tall', :locals=>{:text1=>'picking with eyes',:text2=>'closed', :pct=>'10.3%'}
     .compare_row#bias_computer
       = render :partial=>'bias/compare_tall', :locals=>{:text1=>'letting computer', :text2=>'pick a sample', :pct=>'66.8%'}
-%p.hide#page
-  Bias Compare
-= link_to bias_index_path do
-  .back.back_position
-= link_to lesson_index_path do
-  .next_signpost.next_position
+<page-nav back="'/bias/banishing'" forward="'/itinerary'"></page-nav>

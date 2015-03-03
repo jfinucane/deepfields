@@ -55,4 +55,12 @@ game.service('biasModal', function(){
   	$('#oops').removeClass('hide')
     $('#oops').animate({opacity:1}, 100)
   }
+  this.fast_check = function(id) {
+  	if (id == 'bias_computer') {
+  		this.check_fill('bias_computer', 20, 'unbiased')
+  	}
+  	else {
+  	this.check_fill(id, 20, 'biased')
+  	} 
+  }
 });        

@@ -21,7 +21,6 @@ game.service('modalService', ['biasModal', function(biasModal) {
         var video_last =  (video_pos == modal_stack.length-1) &&  (video_pos > -1)
         return video_last
   }
-  
   this.bias = function(bias, id) {
     if (checked_list.indexOf(id) > -1){
       return
@@ -56,5 +55,9 @@ game.service('modalService', ['biasModal', function(biasModal) {
   }
   this.show_next_bias = function () {
     return (checked_list.length > 7)
+  }
+  this.reset_checklist = function () {
+    console.log('RESETTING')
+    checked_list =[]
   }
 }]);

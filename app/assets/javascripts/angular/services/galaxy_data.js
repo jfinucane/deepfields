@@ -67,7 +67,7 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   	frequency_list =[]
   	for (i in [0,1,2]) {
   		count= galaxy_counts[i]
-  		freq = Math.round(count*100/galaxy_list.length)
+  		freq = Math.round(count*1000/galaxy_list.length)/10.
   		frequency_list.push({freq: freq, count: count, name: type_names[i]})
   	}
   	console.log("FREQ", frequency_list)

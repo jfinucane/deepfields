@@ -2,11 +2,11 @@
   .bias_pct_header
     Percentage of irregular galaxies in 
     %br
-    HDF-#{@field}  
+    HDF-{{fieldChoice.get_field()}}
   .bias_pct_row
     Your Method
     .bias_right_justify
-      = "%4.1f%" % @percent
+      {{galaxyData.frequencies()[2].freq}}%
   .bias_pct_row
     Astronomers' result
     .bias_right_justify

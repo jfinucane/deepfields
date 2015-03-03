@@ -1,9 +1,10 @@
 .compare_row_taller
-  .compare_method_row
-    .bias_row_text
-      = text1
-      %br
-      = text2
+  <div class='compare_method_row' ng-class='{redden_background: redden_background}'>
+  .bias_row_text
+    = text1
+    %br
+    = text2
+  </div>    
   .bias_check_row
     .check_box.check_box_tall.unbiased
       %canvas.check_canvas{width:22, height:22}

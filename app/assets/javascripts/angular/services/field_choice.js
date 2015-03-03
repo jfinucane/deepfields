@@ -8,6 +8,7 @@ game.service('fieldChoice', function() {
   }
 
   this.get_field = function() {
+    console.log('fielding')
   	return active_field;
   }
 

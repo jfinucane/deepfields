@@ -3,7 +3,7 @@ class BiasController < ApplicationController
 	def index
   end
   def compare
-    @percent = session['percent'] || 0
-    @field = session['field'] || 'Not selected'
+    @percent =  0
+    @field =  'Not selected'
   end
 end

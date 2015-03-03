@@ -1,7 +1,9 @@
-ISSUE with the web page
 
-YOU VS THE ASTRONOMERS June 4
+Rails/Angular Issues
 
-Noting that Compare.java in the old app loops until the error is less than 3% for each sample.
+HAML mix looks gross.
 
-When sampling a proportion of .72 it appears that SE is 5.9% and for five samples SEM is around 2.6%.   
+The visible page link, i.e. /bias/compare_frequency 
+must NOT be the same as the actual template URL.   The link to the template URL is served by Rails but the use of ng-view requires layout false.
+
+   
