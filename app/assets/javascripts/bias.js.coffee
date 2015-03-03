@@ -19,7 +19,7 @@ check_cross = (c,time) ->
       if (i > 21)
         clearInterval(handle)), \
       time
-check_fill = (id, time, biased='biased') -> 
+window.check_fill = (id, time, biased='biased') -> 
   c = $('#' + id + ' .' + biased + ' canvas')
   window.test = c
   ctx = c[0].getContext('2d')
@@ -38,9 +38,10 @@ check_fill = (id, time, biased='biased') ->
         check_cross(c, time)), \
       time),\
     100
-thats_right = (id,y) ->
+window. thats_right = (id) ->
   check_fill(id,20)
   msg_id = '#' + id + '_msg'
+  y = $('#'+id).position().top+60
   $(msg_id).css('top': y-60).removeClass('hide')
   $(msg_id).animate
     opacity: 0, \
@@ -57,6 +58,7 @@ $('#oops_close').click ()->
   window.modal_close_fade('oops')
   check_fill(window.bias_method, 30)
 jQuery ->
+  console.log('offset', $('#bias_eyes_closed_biased .position_modal').height())
   return
  
   window.bias_check = 'unbiased'

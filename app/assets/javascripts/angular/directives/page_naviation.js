@@ -48,8 +48,8 @@ game.directive('biasCheck', ['modalService',function (modal) {
         'image': '=image',
         'open': '&onCheck'
     },
-    template: "<div class='bias_row clickable' ng-class='{bias_tall_image: tall}'>"+
-    "<div class='bias_wide_method_row' id='{{image}}'><div class='image'></div>"+
+    template: "<div class='bias_row clickable' ng-class='{bias_tall_image: tall}' id='{{image}}'>"+
+    "<div class='bias_wide_method_row'><div class='image'></div>"+
     "<div class='bias_row_text'>{{text}}</div></div>"+
     "<unbiased-check-box></unbiased-check-box><biased-check-box></biased-check-box></div>"
   }

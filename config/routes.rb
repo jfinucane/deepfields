@@ -15,6 +15,7 @@ Galaxy::Application.routes.draw do
     get 'what_is_deep'
     get 'field_modals'
     get 'galaxy_types'
+    get 'bias_modals'
   end
   namespace :finder do
     get 'select'
