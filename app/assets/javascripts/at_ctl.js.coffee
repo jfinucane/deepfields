@@ -42,5 +42,10 @@ jQuery ->
       1000  
   $('.close_modal_general').click (e) ->
     id = $(this).parents('.center_block').attr('id')
-    window.modal_close_fade(id) 
+    close_selector = '#' + id
+    $(close_selector).animate 
+      opacity: 0,\
+      100,\
+      () ->
+        $(close_selector).addClass('hide') 
     

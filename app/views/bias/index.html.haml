@@ -40,11 +40,8 @@
     on-check='modal.bias(biased, image_ref)'></bias-check>
 
 %bias_modals
-%p.hide#page
-  Bias
 #travelogue_4_5.travelogue_position
-= link_to lesson_index_path do
-  .back.back_position
-= link_to bias_compare_path do
-  .next_signpost.next_position.hide
-.next_disable_signpost.next_position
+<page-back back="'/itinerary'"></page-back>
+
+<page-forward forward="'/bias/compare'" ng-show='modal.show_next_bias()'></page-forward>
+<div class='next_disable_signpost next_position' ng-hide='modal.show_next_bias()'></div>

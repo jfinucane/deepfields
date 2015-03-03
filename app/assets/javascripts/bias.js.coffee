@@ -5,49 +5,7 @@ window.modal_close_fade = (id) ->
     100,\
     () ->
       $(close_selector).addClass('hide')
-check_cross = (c,time) ->
-  ctx = c[0].getContext('2d')
-  ctx.strokeStyle = '#9c815b'
-  ctx.moveTo(20,2)
-  ctx.beginPath()
-  ctx.lineWidth = 2
-  i = 3;
-  handle = setInterval (()->
-      ctx.lineTo(22-i,i)
-      i += 2
-      ctx.stroke()
-      if (i > 21)
-        clearInterval(handle)), \
-      time
-window.check_fill = (id, time, biased='biased') -> 
-  c = $('#' + id + ' .' + biased + ' canvas')
-  window.test = c
-  ctx = c[0].getContext('2d')
-  ctx.beginPath()
-  ctx.strokeStyle = '#9c815b'
-  ctx.lineWidth = 2
-  setTimeout (()->
-    ctx.moveTo(2,2)
-    i = 3; 
-    handle = setInterval (()->
-      ctx.lineTo(i,i)
-      i += 2
-      ctx.stroke()
-      if (i > 21)
-        clearInterval(handle)
-        check_cross(c, time)), \
-      time),\
-    100
-window. thats_right = (id) ->
-  check_fill(id,20)
-  msg_id = '#' + id + '_msg'
-  y = $('#'+id).position().top+60
-  $(msg_id).css('top': y-60).removeClass('hide')
-  $(msg_id).animate
-    opacity: 0, \
-    2000,\
-    () ->
-      $(msg_id).addClass('hide').css('opacity', 1)
+
 oops = (id) ->
   $("#oops").removeClass("hide")
   $('#oops').animate
@@ -58,7 +16,6 @@ $('#oops_close').click ()->
   window.modal_close_fade('oops')
   check_fill(window.bias_method, 30)
 jQuery ->
-  console.log('offset', $('#bias_eyes_closed_biased .position_modal').height())
   return
  
   window.bias_check = 'unbiased'

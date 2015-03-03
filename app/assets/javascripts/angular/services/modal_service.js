@@ -1,16 +1,16 @@
-game.service('modalService', function() {
-  biased_flag = ''
-  bias_id= ''
-  oops_id=''
+game.service('modalService', ['biasModal', function(biasModal) {
+  var biased_flag = ''
+  var bias_id= ''
+  var oops_id=''
   var modal_stack = []
+  var checked_list = []
   this.open = function(id) {
       modal_stack.push(id)
       console.log('stacked',id)
   }
 // all modals stack on top of each other, so remove them in LIFO order
   this.close = function() {
-       id = modal_stack.pop()
-       console.log('trying to close',id)
+      modal_stack.pop()
 	}
   this.show =function(id) {
       return ( modal_stack.indexOf(id) > -1)
@@ -23,26 +23,23 @@ game.service('modalService', function() {
   }
   
   this.bias = function(bias, id) {
+    if (checked_list.indexOf(id) > -1){
+      return
+    }
+    checked_list.push(id)
     bias_id = id
     biased_flag = bias ? 'biased' : 'unbiased'
     if ((bias_id == 'bias_eyes_closed') ||  (bias_id == 'bias_computer')) {
-       oops_id = '#' + bias_id + '_' + biased_flag
-       $(oops_id).removeClass('hide')
-       modal_frame = oops_id + " .position_modal"
-       top_dist = (676 -$(modal_frame).height())/2 -24
-       $(modal_frame).css('top', top_dist)
-        $(oops_id).animate (
-          {opacity:1}, 200)
-       }
+       oops_id = '#' + id + '_' + biased_flag
+       biasModal.open_id_specific_modals(oops_id)
+    }
     else {
       if (biased_flag == 'biased') {
-       thats_right(id)
+       biasModal.thats_right(id)
        }
       else {
-       $('#oops').removeClass('hide')
-       $('#oops').animate({opacity:1}, 100)
        oops_id = '#oops'
-       console.log ('setting oops id', oops_id)
+       biasModal.open_oops_modal()
       }
     }
   }
@@ -50,11 +47,14 @@ game.service('modalService', function() {
     $(oops_id).animate({opacity:0}, 100, function(){
       $(oops_id).addClass('hide')
       if(bias_id=='bias_computer') {
-        check_fill(bias_id, 40, 'unbiased')
+        biasModal.check_fill(bias_id, 40, 'unbiased')
       }
       else {
-        check_fill(bias_id, 40)
+        biasModal.check_fill(bias_id, 40, 'biased')
       }
     })
   }
-});
+  this.show_next_bias = function () {
+    return (checked_list.length > 7)
+  }
+}]);
