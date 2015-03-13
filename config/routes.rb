@@ -34,8 +34,6 @@ Galaxy::Application.routes.draw do
   namespace :sample do
     get 'index'
     get 'go'
-    get 'visualize'
-    get 'size'
   end
   namespace :funnel do
     get 'magnify'

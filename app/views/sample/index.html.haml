@@ -19,11 +19,8 @@
     .std_bold
       the computer will choose five samples of the same size as your safari sample.
   .sample_go
-    =link_to sample_go_path do
-      = render partial: 'nav/button', locals: {text: 'GO'} 
-
-=link_to lesson_index_path do 
-  .back.back_position
+    <link-button text='"go"' link='"sample/visualize"'></link-button>
+<page-back back='"itinerary"'></page-back>
 
 #travelogue_6.travelogue_position
 .bg_3_1

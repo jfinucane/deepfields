@@ -1,11 +1,20 @@
 game.directive('navButton', function() {
 	return {
 		scope: {button_text: '=text'},
-		template: "<div class= 'button_outside'>"+ 
-		"<div class='button_inside'>"+
-		" <div class='button_text'>{{button_text}}</div>" +
+		template: "<div class= 'button_outside'><div class='button_inside'>"+
+		"<div class='button_text'>{{button_text}}</div>" +
 		"</div></div>"
 
+	}
+})
+
+game.directive('linkButton', function() {
+	return {
+		scope: {button_text: '=text', link_href: '=link'},
+		template: "<a href='{{link_href}}'>"+ 
+		 "<div class= 'button_outside'><div class='button_inside'>"+
+		"<div class='button_text'>{{button_text}}</div>" +
+		"</div></div></a>"
 	}
 })
 

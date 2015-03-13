@@ -36,7 +36,7 @@ function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list) {
   }
 }
 game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice){
-  var galaxy_counts =[0,0,0,0,0]
+  var galaxy_counts =[0,0,0]
   var galaxy_list = []
   var galaxies,frequency_list
   var type_names = ['Elliptical', 'Spiral', 'Irregular']
@@ -47,6 +47,9 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   galaxy_points = function(galaxies){
   	var field = 'hdf'+fieldChoice.get_field()
   	return (galaxies[field])
+  }
+  this.galaxies_for_current_field = function() {
+    return galaxy_points(galaxies)
   }
   this.sample_this_galaxy = function(event){
     image_pos = $('#starfield').position()
@@ -87,5 +90,12 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   		drawX(galaxy_locations[galaxy_id])
   	}
   }
-
+  this.create_default_data =function() {
+    galaxy_counts=[2,6,1]
+    frequency_list=[{freq: 22.2, count: 2, name: type_names[0]},
+                    {freq: 66.7, count: 6, name: type_names[1]},
+                    {freq: 11.1, count: 1, name: type_names[2]}]
+    galaxy_list=[11,22,33,44,55,66,77,88,99]
+    console.log(frequency_list[2], 'DEFAULT')
+  }
 }])

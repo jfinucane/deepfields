@@ -28,18 +28,15 @@
 .sample_table_frame
   .across.across_spacing
     .condensed_h2_gray.sample_size_header
-      Your HDF-#{field_name}
+      Your HDF-{{fieldChoice.field_name()}}
       Safari sample size: 
     #sample_counts
-      =@count
+      {{galaxyData.count_of_samples()}}
   =render :partial=>'sample/frequency_table'
 #travelogue_7.travelogue_position
-= link_to sample_index_path do
-  .back.back_position
-= link_to funnel_magnify_path do
-  .next_signpost.next_position.show_plot.hide
-.next_disable_signpost.next_position
-#page.hide
-  Visualize
-#count.hide
-  =@count
+<page-back back='"sample/enough"'>
+</page-back>
+<page-forward forward='"sample/magnify"' ng-show='show_min_max_plot'>
+</page-forward>
+<div class='next_disable_signpost next_position' ng-hide='show_min_max_plot'>
+</div>

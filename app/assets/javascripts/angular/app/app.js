@@ -37,7 +37,7 @@ game.config(['$routeProvider', '$locationProvider', '$injector',
       when('/bias/compare_frequency', {templateUrl: '/bias/compare.html', controller: 'compareCtrl'}).
 
       when('/sample/enough', {templateUrl: '/sample/index.html', controller: 'indexSampleCtrl'}).
-      when('/sample/go', {templateUrl: '/sample/go.html', controller: 'goCtrl'}).
+      when('/sample/visualize', {templateUrl: '/sample/go.html', controller: 'goCtrl'}).
       when('/sample/magnify', {templateUrl: '/funnel/magnify.html', controller: 'magnifyCtrl'}).
       when('/sample/smallest', {templateUrl: '/funnel/smallest.html', controller: 'smallestCtrl'}).
       when('/sample/best_region', {templateUrl: '/funnel/best_region.html', controller: 'bestRegionCtrl'}).

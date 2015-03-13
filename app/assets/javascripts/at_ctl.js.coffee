@@ -27,12 +27,7 @@ $('.travelogue_position').on 'click', () ->
 $('#travelogue_pdf_link').on 'click', () ->
   open_travelogue()
 jQuery -> 
-  $('#overlay_btn').click () ->
-    o=$('#overlay')
-    if o.hasClass('hide')
-      o.removeClass('hide')
-    else
-      o.addClass('hide')     
+    
   $('.close_style').click () ->
     $('.right_slide').animate
       left: '960px',\
@@ -48,4 +43,7 @@ jQuery ->
       100,\
       () ->
         $(close_selector).addClass('hide') 
+  $('.field_selection_modal').click (e) ->
+    $('.field_selection_modal').addClass('hide')
+        
     

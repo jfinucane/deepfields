@@ -14,7 +14,7 @@
   .sample_you.sample_row_1.sample_col
     1
   .sample_you.sample_row_2.sample_col.sample_computer
-    = "%5.1f%" % @percent
+    {{galaxyData.frequencies()[2].freq}}
 .sample_table_width.osc_h2_gray.two_em_ltr.black_background
   Computer
 .sample_computer_table.sample_table_width
@@ -29,17 +29,34 @@
     .sample_computer.sample_row_2#f2.sample_col
     .sample_computer.sample_row_2#f3.sample_col
     .sample_computer.sample_row_2#f4.sample_col  
-.min_max_background.min_max_background_position.show_plot#replace_canvas.hide
-  %canvas{width: 524, height: 150, id: 'variability'}
-.min_max_placeholder#show_plot_elements
-  .button_outside.min_max_button_adjust#show_plot_button
-    .button_inside
-      .button_text
-        Show MIN/MAX plot
-.sample_controls.show_plot.hide
-  .float_left 
-    = render :partial=>'sample/checkbox' 
-  .button_outside.test_five_adjust#recalculate
-    .button_inside       
-      .button_text
-        Test 5 more samples
+<div class='min_max_background min_max_background_position' ng-show='show_min_max_plot'>
+%canvas{width: 524, height: 150, id: 'variability'}
+</div>
+<div class='min_max_placeholder' ng-hide='show_min_max_plot'>  
+<nav-button class='min_max_button_adjust' ng-click='show_plot()' text='"Show MIN/MAX plot"'>
+</nav-button>      
+</div>
+<div class='sample_controls show_plot' ng-show='show_min_max_plot'>       
+.float_left 
+  .checkbox_frame
+    .checkbox_hdr.checkbox_col_1
+      Display
+    .checkbox_hdr.checkbox_col_2
+      ON/OFF
+    .checkbox_row.checkbox_col_1 
+      Median
+      .green_dot
+    <div class= 'checkbox_row checkbox_col_2' ng-click='median_checked()'>  
+    .unchecked_box.center  
+    <div class='checked_box center' ng-show='median()'></div>
+    </div>   
+    .checkbox_row.checkbox_col_1
+      Mean 
+      .red_dot
+    <div class= 'checkbox_row checkbox_col_2' ng-click='mean_checked()'>   
+    .unchecked_box.center  
+    <div class='checked_box center' ng-show='mean()'></div> 
+    </div>
+<nav-button class='test_five_adjust' ng-click='recalculate()' text='"Test 5 more samples"'>
+</nav-button>
+</div>      
