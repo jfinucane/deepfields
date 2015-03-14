@@ -14,7 +14,7 @@
   .sample_you.sample_row_1.sample_col
     1
   .sample_you.sample_row_2.sample_col.sample_computer
-    {{galaxyData.frequencies()[2].freq}}
+    {{galaxyData.frequencies()[2].freq}}%
 .sample_table_width.osc_h2_gray.two_em_ltr.black_background
   Computer
 .sample_computer_table.sample_table_width
@@ -24,39 +24,39 @@
     .sample_computer.sample_row_1.sample_col 3
     .sample_computer.sample_row_1.sample_col 4
     .sample_computer.sample_row_1.sample_col 5
-    .sample_computer.sample_row_2#f0.sample_col
-    .sample_computer.sample_row_2#f1.sample_col
-    .sample_computer.sample_row_2#f2.sample_col
-    .sample_computer.sample_row_2#f3.sample_col
-    .sample_computer.sample_row_2#f4.sample_col  
+    .sample_computer.sample_row_2.sample_col {{freq(0)}}%
+    .sample_computer.sample_row_2.sample_col {{freq(1)}}%
+    .sample_computer.sample_row_2.sample_col {{freq(2)}}%
+    .sample_computer.sample_row_2.sample_col {{freq(3)}}%
+    .sample_computer.sample_row_2.sample_col {{freq(4)}}%
 <div class='min_max_background min_max_background_position' ng-show='show_min_max_plot'>
 %canvas{width: 524, height: 150, id: 'variability'}
 </div>
-<div class='min_max_placeholder' ng-hide='show_min_max_plot'>  
+<div class='min_max_placeholder' ng-hide='show_min_max_plot'>
 <nav-button class='min_max_button_adjust' ng-click='show_plot()' text='"Show MIN/MAX plot"'>
-</nav-button>      
+</nav-button>
 </div>
-<div class='sample_controls show_plot' ng-show='show_min_max_plot'>       
-.float_left 
+<div class='sample_controls show_plot' ng-show='show_min_max_plot'> 
+.float_left
   .checkbox_frame
     .checkbox_hdr.checkbox_col_1
       Display
     .checkbox_hdr.checkbox_col_2
       ON/OFF
-    .checkbox_row.checkbox_col_1 
+    .checkbox_row.checkbox_col_1
       Median
       .green_dot
-    <div class= 'checkbox_row checkbox_col_2' ng-click='median_checked()'>  
-    .unchecked_box.center  
+    <div class= 'checkbox_row checkbox_col_2' ng-click='median_checked()'>
+    .unchecked_box.center
     <div class='checked_box center' ng-show='median()'></div>
-    </div>   
+    </div>
     .checkbox_row.checkbox_col_1
-      Mean 
+      Mean
       .red_dot
-    <div class= 'checkbox_row checkbox_col_2' ng-click='mean_checked()'>   
-    .unchecked_box.center  
+    <div class= 'checkbox_row checkbox_col_2' ng-click='mean_checked()'>
+    .unchecked_box.center
     <div class='checked_box center' ng-show='mean()'></div> 
     </div>
 <nav-button class='test_five_adjust' ng-click='recalculate()' text='"Test 5 more samples"'>
 </nav-button>
-</div>      
+</div>

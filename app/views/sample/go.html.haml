@@ -15,16 +15,17 @@
     = '.'  
   %br
   %br
-  .show_plot.hide
-    .std_text
-      The range of this data is repre- sented by the length of the line:  the longer the line, the greater the variability.   Add measures of central tendency to the graph.   Note the relative positions of the
-      .link.link_vocab mean
-      and&nbsp;
-      .link.link_vocab> median
-      = '.'
-      Test other sets of five samples by pressing 
-      %br
-      '5 MORE SAMPLES'.  
+  <div ng-show='show_min_max_plot'>
+  .std_text
+    The range of this data is repre- sented by the length of the line:  the longer the line, the greater the variability.   Add measures of central tendency to the graph.   Note the relative positions of the
+    .link.link_vocab mean
+    and&nbsp;
+    .link.link_vocab> median
+    = '.'
+    Test other sets of five samples by pressing 
+    %br
+    '5 MORE SAMPLES'.
+  </div>      
 .sample_table_frame
   .across.across_spacing
     .condensed_h2_gray.sample_size_header

@@ -12,27 +12,30 @@ var sample_frequencies = function() {
       }
       freq[trial] =irregular*100.0/your_sample_size
    }
-   for (i=0; i<5; i++){
-      $('#f' + i).text(freq[i].toFixed(1) + "%")
-      freq[i] = freq[i] * 4.84 +18
+  var pixel_locations = []
+  for (i=0; i<5; i++){
+      pixel_locations[i] = freq[i] * 4.84 +18
    }
-   console.log('here')
-   console.log(freq)
-   return  freq.sort(function(a,b){return a-b});
+   pixel_locations.sort(function(a,b){return a-b})
+   var middle = pixel_locations[2]
+   var sum = 0
+   for(i=0; i<5; i++){sum += pixel_locations[i]}
+   var avg = sum/5.0
+   return {frequencies: freq, median_pixel: middle, mean_pixel: avg, pixels: pixel_locations};
 }
 this.sample_draw= function(ctx){
   var freq = sample_frequencies()
   ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
   ctx.beginPath()
   ctx.strokeStyle='#000'
-  ctx.moveTo(freq[0], 105)
-  ctx.lineTo(freq[4], 105)
+  ctx.moveTo(freq.pixels[0], 105)
+  ctx.lineTo(freq.pixels[4], 105)
   ctx.stroke();
-  ctx.moveTo(freq[0], 100)
-  ctx.lineTo(freq[0], 111)
+  ctx.moveTo(freq.pixels[0], 100)
+  ctx.lineTo(freq.pixels[0], 111)
   ctx.stroke();
-  ctx.moveTo(freq[4], 100)
-  ctx.lineTo(freq[4], 111)
+  ctx.moveTo(freq.pixels[4], 100)
+  ctx.lineTo(freq.pixels[4], 111)
   ctx.stroke()
   return freq
 }

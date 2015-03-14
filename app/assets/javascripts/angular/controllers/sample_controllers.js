@@ -19,14 +19,12 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     $scope.median_checked = function() {
       sample_median_checked = true
       sample_mean_checked = false
-      draw.red_diamond(ctx, sample_frequencies[2],102, 7)
+      draw.red_diamond(ctx, sample_frequencies.median_pixel,102, 7)
     }
     $scope.mean_checked = function() {
       sample_mean_checked = true
       sample_median_checked = false
-      var sum = 0
-      for(i=0; i<5; i++){sum += sample_frequencies[i]}
-      draw.green_circle(ctx, Math.floor(sum/5), 105,9)
+      draw.green_circle(ctx, sample_frequencies.mean_pixel, 105,9)
     }
     $scope.recalculate = function() {
       sample_frequencies = draw.sample_draw(ctx)
@@ -35,6 +33,9 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     }
     $scope.mean = function() {return sample_mean_checked}
     $scope.median = function() {return sample_median_checked}
+    $scope.freq = function(i) {
+      return sample_frequencies.frequencies[i].toFixed(1)
+    }
     page($scope,15)
   }]);
 
