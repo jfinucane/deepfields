@@ -24,12 +24,11 @@
       #min_max_graphic
       #min_max_frame
 #travelogue_8.travelogue_position
-= link_to sample_go_path do
-  .back.back_position
-= link_to funnel_smallest_path do
-  .next_signpost.next_position.show_plot.hide
-.next_disable_signpost.next_position
+<page-back back='"sample/enough"'></page-back>
+<page-forward forward='"sample/smallest"' ng-show='slider_down()'>
+</page-forward>
+<div class='next_disable_signpost next_position' ng-hide='slider_down()'>
+</div>
 
-#page.hide
-  Magnify
+
 

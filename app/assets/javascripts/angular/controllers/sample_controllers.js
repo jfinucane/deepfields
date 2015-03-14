@@ -42,6 +42,8 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
 gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus', 'magnifierDrag',
   function($scope, page, magnifier) {
     page($scope,16)
+    magnifier.drag_action($scope)
+    $scope.slider_down = magnifier.slider_down
   }]);
 
 gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
