@@ -39,8 +39,8 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     page($scope,15)
   }]);
 
-gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus',
-  function($scope, page) {
+gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus', 'magnifierDrag',
+  function($scope, page, magnifier) {
     page($scope,16)
   }]);
 

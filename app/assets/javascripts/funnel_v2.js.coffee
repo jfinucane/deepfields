@@ -30,30 +30,3 @@ jQuery ->
     $('.next_disable_signpost').addClass('hide')
     $('.next_signpost').removeClass('hide')
     $('.variability_overlay_region').removeClass('hide')
-
-jQuery ->
-  if !window.page("Magnify") then return
-  floating_lines = (c, ctx, t) -> 
-    c.width = c.width
-    ctx.beginPath()
-    ctx.strokeStyle = '#008ec7'
-    ctx.lineWidth=4
-    ctx.moveTo(0,20 + t )
-    ctx.lineTo(50,20)
-    ctx.stroke()
-    ctx.moveTo(0,87 + t)
-    ctx.lineTo(50,379)
-    ctx.stroke()
-  c=document.getElementById("floating_lines");
-  ctx=c.getContext("2d");
-  floating_lines(c, ctx, 0)
-  $("#magnifier_glass").draggable \
-    containment: "#magnifier_container",
-    drag: ()->
-      t = $(this).position().top
-      $('#min_max_graphic').css('top', (30 - 5.70*t)+'px')
-      floating_lines(c, ctx, t)
-      if t > 84
-        $('.next_disable_signpost').addClass('hide')
-        $('.next_signpost').removeClass('hide')
-
