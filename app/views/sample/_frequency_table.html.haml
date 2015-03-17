@@ -19,16 +19,12 @@
   Computer
 .sample_computer_table.sample_table_width
   .sample_table_inner
-    .sample_computer.sample_row_1.sample_col 1
-    .sample_computer.sample_row_1.sample_col 2
-    .sample_computer.sample_row_1.sample_col 3
-    .sample_computer.sample_row_1.sample_col 4
-    .sample_computer.sample_row_1.sample_col 5
-    .sample_computer.sample_row_2.sample_col {{freq(0)}}%
-    .sample_computer.sample_row_2.sample_col {{freq(1)}}%
-    .sample_computer.sample_row_2.sample_col {{freq(2)}}%
-    .sample_computer.sample_row_2.sample_col {{freq(3)}}%
-    .sample_computer.sample_row_2.sample_col {{freq(4)}}%
+    <div ng-repeat='sample_number in [1,2,3,4,5]'>
+    .sample_computer.sample_row_1.sample_col {{sample_number}}
+    </div>
+    <div ng-repeat='sample in sample_frequencies() track by $index'>
+    .sample_computer.sample_row_2.sample_col {{sample.toFixed(1)}}%
+    </div> 
 <div class='min_max_background min_max_background_position' ng-show='show_min_max_plot'>
 %canvas{width: 524, height: 150, id: 'variability'}
 </div>

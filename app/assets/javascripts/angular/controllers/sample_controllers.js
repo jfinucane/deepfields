@@ -33,9 +33,7 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     }
     $scope.mean = function() {return sample_mean_checked}
     $scope.median = function() {return sample_median_checked}
-    $scope.freq = function(i) {
-      return sample_frequencies.frequencies[i].toFixed(1)
-    }
+    $scope.sample_frequencies = function() { return sample_frequencies.frequencies}
     page($scope,15)
   }]);
 
