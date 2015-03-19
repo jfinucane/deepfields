@@ -1,25 +1,73 @@
 .troika_h1.h_pos
   Where's the best sample size?
 .left_smallest_region
-  = render partial: 'funnel/best_header'
+  #best_first{'ng-hide'=>'show_me()'}
+    .std_text
+      To find the &nbsp;
+      .link.link_vocab> smallest reasonable sample
+      , we need
+      %br
+      to look more closely at the variability of the small- 
+      %br
+      est samples
+
+  .best_try{'ng-show'=>'show_me()'}
+    .std_text
+      In the bright yellow region, variability first starts to "settle down", and the 
+      .link.link_vocab measure of central tendency
+      first starts to ap- 
   .best_sample_position
     .brown_border
       %checkbox_mean_median
     .variability_inset
-  = render partial: 'funnel/best_body'    
+  #best_base_text{'ng-hide'=>'show_me()'}
+    .std_text
+      .short_break
+      Add the 
+      .link.link_vocab mean
+      or the
+      .link.link_vocab median
+      to see the effect of sample size on variability.  The indicators will be connected with a line.
+    .short_break
+  #best_add_text{'ng-show'=>'already_checked()'}
+    .std_text
+      As sample size increases, there is less variability.  The
+      .link.link_vocab measures of central ten- dency
+      approach a constant value when the sample size is sufficient to represent the population.  The sample mean or median is approaching the population mean or median as the sample size increases.
+    .short_break
+    .std_bold
+      Do you think you know where the smallest reason-
+      %br
+      able sample is?
+
+    .adjust_best_show_me_position{'ng-click'=>'show_me_action()'}
+      .button_outside
+        .button_inside
+          .button_text.adjust_best_show_me_text
+            Show me
+  .best_try{'ng-show'=>'show_me()'}
+    .std_text
+      roach a more constant value.  This region
+      yields the&nbsp; 
+      .link.link_vocab> smallest reasonable size
+      = "."
+      Accuracy wouldn't increase much by picking a larger sample.
+    .short_break
+    .std_bold
+      Can you determine the smallest reasonable sample size for data taken from the HDF?
+    .short_break
+    <link-button text='"&nbsp;&nbsp;Let me try&nbsp;&nbsp;"' link='"sample/best_region"' class='float_right' >
+    </link-button>      
 .right_smallest_region
   .sky_blue_border
     .sky_blue_title
       Variability of the smallest sample sizes
     .variability_background
-    .variability_overlay_mean.hide
-    .variability_overlay_median.hide
-    .variability_overlay_region.hide
-= link_to funnel_magnify_path do
-  .back.back_position
-= link_to funnel_best_region_path do
-  .next_signpost.next_position.show_plot.hide
-.next_disable_signpost.next_position
-#page.hide
-  Smallest
+    <div class='variability_overlay_mean' ng-show='mean()'></div>
+    <div class='variability_overlay_median' ng-show='median()'></div>
+    <div class='variability_overlay_region' ng-show='show_me()'></div>
+<page-back back='"sample/magnify"'></page-back>
+<page-forward forward='"sample/best_region"' ng-show='show_me()'>
+</page-forward>
+<div class='next_disable_signpost next_position' ng-hide='show_me()'></div>
 

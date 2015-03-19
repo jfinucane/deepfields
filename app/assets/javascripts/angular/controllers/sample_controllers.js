@@ -46,6 +46,24 @@ gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus', 'magnifierDr
 
 gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
   function($scope, page) {
+    var sample_mean_checked = false
+    var sample_median_checked = false
+    var show_me = false
+    $scope.mean_checked = function() {
+      sample_mean_checked = true
+      sample_median_checked = false     
+    }
+    $scope.median_checked = function() {
+      sample_median_checked = true
+      sample_mean_checked = false      
+    }
+    $scope.mean = function() {return sample_mean_checked}
+    $scope.median = function() {return sample_median_checked}
+    $scope.already_checked = function () {
+      return (sample_mean_checked || sample_median_checked) && !show_me
+    }
+    $scope.show_me_action = function() {show_me = true}
+    $scope.show_me = function() { return show_me}
     page($scope,17)
   }]);
 
