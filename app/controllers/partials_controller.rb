@@ -6,5 +6,7 @@ class PartialsController < ApplicationController
 	end
 	def galaxy_types
 	end
+	def checkbox_mean_median
+	end
 end
 

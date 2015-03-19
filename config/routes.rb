@@ -16,6 +16,7 @@ Galaxy::Application.routes.draw do
     get 'field_modals'
     get 'galaxy_types'
     get 'bias_modals'
+    get 'checkbox_mean_median'
   end
   namespace :finder do
     get 'select'

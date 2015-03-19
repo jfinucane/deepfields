@@ -1,0 +1,19 @@
+.checkbox_frame
+  .checkbox_hdr.checkbox_col_1
+    Display
+  .checkbox_hdr.checkbox_col_2
+    ON/OFF
+  .checkbox_row.checkbox_col_1
+    Median
+    .green_dot
+  <div class= 'checkbox_row checkbox_col_2' ng-click='median_checked()'>
+  .unchecked_box.center
+  <div class='checked_box center' ng-show='median()'></div>
+  </div>
+  .checkbox_row.checkbox_col_1
+    Mean
+    .red_dot
+  <div class= 'checkbox_row checkbox_col_2' ng-click='mean_checked()'>
+  .unchecked_box.center
+  <div class='checked_box center' ng-show='mean()'></div>
+  </div>
