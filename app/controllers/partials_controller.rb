@@ -8,5 +8,7 @@ class PartialsController < ApplicationController
 	end
 	def checkbox_mean_median
 	end
+	def definitions
+	end
 end
 

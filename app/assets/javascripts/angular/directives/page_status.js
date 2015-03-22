@@ -1,5 +1,5 @@
-gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'modalService', 'fieldChoice', 'galaxyData',
-  function(gameProgress, drawProgressDots, modal, fieldChoice, galaxyData) { 
+gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'modalService', 'fieldChoice', 'galaxyData', 'pullup',
+  function(gameProgress, drawProgressDots, modal, fieldChoice, galaxyData, pullup) { 
       return function($scope, step){
             var p=gameProgress
       $scope.signpost_visited = p.signpost_visited
@@ -12,7 +12,8 @@ gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'moda
       $scope.modal = modal
       $scope.fieldChoice = fieldChoice
       $scope.galaxyData = galaxyData
-      if (fieldChoice.get_field()== ''){
+      pullup.toggle_down()
+      if (fieldChoice.get_field()== ''){  //TODOJF Testing code
         fieldChoice.set_field("s") 
         galaxyData.create_default_data()
         console.log('using DEFAULT data')

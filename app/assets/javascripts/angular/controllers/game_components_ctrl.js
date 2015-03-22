@@ -1,10 +1,12 @@
-gameControllers.controller('GameComponentsCtrl', ['$scope', 'gameProgress',
-  function($scope, gameProgress) {
+gameControllers.controller('GameComponentsCtrl', ['$scope', 'gameProgress', 'pullup',
+  function($scope, gameProgress, pullup) {
     var progress= gameProgress
     $scope.show_pullup = function(){
     	return (progress.pullup());
     }
+    $scope.pullup = pullup
    $scope.signpost_visited = progress.signpost_visited
+   window.$scope = $scope
    $scope.define = function(word,event){ 
       $('.vocab_inner#'+word).removeClass('hide')
       var browser_width = $(window).width()
