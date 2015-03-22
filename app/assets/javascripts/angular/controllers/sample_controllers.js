@@ -1,11 +1,8 @@
 'use strict';
-
-
 gameControllers.controller('indexSampleCtrl', ['$scope', 'pageStatus',
   function($scope, page) {
     page($scope,14)
   }]);
-
 gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
   function($scope,  page, draw) {
     var sample_mean_checked = false
@@ -36,14 +33,12 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     $scope.sample_frequencies = function() { return sample_frequencies.frequencies}
     page($scope,15)
   }]);
-
 gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus', 'magnifierDrag',
   function($scope, page, magnifier) {
     page($scope,16)
     magnifier.drag_action($scope)
     $scope.slider_down = magnifier.slider_down
   }]);
-
 gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
   function($scope, page) {
     var sample_mean_checked = false
@@ -63,7 +58,7 @@ gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
       return (sample_mean_checked || sample_median_checked) && !show_me
     }
     $scope.show_me_action = function() {show_me = true}
-    $scope.show_me = function() { return show_me}
+    $scope.show_me = function() {return show_me}
     page($scope,17)
   }]);
 

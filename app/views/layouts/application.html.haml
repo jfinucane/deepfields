@@ -7,13 +7,13 @@
 = csrf_meta_tags
 </head>  
 <body class="game"  >
-<div ng-controller='PullupCtrl' class='find_position'>
+<div ng-controller='GameComponentsCtrl' class='find_position'>
 
 .game_frame.container_12
   %ng-view
   = render partial: 'layouts/progress_pullup'
-  = render :partial=> 'nav/modal_block' 
-  = render :partial=> 'nav/vocab' 
+  = render :partial=> 'nav/modal_block'
+  %explanations 
 #travelogue_path.hide
   = lesson_display_pdf_path 
 #progress.hide

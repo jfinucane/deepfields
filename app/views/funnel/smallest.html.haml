@@ -3,8 +3,8 @@
 .left_smallest_region
   #best_first{'ng-hide'=>'show_me()'}
     .std_text
-      To find the &nbsp;
-      .link.link_vocab> smallest reasonable sample
+      To find the
+      %phrase{'word'=>"'smallest'", 'define'=>'define'} smallest reasonable sample
       , we need
       %br
       to look more closely at the variability of the small- 
@@ -14,8 +14,8 @@
   .best_try{'ng-show'=>'show_me()'}
     .std_text
       In the bright yellow region, variability first starts to "settle down", and the 
-      .link.link_vocab measure of central tendency
-      first starts to ap- 
+      %phrase{'word'=>"'central_tendency'", 'define'=>'define'} measure of central tendency
+      first starts to approach 
   .best_sample_position
     .brown_border
       %checkbox_mean_median
@@ -24,15 +24,15 @@
     .std_text
       .short_break
       Add the 
-      .link.link_vocab mean
+      %phrase{'word'=>"'mean'", 'define'=>'define'} mean
       or the
-      .link.link_vocab median
+      %phrase{'word'=>"'median'", 'define'=>'define'}  median
       to see the effect of sample size on variability.  The indicators will be connected with a line.
     .short_break
   #best_add_text{'ng-show'=>'already_checked()'}
     .std_text
       As sample size increases, there is less variability.  The
-      .link.link_vocab measures of central ten- dency
+      %phrase{'word'=>"'central_tendency'", 'define'=>'define'} measures of central ten- dency
       approach a constant value when the sample size is sufficient to represent the population.  The sample mean or median is approaching the population mean or median as the sample size increases.
     .short_break
     .std_bold
@@ -47,9 +47,9 @@
             Show me
   .best_try{'ng-show'=>'show_me()'}
     .std_text
-      roach a more constant value.  This region
-      yields the&nbsp; 
-      .link.link_vocab> smallest reasonable size
+      a more constant value.  This region
+      yields the  
+      %phrase{'word'=>"'smallest'", 'define'=>'define'} smallest reasonable size
       = "."
       Accuracy wouldn't increase much by picking a larger sample.
     .short_break
@@ -70,4 +70,3 @@
 <page-forward forward='"sample/best_region"' ng-show='show_me()'>
 </page-forward>
 <div class='next_disable_signpost next_position' ng-hide='show_me()'></div>
-
