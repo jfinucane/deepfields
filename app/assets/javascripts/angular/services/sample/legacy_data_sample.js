@@ -18,9 +18,4 @@ game.service('legacyDataSample', function(){
     }
     return freq.map(function(f) {return f*5.2 - 133 })
   }
-  
-
-
-
-
 })
