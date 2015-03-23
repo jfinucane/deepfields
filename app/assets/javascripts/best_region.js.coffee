@@ -33,16 +33,7 @@ window.you_got_it =  () ->
   $('#next_compare_astronomer').append($form)
   $form.submit()
 
-window.show_modal = (id) ->
-    msg_id = '#' + id
-    $(msg_id).removeClass('hide')
-    modal_frame = msg_id + " .position_modal"  
-    top_dist = (676 -$(modal_frame).height())/2
-    console.log $(modal_frame).height(), modal_frame
-    $(modal_frame).css('top': top_dist)
-    $(msg_id).animate
-        opacity: 1, \
-        200
+
 rescale = (freq) ->
   x = window.your_persistent_freq[freq]
   #remove old display units

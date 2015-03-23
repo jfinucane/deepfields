@@ -26,6 +26,19 @@ $('.travelogue_position').on 'click', () ->
   open_travelogue()
 $('#travelogue_pdf_link').on 'click', () ->
   open_travelogue()
+
+#used in Angular version
+window.show_modal = (id) ->
+    msg_id = '#' + id
+    $(msg_id).removeClass('hide')
+    modal_frame = msg_id + " .position_modal"  
+    top_dist = (676 -$(modal_frame).height())/2
+    console.log $(modal_frame).height(), modal_frame
+    $(modal_frame).css('top': top_dist)
+    $(msg_id).animate
+        opacity: 1, \
+        200
+
 jQuery -> 
     
   $('.close_style').click () ->
@@ -34,7 +47,9 @@ jQuery ->
       1000
     $('.left_slide').animate
       left: '-540px',\
-      1000  
+      1000 
+
+#used in Angular version       
   $('.close_modal_general').click (e) ->
     id = $(this).parents('.center_block').attr('id')
     close_selector = '#' + id

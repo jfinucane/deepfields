@@ -40,6 +40,7 @@ game.service('pullup', function(){
     }
     this.toggle_down = function() {
         if (!$('.tab_area').hasClass('tab_down')) {
-          $('.progress_slider').animate( {top: "+=254px"}, 1000, toggle_down  }
+          $('.progress_slider').animate( {top: "+=254px"}, 1000, toggle_down)
+        }
     }
 })

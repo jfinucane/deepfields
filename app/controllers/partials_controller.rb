@@ -10,5 +10,7 @@ class PartialsController < ApplicationController
 	end
 	def definitions
 	end
+	def irregular_graph
+	end
 end
 

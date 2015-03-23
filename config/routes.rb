@@ -18,6 +18,7 @@ Galaxy::Application.routes.draw do
     get 'bias_modals'
     get 'checkbox_mean_median'
     get 'definitions'
+    get 'irregular_graph'
   end
   namespace :finder do
     get 'select'
@@ -42,7 +43,7 @@ Galaxy::Application.routes.draw do
     get 'smallest'
     get 'more_closely'
     get 'best_region'
-    post 'you_got_it'
+    get 'you_got_it'
     get 'you_got_it_back'
     get 'compare_astronomer'
     get 'you_versus'

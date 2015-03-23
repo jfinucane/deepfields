@@ -39,7 +39,7 @@ gameControllers.controller('magnifyCtrl', ['$scope',  'pageStatus', 'magnifierDr
     magnifier.drag_action($scope)
     $scope.slider_down = magnifier.slider_down
   }]);
-gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
+gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus', 
   function($scope, page) {
     var sample_mean_checked = false
     var sample_median_checked = false
@@ -62,8 +62,25 @@ gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
     page($scope,17)
   }]);
 
-gameControllers.controller('bestRegionCtrl', ['$scope', 'pageStatus',
-  function($scope, page) {
+gameControllers.controller('bestRegionCtrl', ['$scope', 'pageStatus', '$location',
+  function($scope, page, location) {
+    var wrong_sample_estimate = false;
+    $scope.check_reasonable = function() { 
+
+      if ($scope.reasonable_size === undefined) {$scope.reasonable_size =0}
+      console.log('check_reasonable', $scope.reasonable_size)
+      var estimate = 0 || parseInt($scope.reasonable_size)
+      if (estimate > 50 || estimate < 40){
+        window.show_modal("wrong_sample_estimate")
+      }
+      else {location.path('/sample/you_got_it')}
+      
+    }
+    $scope.next = function() { location.path('/sample/you_got_it')}
+    $scope.try_again = function () {
+      var elem =  $('#wrong_sample_estimate')
+      elem.animate({opacity: 0}, 100, function() { elem.addClass('hide'); elem.css('opacity',1);})
+    }
     page($scope,18)
   }]);
 

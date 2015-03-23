@@ -5,8 +5,6 @@
     REASONABLE SIZE:
   .on_left#sample_number
     .best_size_spacing
-      %input#make_estimate.reasonable_size{type:'text',maxlength: 3}
-    .button_outside#best_region
-      .button_inside
-        .button_text
-          Go
+      %input#make_estimate.reasonable_size{maxlength: 3, 'ng-model'=>'reasonable_size'}
+    
+    %action_button{'action'=>'check_reasonable'} Go

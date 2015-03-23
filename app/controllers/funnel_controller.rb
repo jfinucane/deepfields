@@ -6,37 +6,15 @@ class FunnelController < ApplicationController
   def smallest
   end
   def best_region
-    puts 'SESSION',session.inspect
-    @sample_size = session['sample_size']
-    @your_persistent_freq = JSON.parse(session['your_persistent_freq_sample'])
   end
-  def compare_astronomer
-    if params['run_sample']
-      session['run_sample'] = params['run_sample'].to_i
-    end
-    @reasonable = session['run_sample']
-    puts session.inspect      
+  def compare_astronomer     
   end
   def you_got_it
-    @sample_size = session['sample_size']
-
-    if params['run_sample']
-      session['run_sample'] = params['run_sample'].to_i
-    end
-    @your_persistent_freq = JSON.parse(session['your_persistent_freq_sample'])
-    session['frequencies'] = params['your_reasonable_freq'] || session['frequencies']
-    @your_reasonable_freq = session['frequencies']
-    @reasonable = session['run_sample']
   end
   def you_got_it_back
-    @sample_size = session['sample_size']
-    @your_persistent_freq = JSON.parse(session['your_persistent_freq_sample'])
-
-    @your_reasonable_freq = session['frequencies']
-    @reasonable = session['run_sample']
-    render 'you_got_it'
   end
   def you_versus
+    return
     puts session.inspect
     @field=session["field"]
     sample = session['run_sample']
