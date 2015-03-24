@@ -1,8 +1,7 @@
 game.service('sampleDraw', ['galaxyData', function(galaxyData) {
-var sample_frequencies = function() {
+var sample_frequencies = function(your_sample_size) {
   var galaxies = galaxyData.galaxies_for_current_field()
   var pts = galaxies.length
-  var your_sample_size = galaxyData.count_of_samples()
   var freq = Array(5)
   for(var trial=0; trial < 5; trial++){ 
     irregular = 0
@@ -23,8 +22,27 @@ var sample_frequencies = function() {
    var avg = sum/5.0
    return {frequencies: freq, median_pixel: middle, mean_pixel: avg, pixels: pixel_locations};
 }
+var reasonable_size = 0
+var reasonable_freq = []
+this.get_reasonable_size = function(){return reasonable_size}
+this.get_reasonable_freq = function (){return reasonable_freq}
+this.set_reasonable_size = function(size) {
+  reasonable_size = size
+  reasonable_freq = sample_frequencies(reasonable_size)
+}
+var five_sample_frequencies  = []
+this.set_sample_frequencies = function(freq) {
+  five_sample_frequencies = freq
+}
+this.get_sample_frequencies = function() {
+   if (five_sample_frequencies.length > 0) {
+      return five_sample_frequencies
+   }
+   five_sample_frequencies = sample_frequencies(galaxyData.count_of_samples())
+   return five_sample_frequencies
+   }
 this.sample_draw= function(ctx){
-  var freq = sample_frequencies()
+  var freq = sample_frequencies(galaxyData.count_of_samples())
   ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
   ctx.beginPath()
   ctx.strokeStyle='#000'
@@ -60,4 +78,27 @@ this.green_circle = function(ctx,x,y,r){
   ctx.arc(x,y,r,0, 2*Math.PI)
   ctx.fill()
 }
+var heavy_bar = function(ctx,x,y){
+  x = Math.floor(x);
+  y = Math.floor(y);
+  ctx.moveTo(x,y-9);
+  ctx.lineTo(x,y+9);
+  ctx.stroke()
+}  
+this.heavy_line = function(id, color, x1, x2, y) {
+  c=document.getElementById(id)
+  if (c == null) {
+    console.log('heavy line NOT drawn for ', id)
+    return
+  }
+  ctx=c.getContext("2d")
+  ctx.beginPath()
+  ctx.strokeStyle=color
+  ctx.lineWidth=3
+  ctx.moveTo(x1,y)
+  ctx.lineTo(x2,y)
+  ctx.stroke()
+  heavy_bar(ctx,x1,y)
+  heavy_bar(ctx,x2,y)
+}  
 }])

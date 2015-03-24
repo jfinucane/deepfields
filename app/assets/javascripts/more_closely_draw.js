@@ -32,7 +32,14 @@ function funnel_draw_headers(){
 function init_graph_legend(){
     funnel_draw_headers();
     draw_right_numbers()
-    vertical_red()
+    c=document.getElementById("live_samples");
+    ctx=c.getContext("2d");
+    ctx.beginPath()
+    ctx.strokeStyle="#644c3f";
+    ctx.lineWidth =3;
+    ctx.moveTo(50,0)
+    ctx.lineTo(50,300)
+    ctx.stroke()
 }
 function draw_right_numbers(){
     if (!window.page('Best Region') && !window.page('You Got It')) 
@@ -55,21 +62,7 @@ function draw_right_numbers(){
         ctx.stroke()
     }   
 }
-function draw_statistics_line(ctx, freq, y, color){
-  console.log('HEIGHT',y)
-  ctx.beginPath()
-  ctx.strokeStyle = color
-  ctx.lineWidth = 1
-  ctx.moveTo(Math.floor(freq[0]),y)
-  ctx.lineTo(Math.floor(freq[4]),y)
-  ctx.stroke()
-  v_bar(ctx,freq[0],y)
-  v_bar(ctx,freq[4],y)
-  console.log('draw')
-  console.log(freq)
-  console.log(y)
-  console.read
-}
+//DUPLICATE TODOJF
 function v_bar(ctx,x,y){
    x = Math.floor(x);
    y = Math.floor(y);
@@ -77,22 +70,6 @@ function v_bar(ctx,x,y){
    ctx.lineTo(x,y+4);
    ctx.stroke()
 }
-old_line_x = 0;
-old_line_y = 0;
-function connect_line(ctx,x,y){
-  if (x==0 && y ==0) {
-    old_line_x = 0;
-    old_line_y = 0;
-    return
-  }
-  if ( old_line_x > 0 || old_line_y > 0) {
-     ctx.beginPath();
-     ctx.strokeStyle ='#000000';
-     ctx.moveTo(old_line_x, old_line_y);
-     ctx.lineTo(x,y);
-     ctx.stroke();
-  }
-  old_line_x = x;
-  old_line_y = y;
-}
+
+
      

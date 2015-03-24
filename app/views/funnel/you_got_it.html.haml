@@ -5,23 +5,48 @@
 .short_break
 %br
 .left_smallest_region
-  = render partial:'funnel/you_got_it_left'
-.right_smallest_region
-  =render partial:'funnel/best_graph'
+  .color_bar_legend
+    .osc_h2_gray_normal.color_bar_title
+      Your original
+      %br
+      Safari sample size:
+    .color_bar_counts#your_sample_field
+      {{sample_size}}
+    .color_bar   
+      %canvas#purple_sample{width:100, height: 20}
 
-= link_to funnel_best_region_path do
-  .back.back_position
-#travelogue_9.travelogue_position
-= link_to funnel_compare_astronomer_path do
-  .next_signpost.next_position
-#page.hide
-  You Got It
-.hide
-  #your_persistent_freq
-    = @your_persistent_freq
-  #reasonable_field_size
-    = @reasonable
-  #your_reasonable_freq
-    = @your_reasonable_freq
+  .color_bar_legend  
+    .osc_h2_gray_normal.color_bar_title
+      Your small
+      %br
+      reasonable sample size:
+    .color_bar_counts#reasonable_field
+      {{reasonable_size}}
+    .color_bar.color_bar_adjust
+      %canvas#green_sample{width:100, height: 20}
+  #you_got_it_text
+    .std_text
+      You found a good value for the&nbsp; 
+      %phrase{'word'=>"'smallest'", 'define'=>'define'} smallest reason- able sample
+      = '.'
+      You picked one of the smallest sizes that kept the variability of results about as low as could be obtained by sampling much more of the population.
+      %br
+      %br
+      Here, the total number of galaxies in your HDF is slightly over 1,000.  But a sample of
+      .std_bold
+        40-50
+      adequately represents this populations because it yields about as low a variability as a sample of almost 1,000.
+
+      Now that you have a good sample size, you can compare results with the astronomers.  
+.right_smallest_region
+  .blue_header
+    .sky_blue_title
+      Percentage of Irregular Galaxies:
+      %br
+      Variability in 5 computer samples
+  .sky_blue_border_variability
+    .live_sample_background
+      %canvas{width:'396',height:'300',id:'live_samples'}'
+<page-nav back='"/sample/best_region"' forward='"/sample/compare_astronomer"'></page-nav>
 
       

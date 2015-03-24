@@ -20,7 +20,8 @@ gameControllers.controller('selectCtrl', ['$scope', '$routeParams', '$injector',
     $scope.clicksAreActive = true
     $scope.got_counts = function(){
       galaxyData.compute_frequencies()  //Memoize frequencies to avoid $digest loop
-      location.path('/start/got_counts')
+      //TODOFIX TESTING ONLY
+      location.path('/sample/best_region')
     }
   }]);
 gameControllers.controller('gotCountsCtrl', ['$scope', '$routeParams', '$injector', 'pageStatus','galaxyData',

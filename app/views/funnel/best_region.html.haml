@@ -26,7 +26,15 @@
   = render :partial=>'layouts/enter_reasonable'
   .adjust_checkbox
     %checkbox_mean_median
-%irregular_graph
+.right_smallest_region
+  .blue_header
+    .sky_blue_title
+      Percentage of Irregular Galaxies:
+      %br
+      Variability in 5 computer samples
+  .sky_blue_border_variability
+    .live_sample_background
+      %canvas{width:'396',height:'300',id:'live_samples'}
 
 <page-back back='"/sample/smallest"'></page-back>
 .center_block.hide#wrong_sample_estimate
@@ -45,4 +53,4 @@
         .std_text
           Try again or let us choose an appropriate sample size of 45 for you.
       %action_button{'action'=>'try_again'} TRY AGAIN                 
-      %linked_button{'link'=>'"/sample/you_got_it"', 'text'=>'"NEXT"'}NEXT
+      %action_button{'action'=>'next', 'text'=>'"NEXT"'}NEXT

@@ -11,7 +11,7 @@
     you've just discovered.  It will tally the percentages for all the
     .link#galaxy_type_tag.galaxy_types_action galaxy types
     in that sample.  Your results will be compared with the
-    .link.link_vocab astronomers' actual findings
+    %phrase{'word'=>"'astronomers_result'", 'define'=>'define'} astronomers' actual findings
     for that Deep Field.
   %br
   %br
@@ -23,15 +23,10 @@
       %br
       reasonable sample size:
     .color_bar_counts
-      = @reasonable
-    = link_to funnel_you_versus_path do
-      .button_outside.go_adjust.bigger_button
-        .button_inside
-          .button_text
-            GO
-.galaxy_collage            
-= link_to funnel_you_got_it_back_path do
-  .back.back_position
+      {{reasonable_size}}
+    %linked_button.go_adjust.bigger_button{'link'=>'"/sample/you_versus"'} GO        
+.galaxy_collage  
+<page-back back='"/sample/you_got_it"'></page-back>          
 
 %galaxy_types
 
