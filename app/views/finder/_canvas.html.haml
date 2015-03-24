@@ -10,12 +10,12 @@
   .star_canvas.star_border
     <div ng-click='clicksAreActive && galaxyData.sample_this_galaxy($event)' id='starfield'>
     <div class='n-image' ng-show='fieldChoice.get_field()=="n"'>
-    %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
+    %canvas{:id=>'nStarDraw',:width=>'431px',:height=>'443px'}
       %p Your browser doesn't support canvas
     </div>
     <div class='s-image' ng-show='fieldChoice.get_field()=="s"'>
-    %canvas{:id=>'StarDraw',:width=>'431px',:height=>'443px'}
-      %p Your browser doesn't support canvas
+    %canvas{:id=>'sStarDraw',:width=>'431px',:height=>'443px'}
+      %p Your browser doesn't support canvas for HDFs
     </div>
     </div>       
   - if show_counts          

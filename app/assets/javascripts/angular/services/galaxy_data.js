@@ -1,7 +1,8 @@
-function drawX  (position) {
+function drawX  (position, field) {
     x=position[0]
     y=position[1]
-    c=document.getElementById("StarDraw");
+    c=document.getElementById(field+"StarDraw");
+    console.log ('field', field)
     ctx=c.getContext("2d")
     ctx.strokeStyle = '#ff0000'
     ctx.lineWidth = 2
@@ -13,7 +14,7 @@ function drawX  (position) {
     ctx.lineTo(x - size, y + size);
     ctx.stroke();
 }
-function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list) {
+function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list,field) {
   var type_map = [0,0,1,1,2] //these types summarize the four categories in YAML
   var dist =[]
   for(var i=0; i < galaxy_locations.length; i++){
@@ -22,14 +23,17 @@ function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list) {
      dist[i]= [parseInt(distance),i] 
   }
   d= dist.sort(function(a,b){return a[0]-b[0]})
+  window.dist = dist
+  window.dx = d
   console.log('aha d[0] contains', d[0])
   closest_galaxy = d[0]
   closest_id = closest_galaxy[1]
   closest_distance = closest_galaxy[0]
   galaxy_coordinates = galaxy_locations[closest_id]
+  console.log(galaxy_coordinates, 'coords')
   // must click within 10px and must be unique new sample 
   if ((closest_distance < 101) && (galaxy_list.indexOf(closest_id)==-1)){
-      drawX(galaxy_coordinates)
+      drawX(galaxy_coordinates,field)
       galaxy_list.push(closest_id)
       //mapping the galaxy data into fewer types
       galaxy_counts[type_map[galaxy_coordinates[2]]] += 1
@@ -57,7 +61,7 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
     var x = event.clientX - image_pos.left - delta_x - 10
     var y = event.clientY - image_pos.top - 32
     galaxy_locations = galaxy_points(galaxies)
-  	g = closest(x,y, galaxy_locations, galaxy_counts, galaxy_list)  
+  	g = closest(x,y, galaxy_locations, galaxy_counts, galaxy_list, fieldChoice.get_field())  
   }
   this.reset_the_counts = function () {
   	galaxy_counts = [0,0,0,0,0]
@@ -86,7 +90,7 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   	for (i in galaxy_list) {
   		var galaxy_id = galaxy_list[i]
    		console.log(galaxy_id)
-  		drawX(galaxy_locations[galaxy_id])
+  		drawX(galaxy_locations[galaxy_id], fieldChoice.get_field())
   	}
   }
   this.create_default_data =function() {
@@ -95,6 +99,7 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
                     {freq: 66.7, count: 6, name: type_names[1]},
                     {freq: 11.1, count: 1, name: type_names[2]}]
     galaxy_list=[11,22,33,44,55,66,77,88,99]
+    fieldChoice.set_field('s')
     console.log(frequency_list[2], 'DEFAULT')
   }
 }])
