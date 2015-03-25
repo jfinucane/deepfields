@@ -5,40 +5,34 @@
       Sample the
       %br
       other hdf
-
     .std_text
       Find out if things look the same or different in the other direction.
 .enter_right
-  - if field != 'n'
-    .field_block#north
-      #plain_north
-        .plain_middle
-          .big_look
-            Look North 
-          .big_text
-            near the Big Dipper
-        #north_plain
-      <a href='start/select' id='hover_north' class='hover_adjust_right hover_control' ng-click=fieldChoice.set_field('n')></a>
-  - else 
-    #north_used
+  .field_block#north{'ng-show'=>'field!="n"'}
+    #plain_north.plain_control
+      .plain_middle
+        .big_look
+          Look North 
+        .big_text
+          near the Big Dipper
+      #north_plain     
+    #hover_north.hover_adjust_right.hover_control{'ng-click'=>'look_at_other_hdf()'}
+  #north_used{'ng-show'=>'field=="n"'}
   .earth_block
     #earth_image
     <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-North")'> More info about HDF-N </div>
-
-  - if field != 's'
-    .field_block#south
-      #plain_south
-        .plain_middle
-          .short_break
-          .short_break
-          .big_look
-            Look South
-          .big_text
-            near the constellation Tucana
-        #south_plain
-      <a href='start/select' id='hover_south' class='hover_adjust_right_south hover_control' ng-click=fieldChoice.set_field('s')></a>
-  - else
-    #south_used
+  .field_block#south{'ng-show'=>'field!="s"'}
+    #plain_south.plain_control
+      .plain_middle
+        .short_break
+        .short_break
+        .big_look
+          Look South
+        .big_text
+          near the constellation Tucana
+      #south_plain   
+    #hover_south.hover_adjust_right_south.hover_control{'ng-click'=>'look_at_other_hdf()'}
+  #south_used.hover_control{'ng-show'=>'field=="s"'}
   .earth_block
     <div class='enter_tag_position condensed_h2_underscore' ng-click='modal.open("Meet HDF-South")'> More info about HDF-S </div>
 

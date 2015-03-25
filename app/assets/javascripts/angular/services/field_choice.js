@@ -1,17 +1,12 @@
 game.service('fieldChoice', function() {
-
   var active_field = ''
-
   this.set_field = function(field){
   	active_field= field.toLowerCase();
   	return true;
   }
-
   this.get_field = function() {
-    console.log('fielding')
   	return active_field;
   }
-
   this.field_name = function(field){
   	var field_name = 'None'
   	if (active_field == 'n') {
@@ -22,7 +17,6 @@ game.service('fieldChoice', function() {
   	}
   	return field_name;
   }
-
   this.get_field_name = function() {
     return this.field_name(this.get_field())
   }
