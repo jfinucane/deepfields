@@ -1,5 +1,6 @@
 game.service('fieldChoice', function() {
   var active_field = ''
+  var other_field = 'None'
   this.set_field = function(field){
   	active_field= field.toLowerCase();
   	return true;
@@ -21,15 +22,17 @@ game.service('fieldChoice', function() {
     return this.field_name(this.get_field())
   }
 
-  this.other_field= function(field) {
-  	var other_field = 'None'
+  var other = function(field) {
   	if (active_field == 's') {
   		other_field =  'n';
   	}
-  	if (active_field == 'South') {
-  		other_field = 'n'
+  	if (active_field == 'n') {
+      other_field = 's'
     }
     return other_field
+  }
+  this.other_name = function(){
+    return other_field == 'n' ? 'NORTH': 'SOUTH'
   }
   this.change_field= function(field) {
   	active_field = this.other_field(field)

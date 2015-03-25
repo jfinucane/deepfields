@@ -2,37 +2,29 @@
   Use what you've learned
 .troika_h2.h2_pos
   about good sample size. 
-
 .left_symmetry
   .std_text
-    HDF-#{field_name} contains about the same number of galaxies as HDF-#{other_field_name}.   
+    HDF-{{fieldChoice.get_name().toUpperCase()}} contains about the same number of galaxies as HDF-{{fieldChoice.other_name()}}.   
     %p
     We know that the computer can generate an unbiased sample.  Using what you've learned about choosing the&nbsp; 
-    .link.link_vocab> smallest reasonable sample size
+    %phrase{'word'=>"'smallest'", 'define'=>'define'} smallest reasonable sample size
     , tell the computer how many galaxies to pick and hit GO.
   .move_checkbox_left
     = render :partial=>'layouts/enter_reasonable'
   %p
   %br  
   .std_text
-    .hide.next_allowed
+    .next_allowed{'ng-show'=>'good_sample'}
       When you are ready to move on, hit NEXT.
+    
 .right_symmetry
-  - show_counts = false
   = render partial: 'finder/canvas',:locals=>{:show_counts=> false}  
-#travelogue_12.travelogue_position    
-= link_to symmetry_enter_path do
-  .back.back_position
-.next_signpost.next_position.show_plot.hide
-.next_disable_signpost.next_position
-#you_got_it_path.hide
-  = symmetry_evaluate_path
+#travelogue_12.travelogue_position 
+<page-back back='"/fields/enter"'></page-back>   
+.next_signpost.next_position{'ng-show'=>'good_sample', 'ng-click'=>'next_action()'}
+.next_disable_signpost.next_position{'ng-hide'=>'good_sample'}
 %field_modals 
-#next_compare_astronomer.hide
-  This is a dummy form element for FF form submit bug as of 8/2014  
-#page.hide
-  Sample
-#overlay_background.bad_sample.hide
+#overlay_background.bad_sample{'ng-show'=>'bad_sample'}
   .oops_wrong_modal.adjusted_sample_position
     .std_text
       %br
@@ -40,13 +32,20 @@
       Please enter a number between 1 and 300.
       %br
       %br
-    = render partial: 'nav/close_x'
+    .close{'ng-click'=>'bad_sample=false'}
+      .close_msg
+        CLOSE
+      %i.fa.fa-times 
+}
   
-#overlay_background.sample_too_big.hide    
+#overlay_background.sample_too_big{'ng-show'=>'too_big'}    
   .oops_wrong_modal.adjusted_sample_position
     .std_text
       %br
       Sorry, your sample size is too large to be one of the smallest reasonable samples.
       %br
       %br
-    = render partial: 'nav/close_x'
+    .close{'ng-click'=>'too_big=false'}
+      .close_msg
+        CLOSE
+      %i.fa.fa-times
