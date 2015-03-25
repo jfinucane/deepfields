@@ -62,7 +62,6 @@ gameControllers.controller('smallestCtrl', ['$scope', 'pageStatus',
     $scope.show_me = function() {return show_me}
     page($scope,17)
   }]);
-
 gameControllers.controller('bestRegionCtrl', ['$scope', 'pageStatus', '$location', 'bestSampleDraw', 'sampleDraw', 
   function($scope, page, location, bestSampleDraw, sampleDraw) {
     page($scope,18)
@@ -102,10 +101,7 @@ gameControllers.controller('bestRegionCtrl', ['$scope', 'pageStatus', '$location
     }
     $scope.mean = function() {return sample_mean_checked}
     $scope.median = function() {return sample_median_checked}
-
-
   }]);
-
 gameControllers.controller('youGotItCtrl', ['$scope', 'pageStatus', 'bestSampleDraw', 'sampleDraw', 'galaxyData',
   function($scope, page, bestSampleDraw, sampleDraw, galaxyData) {
     $scope.reasonable_size = sampleDraw.get_reasonable_size()
@@ -113,14 +109,16 @@ gameControllers.controller('youGotItCtrl', ['$scope', 'pageStatus', 'bestSampleD
     bestSampleDraw.dummy_draw()
     page($scope,19)
   }]);
-
 gameControllers.controller('compareAstronomerCtrl', ['$scope', 'pageStatus', 'sampleDraw',
   function($scope, page, sampleDraw) {
     $scope.reasonable_size = sampleDraw.get_reasonable_size()
     page($scope,20)
   }]);
-
-gameControllers.controller('youVersusrCtrl', ['$scope', 'pageStatus',
-  function($scope, page) {
+gameControllers.controller('youVersusCtrl', ['$scope', 'pageStatus', 'sampleTypeFrequency', 'sampleDraw', 'fieldChoice',
+  function($scope, page, sampleTypeFrequency,sampleDraw, fieldChoice) {
+    sampleTypeFrequency.create_type_frequency()
+    $scope.reasonable_size = sampleDraw.get_reasonable_size()
+    $scope.type_freq = sampleTypeFrequency.type_frequency
+    $scope.astronomer_freq = sampleTypeFrequency.ASTRONOMER
     page($scope,21)
   }]);

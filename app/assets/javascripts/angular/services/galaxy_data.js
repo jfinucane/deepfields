@@ -1,12 +1,11 @@
 function drawX  (position, field) {
-    x=position[0]
-    y=position[1]
-    c=document.getElementById(field+"StarDraw");
-    console.log ('field', field)
-    ctx=c.getContext("2d")
+    var x=position[0]
+    var y=position[1]
+    var c=document.getElementById(field+"StarDraw");
+    var ctx=c.getContext("2d")
     ctx.strokeStyle = '#ff0000'
     ctx.lineWidth = 2
-    size = 6;
+    var size = 6;
     ctx.moveTo(x - size, y - size);
     ctx.lineTo(x + size, y + size);
     ctx.stroke();
@@ -22,15 +21,11 @@ function closest (x,y, galaxy_locations, galaxy_counts, galaxy_list,field) {
      distance = Math.pow((x-g[0]),2) + Math.pow((y-g[1]),2);
      dist[i]= [parseInt(distance),i] 
   }
-  d= dist.sort(function(a,b){return a[0]-b[0]})
-  window.dist = dist
-  window.dx = d
-  console.log('aha d[0] contains', d[0])
-  closest_galaxy = d[0]
-  closest_id = closest_galaxy[1]
-  closest_distance = closest_galaxy[0]
+  var d= dist.sort(function(a,b){return a[0]-b[0]})
+  var closest_galaxy = d[0]
+  var closest_id = closest_galaxy[1]
+  var closest_distance = closest_galaxy[0]
   galaxy_coordinates = galaxy_locations[closest_id]
-  console.log(galaxy_coordinates, 'coords')
   // must click within 10px and must be unique new sample 
   if ((closest_distance < 101) && (galaxy_list.indexOf(closest_id)==-1)){
       drawX(galaxy_coordinates,field)

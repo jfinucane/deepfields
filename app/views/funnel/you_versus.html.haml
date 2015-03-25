@@ -1,7 +1,7 @@
 .troika_h1.h_pos
   You vs. THE ASTRONOMERS
 .troika_h2.h2_pos
-  How well does your HDF-#{@field.upcase} sample compare?
+  How well does your HDF-{{fieldChoice.get_field()}} sample compare?
 .you_versus_left
   .std_text
     VERY good! You've avoided bias and chosen an apt sample size.  Your sample results are so close to the 
@@ -9,12 +9,67 @@
     that they could serve as a plausible substitute for those results.  
   %br
 .you_versus_right
-  = render :partial => 'layouts/percentage'
-            
-= link_to funnel_compare_astronomer_path do
-  .back.back_position
-= link_to lesson_index_path do
-  .next_signpost.next_position
+  .short_break
+  .troika_h3
+    Percentage of galaxy types in HDF-#{field.upcase}
+  .you_table
+    .you_hdr1
+      %br
+      %br
+      Galaxy Type
+    .you_hdr2
+      .short_break 
+      YOUR COMPUTER
+      %br
+      SAMPLE
+      %br
+      .table_hdr_text 
+        Using
+        %phrase.small_link{'word'=>"'smallest'", 'define'=>'define'}smallest reason- able sample size
+        of
+        .table_bold#count  {{reasonable_size}}  
+    .you_hdr3
+      .short_break
+      ASTRONOMERS'
+      %br
+      RESULTS
+      %br
+      .table_hdr_text
+        Using
+        %phrase{'word'=>"'whole_population'", 'define'=>'define'} whole population
+        of 
+        .table_bold HDF-{{fieldChoice.get_field().toUpperCase()}}
+    .you_col1
+      .sample_elliptical.you_inline
+      .you_galaxy
+        Elliptical
+    .you_col2
+      .cell_pct#elliptical
+        {{type_freq(0)}}%
+    .you_col3
+      .cell_pct
+        {{astronomer_freq(0)}}%
+    .you_col1
+      .sample_spiral.you_inline
+      .you_galaxy
+        Spiral
+    .you_col2
+      .cell_pct#spiral
+        {{type_freq(1)}}%
+    .you_col3
+      .cell_pct
+        {{astronomer_freq(1)}}%
+    .you_col1
+      .sample_irregular.you_inline
+      .you_galaxy
+        Irregular
+    .you_col2
+      .cell_pct#irregular
+        {{type_freq(2)}}$
+    .you_col3
+      .cell_pct
+        {{astronomer_freq(2)}}%
+<page-nav back='"/sample/compare_astronomer"' forward='"/itinerary"'></page-nav>  
 #travelogue_10_11.travelogue_position
 
    
