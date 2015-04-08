@@ -23,11 +23,12 @@ game.service('sampleTypeFrequency', ['galaxyData', 'sampleDraw', 'fieldChoice',
     window.galaxy_type = galaxy_type 
     return (Math.floor(galaxy_counts[galaxy_type]*1000/(sampleDraw.get_reasonable_size()))/10.0)
   }
+  var astronomers_frequencies =  { 'n': [4.6, 24.7, 70.7], 's': [5.1, 27.2, 67.2]}
   this.ASTRONOMER = function (galaxy_type_number) {
-     var astronomers_frequencies =  { 'n': [4.6, 24.7, 70.7], 's': [5.1, 27.2, 67.2]}
      var field = fieldChoice.get_field()
      return astronomers_frequencies[field][galaxy_type_number]
   }
   this.type_map = [0,0,1,1,2]  
   this.type_names = ['Elliptical', 'Spiral', 'Irregular']
+  this.astronomers_frequencies = astronomers_frequencies
 }])

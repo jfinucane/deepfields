@@ -2,21 +2,15 @@
   Stare and Compare
 .troika_h2.h2_pos
   Astronomers' results
-
-#north_with_hubble.question_left
-#south_with_hubble.question_right
-#compare_table
-  = render partial: 'symmetry/compare'
-  .std_text.symmetry_comment
+= render partial: 'symmetry/compare'
+.std_text.symmetry_comment
+  .std_bold
     Comparing the two HDFs, could you 
     %br
-    say that the universe probably looks the same in these two directions?  Let's 
-    %br
-    find out ...
-= link_to symmetry_evaluate_back_path do
-  .back.back_position
-= link_to symmetry_answer_path do
-  .next_signpost.next_position
+    say that the universe probably looks the same in these two directions?
+    %br  Let's find out ...
+
+<page-nav back='"/fields/evaluate"' forward='"/fields/answer"'><page-nav>  
 #travelogue_14.travelogue_position  
 
 

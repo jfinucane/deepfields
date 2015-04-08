@@ -1,27 +1,20 @@
-.symmetry_hdr
-  .symmetry_text1
-    Galaxy Type
-.symmetry_hdr
-  .symmetry_text2
-    HDF-North Percentages
-.symmetry_hdr
-  .symmetry_text2
-    HDF-South Percentages
-.symmetry_cell.symmetry_col0
-  Elliptical
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['n'][0]
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['s'][0]
-.symmetry_cell.symmetry_col0
-  Spiral
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['n'][1]
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['s'][1]
-.symmetry_cell.symmetry_col0
-  Irregular
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['n'][2]
-.symmetry_cell
-  = "%5.1f%" % ASTRONOMER['s'][2] 
+#north_with_hubble.question_left
+#south_with_hubble.question_right
+#compare_table  
+  .symmetry_hdr
+    .symmetry_text1
+      Galaxy Type
+  .symmetry_hdr
+    .symmetry_text2
+      HDF-North Percentages
+  .symmetry_hdr
+    .symmetry_text2
+      HDF-South Percentages
+  <div ng-repeat='type in [0,1,2]'>    
+  .symmetry_cell.symmetry_col0
+    {{type_names[type]}}
+  .symmetry_cell
+    {{astronomer_frequencies['n'][type]}}%
+  .symmetry_cell
+    {{astronomer_frequencies['s'][type]}}%
+  </div>

@@ -81,18 +81,22 @@ gameControllers.controller('evaluateCtrl', ['$scope',  'pageStatus', 'fieldChoic
     }
   }]);
 
-gameControllers.controller('questionSymmetryCtrl', ['$scope',  'pageStatus', 'fieldChoice', 'fieldSampleDraw',
-  function($scope, page, fieldChoice, fieldSampleDraw) {
+gameControllers.controller('questionSymmetryCtrl', ['$scope',  'pageStatus', 'sampleTypeFrequency',
+  function($scope, page, sampleTypeFrequency) {
+    $scope.astronomer_frequencies = sampleTypeFrequency.astronomers_frequencies
+    $scope.type_names = sampleTypeFrequency.type_names
     page($scope,26)
   }]);
 
-gameControllers.controller('answerCtrl', ['$scope',  'pageStatus', 'fieldChoice',
-  function($scope, page, fieldChoice) {
+gameControllers.controller('answerCtrl', ['$scope',  'pageStatus', 'sampleTypeFrequency',
+  function($scope, page, sampleTypeFrequency) {
+    $scope.astronomer_frequencies = sampleTypeFrequency.astronomers_frequencies
+    $scope.type_names = sampleTypeFrequency.type_names
     page($scope,27)
   }]);
 
-gameControllers.controller('uniformCtrl', ['$scope',  'pageStatus', 'fieldChoice',
-  function($scope, page, fieldChoice) {
+gameControllers.controller('uniformCtrl', ['$scope',  'pageStatus', 'fieldChoice', 'sampleTypeFrequency',
+  function($scope, page, fieldChoice, sampleTypeFrequency) {
     page($scope,28)
   }]);
 
