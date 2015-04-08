@@ -27,5 +27,7 @@ game.service('sampleTypeFrequency', ['galaxyData', 'sampleDraw', 'fieldChoice',
      var astronomers_frequencies =  { 'n': [4.6, 24.7, 70.7], 's': [5.1, 27.2, 67.2]}
      var field = fieldChoice.get_field()
      return astronomers_frequencies[field][galaxy_type_number]
-  }  
+  }
+  this.type_map = [0,0,1,1,2]  
+  this.type_names = ['Elliptical', 'Spiral', 'Irregular']
 }])

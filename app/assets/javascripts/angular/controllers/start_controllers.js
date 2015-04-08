@@ -22,7 +22,7 @@ gameControllers.controller('selectCtrl', ['$scope', '$routeParams', '$injector',
       if (galaxyData.count_of_samples() > 0) {
       galaxyData.compute_frequencies()  //Memoize frequencies to avoid $digest loop
       //TODOFIX TESTING ONLY
-      location.path('/fields/evaluate')
+      location.path('/fields/enter')
     }
     }
   }]);

@@ -2,14 +2,20 @@
   Capture a Random Sample
 = render :partial=>'finder/select_instructions'
 = render :partial=>'finder/canvas',:locals=>{:show_counts=>true} 
-
+.push_5.grid_6
+  .captured_message_location
+    .osc_h1
+      You've captured 
+    #active_counts
+      {{galaxyData.count_of_samples()}}
+    .osc_h1
+      galaxies&nbsp;
+    .got_counts
+    <div id='done_button'  ng_click='got_counts()' ng-class='{button_outside_gray: (galaxyData.count_of_samples() == 0), button_outside: (galaxyData.count_of_samples() > 0)} '>
+    .button_inside
+      .button_text
+        Done
+    </div>
 <page-back back="'/start/enter'"> </page-back> 
 #travelogue_1.travelogue_position  
 %field_modals
-%p.hide#hdf_field
-  = @hdf_field
-%p.hide#page
-  Select
-#finder_get_counts.hide
-  = finder_got_counts_path 
-#result_form.hide  

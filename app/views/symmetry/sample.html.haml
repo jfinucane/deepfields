@@ -24,7 +24,7 @@
 .next_signpost.next_position{'ng-show'=>'good_sample', 'ng-click'=>'next_action()'}
 .next_disable_signpost.next_position{'ng-hide'=>'good_sample'}
 %field_modals 
-#overlay_background.bad_sample{'ng-show'=>'bad_sample'}
+#overlay_background.bad_sample{'ng-show'=>'modal_bad_sample'}
   .oops_wrong_modal.adjusted_sample_position
     .std_text
       %br
@@ -32,20 +32,20 @@
       Please enter a number between 1 and 300.
       %br
       %br
-    .close{'ng-click'=>'bad_sample=false'}
+    .close{'ng-click'=>'modal_bad_sample=false'}
       .close_msg
         CLOSE
       %i.fa.fa-times 
 }
   
-#overlay_background.sample_too_big{'ng-show'=>'too_big'}    
+#overlay_background.sample_too_big{'ng-show'=>'modal_too_big'}    
   .oops_wrong_modal.adjusted_sample_position
     .std_text
       %br
       Sorry, your sample size is too large to be one of the smallest reasonable samples.
       %br
       %br
-    .close{'ng-click'=>'too_big=false'}
+    .close{'ng-click'=>'modal_too_big=false'}
       .close_msg
         CLOSE
       %i.fa.fa-times

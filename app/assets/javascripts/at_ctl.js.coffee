@@ -44,17 +44,20 @@ jQuery ->
       1000
     $('.left_slide').animate
       left: '-540px',\
-      1000 
-
-#used in Angular version       
-  $('.close_modal_general').click (e) ->
-    id = $(this).parents('.center_block').attr('id')
+      1000
+#used in Angular 
+window.close_modal = (id) ->
     close_selector = '#' + id
     $(close_selector).animate 
       opacity: 0,\
       100,\
       () ->
         $(close_selector).addClass('hide') 
+#used in Angular version
+  $('.close_modal_general').click (e) ->
+    id = $(this).parents('.center_block').attr('id')
+    close_modal(id)
+ 
   $('.field_selection_modal').click (e) ->
     $('.field_selection_modal').addClass('hide')
         

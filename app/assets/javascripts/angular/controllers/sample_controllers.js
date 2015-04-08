@@ -9,7 +9,7 @@ gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
     var sample_median_checked = false
     var ctx=document.getElementById("variability").getContext("2d");
     var five_sample_frequencies = draw.sample_draw(ctx)
-    sampleDraw.set_sample_frequencies(five_sample_frequencies)
+    draw.set_sample_frequencies(five_sample_frequencies)
     $scope.show_min_max_plot = false
     $scope.show_plot = function() {
       $scope.show_min_max_plot = true

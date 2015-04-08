@@ -17,18 +17,4 @@
     %canvas{:id=>'sStarDraw',:width=>'431px',:height=>'443px'}
       %p Your browser doesn't support canvas for HDFs
     </div>
-    </div>       
-  - if show_counts          
-    .captured_message_location
-      .osc_h1
-        You've captured 
-      #active_counts
-        {{galaxyData.count_of_samples()}}
-      .osc_h1
-        galaxies&nbsp;
-      .got_counts
-      <div id='done_button'  ng_click='got_counts()' ng-class='{button_outside_gray: (galaxyData.count_of_samples() == 0), button_outside: (galaxyData.count_of_samples() > 0)} '>
-      .button_inside
-        .button_text
-          Done
-      </div>             
+    </div>

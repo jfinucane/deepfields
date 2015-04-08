@@ -6,15 +6,6 @@
   Want to try again?
   .short_break
   .short_break
-  .retry_spacing
-    #try_again
-      = link_to symmetry_sample_path do
-        .button_outside
-          .button_inside
-            .button_text.wider_button
-              Try Again
-    #skip_sampling.wtf            
-      .button_outside
-        .button_inside
-          .button_text.wider_button
-            Skip 
+    %linked_button#try_again{'link'=>'"/fields/sample"'}  Try Again 
+    %action_button{'action'=>'skip'} &nbsp;Skip&nbsp;  
+%br

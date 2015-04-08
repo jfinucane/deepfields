@@ -1,46 +1,97 @@
 .troika_h1.h_pos
   You vs. THE ASTRONOMERS
 .troika_h2.h2_pos
-  How well does your HDF-#{field.upcase} sample compare?
+  How well does your HDF-{{field}} sample compare?
 .left_evaluate
-  .std_text#compare_question
+  .std_text#compare_question{'ng-hide'=>'do_you_think'}
     Do you think your results are plausibly close to the astrono- mers? 
     %br
     %br
-  #plausible_buttons
-    .yes_spacing#plausible_yes
-      .button_outside
-        .button_inside
-          .button_text.wider_button
-            Yes  
-    .button_outside#plausible_no
-      .button_inside
-        .button_text.wider_button
-          No
-  .troika_h2#right_right.hide
+  #plausible_buttons{'ng-hide'=>'do_you_think'}
+    %action_button.yes_spacing{'action'=>'yes'} Yes
+    %action_button{'action'=>'no'} No
+  .troika_h2#right_right{'ng-show'=>'you_said_yes'}
     You're Right!
-  .troika_h2#wrong_right.hide
+  .troika_h2#wrong_right{'ng-show'=>'you_said_no'}
     Actually, your re- sults are good
-  #suggested_sample.hide
+  #suggested_sample{'ng-show'=>'suggested_sample'}
     .std_text
       These results are based on a correct sample size of 45.
       %p
       The computer sample's results are acceptably close to the astronomers'. (See travelogue question 9 to review.)   Next, let's look solely at the astronomers' results for both Deep Fields.        
-  #plausible_explanation.hide
+  #plausible_explanation{'ng-show'=>'plausible'}
     .std_text 
       Your results are plausible.   You had a sample size that reason- ably represented the population.  
       %p
       Your results are acceptably close to the astronomers'. (See travelogue question 9 to review.)   Next, let's look solely at the astronomers' results for both Deep Fields.        
 .evaluate_right
-  = render partial: 'symmetry/percentage'
-= link_to symmetry_sample_path do
-  .back.back_position
-= link_to symmetry_question_path do
-  .next_signpost.next_position.hide
-.next_disable_signpost.next_position
+  .short_break
+  .troika_h3
+    Percentage of galaxy types in HDF-{{field}
+  .you_table_narrow
+    .you_hdr1_narrow
+      %br
+      .half_break
+      Galaxy
+      %br
+      Type
+    .you_hdr2
+      .half_break 
+      YOUR COMPUTER
+      %br
+      SAMPLE
+      %br
+      .table_hdr_text 
+        Using
+        %phrase{'word'=>"'smallest'", 'define'=>'define'}  smallest reason- able sample size
+        of
+        .table_bold#count  {{reasonable_size}}  
+    .you_hdr3
+      .half_break
+      ASTRONOMERS'
+      %br
+      RESULTS
+      %br
+      .table_hdr_text
+        Using
+        %phrase{'word'=>"'all_galaxies'", 'define'=>'define'} whole population
+        of 
+        .table_bold HDF-{{field}}
+    <div ng-repeat='type in [0,1,2]'>    
+    .you_col1_narrow
+      .you_inline{'ng-class'=>'"sample_"+galaxy_type_frequency[type].name.toLowerCase()'}
+      .you_galaxy_safari
+        {{galaxy_type_frequency[type].name}}
+    .you_col2
+      .cell_pct#elliptical
+        {{galaxy_type_frequency[type].freq}}%
+    .you_col3
+      .cell_pct
+        {{astronomer(type)}}%
+    </div>
+<page-back back='"/fields/sample"'></page-back>
 
+<page-forward forward='"/fields/question"' ng-show='do_you_think'>
+</page-forward>
+.next_disable_signpost.next_position{'ng-hide'=>'do_you_think'}
 #travelogue_13.travelogue_position
-#page.hide
-  Evaluate
-#count.hide
-  =@count  
+.center_block#implausible_sorry.hide
+  #overlay_background
+    .wrong_modal.position_modal.symmetry_modal
+      %br
+        .troika_h2
+          Sorry!
+        .short_break
+        .std_text
+          Sorry,
+        = render :partial=>'nav/implausible'
+.center_block#implausible_yes.hide
+  #overlay_background
+    .correct_modal.position_modal.symmetry_modal
+      %br
+        .troika_h2
+          That's right
+        .short_break
+        .std_text
+          That's right,   
+        = render :partial=>'nav/implausible'

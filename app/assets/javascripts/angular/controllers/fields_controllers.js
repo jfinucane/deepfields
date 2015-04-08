@@ -15,17 +15,22 @@ gameControllers.controller('sampleCtrl', ['$scope',  'pageStatus', 'fieldChoice'
       $scope.bad_sample = false;
       $scope.good_sample = false
       $scope.too_big = false
-      $scope.reasonable_size
+      $scope.reasonable_size = ''
+      $scope.modal_too_big = false
+      $scope.modal_bad_sample = false
       var get_size = function(){return $scope.reasonable_size}
       $scope.check_reasonable = function() {
         var digits = get_size()
         if(digits===undefined){digits = 0}
         var size = parseInt(digits)
-        fieldSampleDraw.set_reasonable_size(size)
         console.log('size', size, 'x')
-        if (size==0 || size>300) { console.log('bad number');$scope.bad_sample = true}
+        if (size==0 || size>300) {
+          $scope.modal_bad_sample = true
+          $scope.good_sample = false
+        }
         else {
           $scope.good_sample=true
+          fieldSampleDraw.set_reasonable_size(size)
           fieldSampleDraw.other_field_draw(size)
         }
       }
@@ -33,19 +38,51 @@ gameControllers.controller('sampleCtrl', ['$scope',  'pageStatus', 'fieldChoice'
         var digits = get_size()
         if(digits===undefined){digits = 0}
         var size = parseInt(digits)
-        if (size>0 && size< 50) { location.path('/fields/evaluate') }
-        else { console.log('too big'); $scope.too_big = true} 
+        if (size>0 && size<= 50) { location.path('/fields/evaluate') }
+        else { 
+          $scope.modal_too_big = true
+          $scope.good_sample = false
+        }
       }
     page($scope,24)
   }]);
 
-gameControllers.controller('evaluateCtrl', ['$scope',  'pageStatus', 'fieldChoice',
-  function($scope, page, fieldChoice) {
+gameControllers.controller('evaluateCtrl', ['$scope',  'pageStatus', 'fieldChoice','fieldSampleDraw', 'sampleTypeFrequency',
+  function($scope, page, fieldChoice, fieldSampleDraw, sampleTypeFrequency) {
     page($scope,25)
+    $scope.field = fieldChoice.get_field()
+    $scope.reasonable_size = fieldSampleDraw.get_reasonable_size()
+    $scope.galaxy_type_frequency = fieldSampleDraw.get_type_frequencies()
+    $scope.astronomer = sampleTypeFrequency.ASTRONOMER
+    $scope.no = function(){
+      $scope.do_you_think = true
+      if ($scope.reasonable_size > 39) {
+        $scope.plausible= true
+        $scope.you_said_no = true
+        $scope.you_said_yes = false
+      }
+      else window.show_modal("implausible_yes")
+    }
+    $scope.yes = function() {
+      $scope.do_you_think = true
+      if ($scope.reasonable_size > 39) {
+        $scope.plausible=true
+        $scope.you_said_yes = true
+        $scope.you_said_no = false
+      }
+      else window.show_modal("implausible_sorry")
+    }
+    $scope.skip = function() {
+      window.close_modal('implausible_yes')
+      window.close_modal('implausible_sorry')
+      $scope.suggested_sample = true
+      fieldSampleDraw.set_reasonable_size(45)
+      $scope.reasonable_size = 45
+    }
   }]);
 
-gameControllers.controller('questionSymmetryCtrl', ['$scope',  'pageStatus', 'fieldChoice',
-  function($scope, page, fieldChoice) {
+gameControllers.controller('questionSymmetryCtrl', ['$scope',  'pageStatus', 'fieldChoice', 'fieldSampleDraw',
+  function($scope, page, fieldChoice, fieldSampleDraw) {
     page($scope,26)
   }]);
 
