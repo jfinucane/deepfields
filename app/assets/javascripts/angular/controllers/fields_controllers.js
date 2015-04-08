@@ -95,8 +95,8 @@ gameControllers.controller('answerCtrl', ['$scope',  'pageStatus', 'sampleTypeFr
     page($scope,27)
   }]);
 
-gameControllers.controller('uniformCtrl', ['$scope',  'pageStatus', 'fieldChoice', 'sampleTypeFrequency',
-  function($scope, page, fieldChoice, sampleTypeFrequency) {
+gameControllers.controller('uniformCtrl', ['$scope',  'pageStatus', 
+  function($scope, page) {
     page($scope,28)
   }]);
 
