@@ -1,7 +1,7 @@
 console.log('load home')
 
-gameControllers.controller('HomeCtrl', ['$scope', '$http', 'gameProgress', '$window', '$location',
-  function($scope, $http, gameProgress, win, location) {
+gameControllers.controller('HomeCtrl', ['$scope', '$http', 'gameProgress', '$window', '$location', 'galaxyData',
+  function($scope, $http, gameProgress, win, location, galaxyData) {
     /*$http.get('phones/phones.json').success(function(data) {
       $scope.phones = data;
     });
@@ -24,12 +24,9 @@ gameControllers.controller('HomeCtrl', ['$scope', '$http', 'gameProgress', '$win
       if (window.inside_enter_diamond == true) {
          location.path('/itinerary') 
       }
-  }
-
-
-    console.log('HomeCtrl logged');
-    p=gameProgress
-    p.set_step(1)
-    p.set_background_color()
-    console.log(location.path())
-  }]);
+  }    
+  gameProgress.set_step(1)
+  gameProgress.set_background_color()
+  galaxyData.new_game()
+  gameProgress.set_location_needs_sample('')
+}]);

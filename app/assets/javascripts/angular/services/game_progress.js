@@ -57,5 +57,13 @@ game.service('gameProgress',function(){
         console.log('set background', background_color)
     }
     this.pullup = function () {return pullup_visible}  
-    this.progress = function() {return progress_array}    
+    this.progress = function() {return progress_array} 
+
+    var location_needs_sample = ''
+    this.set_location_needs_sample = function (return_location) {
+       location_needs_sample = return_location
+    }
+    this.get_location_needs_sample = function (){
+      return location_needs_sample
+    }
 });

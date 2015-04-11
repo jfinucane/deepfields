@@ -1,9 +1,15 @@
+
+game.directive('nextSign', function (){
+  return {
+    template: "<div class='next_signpost next_position'></div>"
+  }
+})
 game.directive('pageForward', function() {
   return {
     scope: {
         forward: '=forward'
     }, 	
-    template: "<a href='{{forward}}'> <div class='next_signpost next_position'></div></a>"
+    template: "<a href='{{forward}}'> <next_sign></next_sign></div></a>"
     }
 
 })
@@ -22,7 +28,7 @@ game.directive('pageNav', function() {
         back: '=back'
     }, 	
     template: "<a href='{{back}}'> <div class='back back_position'></div></a>" +
-              "<a href='{{forward}}'> <div class='next_signpost next_position'></div></a>"
+              "<a href='{{forward}}'> <next_sign></next_sign></div></a>"
     }
 
 })

@@ -25,4 +25,17 @@
       .std_text
         Turning its sharp eye toward the southern constellation Tucana, the Hubble Space Telescope captured another dazzling assortment of never-before-seen galaxies. The Hubble Deep Field South (HDF-S) complements the original Hubble Deep Field (HDF-N) taken in late 1995. The constellation Tucana can only be viewed from the southern hemisphere. The 10-day-long observation, in October 1998, doubled the number of far-flung galaxies available to astronomers for deciphering the history of the universe.
     #close_meet_south.close_meet_position
-      %close_overlay 
+      %close_overlay
+</div>
+<div class='overlay_background' ng-show='modal.show("you_must_first_pick")'>
+.wrong_modal.position_caution_modal
+  %br
+    .troika_headline
+      Oops!
+  %p
+    .std_text
+      In order to do this you must first pick some galaxies...
+  .adjust_right.close_modal
+    %close_overlay
+  %br
+</div>

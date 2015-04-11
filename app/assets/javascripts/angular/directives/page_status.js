@@ -13,12 +13,6 @@ gameControllers.service('pageStatus', ['gameProgress', 'drawProgressDots', 'moda
       $scope.fieldChoice = fieldChoice
       $scope.galaxyData = galaxyData
       pullup.toggle_down()
-      if (fieldChoice.get_field()== ''){  //TODOJF Testing code
-        fieldChoice.set_field("s") 
-        galaxyData.create_default_data()
-        console.log('using DEFAULT data')
-        console.log(galaxyData.frequencies()[2].freq)
-      }
     }
   }
 ])

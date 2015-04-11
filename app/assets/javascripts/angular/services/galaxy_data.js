@@ -47,6 +47,10 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
   	var field = 'hdf'+fieldChoice.get_field()
   	return (galaxies[field])
   }
+  this.new_game = function () {
+    galaxy_list = []
+    galaxy_counts = [0,0,0]
+  }
   this.galaxies_for_current_field = function() {
     return galaxy_points(galaxies)
   }
@@ -87,14 +91,5 @@ game.service('galaxyData', ['$http', 'fieldChoice', function($http, fieldChoice)
    		console.log(galaxy_id)
   		drawX(galaxy_locations[galaxy_id], fieldChoice.get_field())
   	}
-  }
-  this.create_default_data =function() {
-    galaxy_counts=[2,6,1]
-    frequency_list=[{freq: 22.2, count: 2, name: type_names[0]},
-                    {freq: 66.7, count: 6, name: type_names[1]},
-                    {freq: 11.1, count: 1, name: type_names[2]}]
-    galaxy_list=[11,22,33,44,55,66,77,88,99]
-    fieldChoice.set_field('s')
-    console.log(frequency_list[2], 'DEFAULT')
   }
 }])

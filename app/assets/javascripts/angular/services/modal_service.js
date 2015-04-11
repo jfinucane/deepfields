@@ -10,6 +10,7 @@ game.service('modalService', ['biasModal', function(biasModal) {
   }
 // all modals stack on top of each other, so remove them in LIFO order
   this.close = function() {
+      console.log('modal stack', modal_stack)
       modal_stack.pop()
 	}
   this.show =function(id) {

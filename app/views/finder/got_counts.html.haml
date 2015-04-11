@@ -45,7 +45,7 @@
 = render :partial=>'finder/canvas',:locals=>{:show_counts=>false} 
 
 <page-back back="'/start/select'"></page-back>
-<page-forward forward='"/start/irregulars"'></page-back>
+%next_sign{'ng-click'=> 'move_forward()'}
 #travelogue_2.travelogue_position
 
 %galaxy_types

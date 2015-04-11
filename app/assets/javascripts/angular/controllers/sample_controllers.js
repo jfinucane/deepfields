@@ -1,7 +1,13 @@
 'use strict';
-gameControllers.controller('indexSampleCtrl', ['$scope', 'pageStatus',
-  function($scope, page) {
-    page($scope,14)
+gameControllers.controller('indexSampleCtrl', ['$scope', 'pageStatus', 'galaxyData', 'gameProgress','$location',
+  function($scope, page, galaxyData, gameProgress, location) {
+    if(galaxyData.count_of_samples() == 0) {
+      gameProgress.set_location_needs_sample('/sample/enough')
+      location.path('/start/enter')
+    }
+    else {
+      page($scope,14)
+    }
   }]);
 gameControllers.controller('goCtrl', ['$scope', 'pageStatus', 'sampleDraw',
   function($scope,  page, draw) {

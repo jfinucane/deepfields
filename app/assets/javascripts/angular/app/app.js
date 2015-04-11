@@ -3,8 +3,8 @@ game = angular.module('gamePage', [
 	'gameControllers'
 	])
 console.log('app here')
-game.config(['$routeProvider', '$locationProvider', '$injector',
-  function($routeProvider, $locationProvider, $injector) {
+game.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
         templateUrl: '/lesson/home.html',
