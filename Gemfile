@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '4.1.6'
 gem 'sprockets'
 
-
+group :production do
+  gem 'rails_12factor' 
+  gem 'puma'
+end
 gem 'redcarpet'
 gem 'rinku', :require => 'rails_rinku'
 
